@@ -29,3 +29,6 @@ func _on_music_volume_value_changed(value: float) -> void:
 
 func _on_gameplay_volume_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(_master_volume, gameplay_slider.value)
+
+func _on_return_button_pressed() -> void:
+	visible = false

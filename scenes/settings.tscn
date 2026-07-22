@@ -125,3 +125,4 @@ text = "Return"
 [connection signal="value_changed" from="ColorRect/MarginContainer/VBoxContainer/SettingsContainer/MasterVolume/HSlider" to="." method="_on_master_volume_value_changed"]
 [connection signal="value_changed" from="ColorRect/MarginContainer/VBoxContainer/SettingsContainer/Music/HSlider" to="." method="_on_music_volume_value_changed"]
 [connection signal="value_changed" from="ColorRect/MarginContainer/VBoxContainer/SettingsContainer/GameplaySounds/HSlider" to="." method="_on_gameplay_volume_value_changed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

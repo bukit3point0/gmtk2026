@@ -36,6 +36,7 @@ layout_mode = 2
 text = "Quit"
 
 [node name="Settings" parent="." unique_id=1476206606 instance=ExtResource("3_w18ys")]
+visible = false
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PlayGameButton" to="MarginContainer/VBoxContainer" method="_on_play_game_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SettingsButton" to="MarginContainer/VBoxContainer" method="_on_settings_button_pressed"]

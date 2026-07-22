@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="GTMK2026 Countdown"
+run/main_scene="uid://dwl7p675kuu11"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://bsd2ufd7fim7q"
 
 [display]
 
