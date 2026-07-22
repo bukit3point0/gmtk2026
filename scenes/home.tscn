@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dysvmlrhyse1v" path="res://scenes/home_settings.gd" id="1_u4wd2"]
 [ext_resource type="PackedScene" uid="uid://bo2hvopdyrqm4" path="res://scenes/settings_button.tscn" id="2_w18ys"]
+[ext_resource type="PackedScene" uid="uid://cefb85vh8t844" path="res://scenes/settings.tscn" id="3_w18ys"]
 
 [node name="Home" type="Node2D" unique_id=262647136]
 
@@ -33,6 +34,8 @@ text = "Settings"
 [node name="QuitButton" parent="MarginContainer/VBoxContainer" unique_id=316426974 instance=ExtResource("2_w18ys")]
 layout_mode = 2
 text = "Quit"
+
+[node name="Settings" parent="." unique_id=1476206606 instance=ExtResource("3_w18ys")]
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PlayGameButton" to="MarginContainer/VBoxContainer" method="_on_play_game_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SettingsButton" to="MarginContainer/VBoxContainer" method="_on_settings_button_pressed"]
