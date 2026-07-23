@@ -8,10 +8,16 @@
 size = Vector2(488, 312)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6f8o3"]
-size = Vector2(1435, 10)
+size = Vector2(3919, 1375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qr0ht"]
-size = Vector2(10, 621.5)
+size = Vector2(1569, 1242)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1esiv"]
+size = Vector2(735.5, 786)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r0jt"]
+size = Vector2(1871, 635)
 
 [node name="Game" type="Node2D" unique_id=1055144618]
 
@@ -38,11 +44,19 @@ shape = SubResource("RectangleShape2D_sn0t7")
 [node name="StaticBody2D" type="StaticBody2D" parent="Level1/Table/Walls" unique_id=2047171367]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/Table/Walls/StaticBody2D" unique_id=483486019]
-position = Vector2(717.5, 463)
+position = Vector2(1037.5, -219.5)
 shape = SubResource("RectangleShape2D_6f8o3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Level1/Table/Walls/StaticBody2D" unique_id=2072154372]
-position = Vector2(1430, 769.25)
+position = Vector2(2209.5, 459)
 shape = SubResource("RectangleShape2D_qr0ht")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Level1/Table/Walls/StaticBody2D" unique_id=661004409]
+position = Vector2(-367.75, 831)
+shape = SubResource("RectangleShape2D_1esiv")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Level1/Table/Walls/StaticBody2D" unique_id=115024064]
+position = Vector2(927.5, 1397.5)
+shape = SubResource("RectangleShape2D_2r0jt")
 
 [connection signal="input_event" from="Level1/Table/InstructionBook" to="Level1/Table/InstructionBook" method="_on_instruction_book_input_event"]

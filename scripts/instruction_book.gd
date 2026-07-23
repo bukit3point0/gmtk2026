@@ -11,6 +11,7 @@ func _process(_delta: float) -> void:
 	if instruction_book_dragging:
 		var mouse_position = get_viewport().get_mouse_position()
 		position = Vector2(mouse_position.x, mouse_position.y)
+		move_and_slide()
 
 func _set_instruction_book_drag() -> void:
 	instruction_book_dragging = !instruction_book_dragging
