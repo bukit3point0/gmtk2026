@@ -155,11 +155,13 @@ offset_bottom = 1064.0
 
 [node name="ConfirmButton" type="Button" parent="TextureRect/ChoiceButtons/HBoxContainer" unique_id=123232915]
 layout_mode = 2
+tooltip_text = "Approve Mission"
 icon = ExtResource("12_td6w2")
 flat = true
 
 [node name="RejectButton" type="Button" parent="TextureRect/ChoiceButtons/HBoxContainer" unique_id=1698930841]
 layout_mode = 2
+tooltip_text = "Cancel Mission"
 icon = ExtResource("13_r2thq")
 flat = true
 
