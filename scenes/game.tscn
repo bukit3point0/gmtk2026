@@ -1,9 +1,48 @@
 [gd_scene format=3 uid="uid://crn0td2ubi874"]
 
 [ext_resource type="PackedScene" uid="uid://bpn3sdvipin1v" path="res://scenes/background.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://ck24iy167p2x" path="res://scripts/instruction_book.gd" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://516g1g3xyua4" path="res://assets/mocks/book.png" id="2_yqjtg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sn0t7"]
+size = Vector2(488, 312)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6f8o3"]
+size = Vector2(1435, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qr0ht"]
+size = Vector2(10, 621.5)
 
 [node name="Game" type="Node2D" unique_id=1055144618]
 
 [node name="Level1" type="Node2D" parent="." unique_id=799543503]
 
 [node name="Background" parent="Level1" unique_id=2126150908 instance=ExtResource("1_uwrxv")]
+
+[node name="Table" type="Node2D" parent="Level1" unique_id=1942911392]
+
+[node name="InstructionBook" type="CharacterBody2D" parent="Level1/Table" unique_id=762449066]
+position = Vector2(720, 770)
+input_pickable = true
+script = ExtResource("2_lnu2h")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Level1/Table/InstructionBook" unique_id=1181639435]
+texture = ExtResource("2_yqjtg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/Table/InstructionBook" unique_id=1014973014]
+shape = SubResource("RectangleShape2D_sn0t7")
+
+[node name="Walls" type="Node2D" parent="Level1/Table" unique_id=867366719]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level1/Table/Walls" unique_id=2047171367]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/Table/Walls/StaticBody2D" unique_id=483486019]
+position = Vector2(717.5, 463)
+shape = SubResource("RectangleShape2D_6f8o3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level1/Table/Walls/StaticBody2D" unique_id=2072154372]
+position = Vector2(1430, 769.25)
+shape = SubResource("RectangleShape2D_qr0ht")
+
+[connection signal="input_event" from="Level1/Table/InstructionBook" to="Level1/Table/InstructionBook" method="_on_instruction_book_input_event"]
