@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ntkki1lc1tjv" path="res://assets/mocks/office_background.png" id="1_bkp1e"]
 [ext_resource type="Texture2D" uid="uid://bl7qw5d1kfdtl" path="res://assets/images/dot_matrix.png" id="2_y0upk"]
 [ext_resource type="Script" uid="uid://bni6xaul56pow" path="res://scripts/dot_matrix.gd" id="3_jougr"]
+[ext_resource type="AudioStream" uid="uid://7vda1wwp4s8f" path="res://assets/audio/dot_matrix_printer.wav" id="4_cbsqf"]
 
 [node name="Background" type="Node2D" unique_id=2126150908]
 
@@ -28,3 +29,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text "
 scroll_following = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TextureRect/DotMatrix/MarginContainer" unique_id=858414349]
+stream = ExtResource("4_cbsqf")
+bus = &"Gameplay"
