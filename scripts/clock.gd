@@ -1,6 +1,6 @@
 extends Node2D
 
-var level_time = 15 # 5m in seconds as a default for now
+var level_time = 300 # 5m in seconds as a default for now
 
 @onready var clock_time: RichTextLabel = $Sprite2D/MarginContainer/RichTextLabel
 
