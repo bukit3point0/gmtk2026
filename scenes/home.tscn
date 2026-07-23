@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://be4hawxc1gp7v"]
 
-[ext_resource type="Script" uid="uid://dysvmlrhyse1v" path="res://scenes/home_settings.gd" id="1_u4wd2"]
+[ext_resource type="Script" uid="uid://dysvmlrhyse1v" path="res://scripts/home_settings.gd" id="1_u4wd2"]
 [ext_resource type="PackedScene" uid="uid://bo2hvopdyrqm4" path="res://scenes/settings_button.tscn" id="2_w18ys"]
 [ext_resource type="PackedScene" uid="uid://cefb85vh8t844" path="res://scenes/settings.tscn" id="3_w18ys"]
 
