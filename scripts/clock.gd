@@ -16,10 +16,14 @@ func countdown() -> void:
 
 func set_time_on_clock() -> void:
 	var minutes = int(floor(level_time / 60.0))
-	var seconds = str(level_time % 60)
+	var seconds = level_time % 60
 	if minutes < 10:
 		minutes = "0" + str(minutes)
 	else:
 		minutes = str(minutes)
+	if seconds < 10:
+		seconds = "0" + str(seconds)
+	else:
+		seconds = str(seconds)
 	clock_time.text = minutes + ":" + seconds
 	

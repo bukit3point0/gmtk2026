@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://ydigpjl7nnn8" path="res://assets/images/ground_to_ship_messaging.png" id="5_wax1t"]
 [ext_resource type="AudioStream" uid="uid://hhq3cuk0xo7a" path="res://assets/audio/typing.mp3" id="6_1tmhi"]
 [ext_resource type="Script" uid="uid://b6k024tjn6xmo" path="res://scripts/ground_to_ship_text.gd" id="6_l5f8m"]
+[ext_resource type="Script" uid="uid://ddt5ycwbcq5ai" path="res://scripts/clock.gd" id="8_6vm3t"]
+[ext_resource type="Texture2D" uid="uid://bcxenai86xxb3" path="res://assets/images/clock.png" id="9_8efq7"]
 
 [node name="Background" type="Node2D" unique_id=2126150908]
 
@@ -92,3 +94,24 @@ scroll_following = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TextureRect/GroundToShipText/MarginContainer" unique_id=2006671506]
 stream = ExtResource("6_1tmhi")
+
+[node name="Clock" type="Node2D" parent="TextureRect" unique_id=1730704484]
+script = ExtResource("8_6vm3t")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect/Clock" unique_id=312802722]
+position = Vector2(1188, 44)
+texture = ExtResource("9_8efq7")
+centered = false
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/Clock/Sprite2D" unique_id=290459490]
+offset_right = 165.0
+offset_bottom = 70.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Clock/Sprite2D/MarginContainer" unique_id=2038141537]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 46
+text = "13:00"
+horizontal_alignment = 1
+vertical_alignment = 1
