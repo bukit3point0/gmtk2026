@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bo2hvopdyrqm4"]
 
 [node name="SettingsButton" type="Button" unique_id=73393664]
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 72
 text = "Play Game"
 flat = true
