@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bpn3sdvipin1v" path="res://scenes/background.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://ck24iy167p2x" path="res://scripts/instruction_book.gd" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://516g1g3xyua4" path="res://assets/mocks/book.png" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://bcxenai86xxb3" path="res://assets/images/clock.png" id="4_lbhrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn0t7"]
 size = Vector2(488, 312)
@@ -58,5 +59,23 @@ shape = SubResource("RectangleShape2D_1esiv")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Level1/Table/Walls/StaticBody2D" unique_id=115024064]
 position = Vector2(927.5, 1397.5)
 shape = SubResource("RectangleShape2D_2r0jt")
+
+[node name="Clock" type="Node2D" parent="Level1" unique_id=1160452619]
+
+[node name="Sprite2D" type="Sprite2D" parent="Level1/Clock" unique_id=1344570789]
+position = Vector2(1188, 44)
+texture = ExtResource("4_lbhrr")
+centered = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Level1/Clock/Sprite2D" unique_id=500326418]
+offset_right = 165.0
+offset_bottom = 70.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Clock/Sprite2D/MarginContainer" unique_id=1016574835]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 46
+text = "13:00"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="input_event" from="Level1/Table/InstructionBook" to="Level1/Table/InstructionBook" method="_on_instruction_book_input_event"]
