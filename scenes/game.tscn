@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://crn0td2ubi874"]
 
+[ext_resource type="Script" uid="uid://gmeqcgwpu5hb" path="res://scripts/game.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://bpn3sdvipin1v" path="res://scenes/background.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://ck24iy167p2x" path="res://scripts/instruction_book.gd" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cv8rrwwrwqrkc" path="res://assets/spritesheets/book_flip_page.png" id="3_iywne"]
@@ -7,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c0sw7ff8v4dvb" path="res://assets/spritesheets/thermometer.png" id="5_iywne"]
 [ext_resource type="Script" uid="uid://dj30d0hgnscu5" path="res://scripts/thermometer.gd" id="5_p57ef"]
 [ext_resource type="Texture2D" uid="uid://clvbjgfe4252e" path="res://assets/mocks/thermometer_empty.png" id="6_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://c4pfidxh07lfa" path="res://scenes/pause_menu.tscn" id="9_0tnpc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6f8o3"]
 size = Vector2(2264, 627)
@@ -481,6 +483,7 @@ _data = {
 size = Vector2(488, 312)
 
 [node name="Game" type="Node2D" unique_id=1055144618]
+script = ExtResource("1_p57ef")
 
 [node name="Level1" type="Node2D" parent="." unique_id=799543503]
 
@@ -702,6 +705,8 @@ libraries/ = SubResource("AnimationLibrary_kvpfn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/Table/InstructionBook" unique_id=1014973014]
 shape = SubResource("RectangleShape2D_sn0t7")
 metadata/_edit_lock_ = true
+
+[node name="PauseMenu" parent="." unique_id=1704919904 instance=ExtResource("9_0tnpc")]
 
 [connection signal="input_event" from="Level1/Table/Thermometer" to="Level1/Table/Thermometer" method="_on_thermometer_input_event"]
 [connection signal="input_event" from="Level1/Table/InstructionBook" to="Level1/Table/InstructionBook" method="_on_instruction_book_input_event"]

@@ -33,3 +33,4 @@ func set_time_on_clock() -> void:
 		seconds = str(seconds)
 	clock_time.text = minutes + ":" + seconds
 	
+	

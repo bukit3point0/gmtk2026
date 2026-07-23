@@ -26,6 +26,7 @@ script = ExtResource("1_u4wd2")
 
 [node name="Title" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=262610604]
 layout_mode = 2
+offset_transform_enabled = true
 theme_override_font_sizes/normal_font_size = 150
 text = "Stop The Launch"
 fit_content = true
