@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bpn3sdvipin1v" path="res://scenes/background.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://ck24iy167p2x" path="res://scripts/instruction_book.gd" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://516g1g3xyua4" path="res://assets/mocks/book.png" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://ddt5ycwbcq5ai" path="res://scripts/clock.gd" id="4_iywne"]
 [ext_resource type="Texture2D" uid="uid://bcxenai86xxb3" path="res://assets/images/clock.png" id="4_lbhrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn0t7"]
@@ -61,6 +62,7 @@ position = Vector2(927.5, 1397.5)
 shape = SubResource("RectangleShape2D_2r0jt")
 
 [node name="Clock" type="Node2D" parent="Level1" unique_id=1160452619]
+script = ExtResource("4_iywne")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level1/Clock" unique_id=1344570789]
 position = Vector2(1188, 44)
