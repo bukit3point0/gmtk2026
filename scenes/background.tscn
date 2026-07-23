@@ -14,6 +14,8 @@
 [ext_resource type="Script" uid="uid://bqiy3hfjuutns" path="res://scripts/choice_buttons.gd" id="12_r2thq"]
 [ext_resource type="Texture2D" uid="uid://db8wwcpsbbigi" path="res://assets/mocks/green_button.png" id="12_td6w2"]
 [ext_resource type="Texture2D" uid="uid://bef1j7iyxvuyy" path="res://assets/mocks/red_button.png" id="13_r2thq"]
+[ext_resource type="Script" uid="uid://dcqkm34267kvf" path="res://scripts/player_lives.gd" id="15_ivgg2"]
+[ext_resource type="Texture2D" uid="uid://d3th7nm1kllde" path="res://assets/images/player_life.png" id="16_r4ipc"]
 
 [node name="Background" type="Node2D" unique_id=2126150908]
 
@@ -160,6 +162,25 @@ flat = true
 layout_mode = 2
 icon = ExtResource("13_r2thq")
 flat = true
+
+[node name="PlayerLives" type="Node2D" parent="TextureRect" unique_id=1660213540]
+script = ExtResource("15_ivgg2")
+metadata/_edit_group_ = true
+
+[node name="Life1" type="Sprite2D" parent="TextureRect/PlayerLives" unique_id=57474748]
+position = Vector2(17, 15)
+texture = ExtResource("16_r4ipc")
+centered = false
+
+[node name="Life2" type="Sprite2D" parent="TextureRect/PlayerLives" unique_id=75707383]
+position = Vector2(77, 15)
+texture = ExtResource("16_r4ipc")
+centered = false
+
+[node name="Life3" type="Sprite2D" parent="TextureRect/PlayerLives" unique_id=634501749]
+position = Vector2(137, 15)
+texture = ExtResource("16_r4ipc")
+centered = false
 
 [connection signal="pressed" from="TextureRect/ChoiceButtons/HBoxContainer/ConfirmButton" to="TextureRect/ChoiceButtons" method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="TextureRect/ChoiceButtons/HBoxContainer/RejectButton" to="TextureRect/ChoiceButtons" method="_on_reject_button_pressed"]
