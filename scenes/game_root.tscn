@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://dwl7p675kuu11"]
 
 [ext_resource type="PackedScene" uid="uid://be4hawxc1gp7v" path="res://scenes/home.tscn" id="1_ni5ms"]
-[ext_resource type="PackedScene" uid="uid://crn0td2ubi874" path="res://scenes/game.tscn" id="2_uebra"]
+[ext_resource type="Script" uid="uid://xspab0bb67wt" path="res://scripts/game_root.gd" id="1_uebra"]
 
 [node name="GameRoot" type="Node2D" unique_id=996706110]
+script = ExtResource("1_uebra")
 
 [node name="Home" parent="." unique_id=262647136 instance=ExtResource("1_ni5ms")]
-
-[node name="Game" parent="." unique_id=1055144618 instance=ExtResource("2_uebra")]

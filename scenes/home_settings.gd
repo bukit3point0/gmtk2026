@@ -3,7 +3,8 @@ extends VBoxContainer
 @onready var settings: Node2D = $"../../Settings"
 
 func _on_play_game_button_pressed() -> void:
-	pass # Replace with function body.
+	var game_root = owner.owner
+	game_root.load_game()
 
 func _on_settings_button_pressed() -> void:
 	settings.visible = true
