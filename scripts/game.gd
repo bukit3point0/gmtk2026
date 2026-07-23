@@ -4,6 +4,7 @@ func pause_trigger():
 	var clock_node = get_node("Level1/Background/TextureRect/Clock")
 	clock_node.pause_countdown = true
 	var pauseMenu = get_node("PauseMenu")
+	print("pause ", pauseMenu)
 	pauseMenu.visible = true
 
 func unpause():

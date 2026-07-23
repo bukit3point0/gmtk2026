@@ -5,6 +5,163 @@
 [ext_resource type="Script" uid="uid://ck24iy167p2x" path="res://scripts/instruction_book.gd" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cv8rrwwrwqrkc" path="res://assets/spritesheets/book_flip_page.png" id="3_iywne"]
 [ext_resource type="Texture2D" uid="uid://bvq0yewxmio1m" path="res://assets/spritesheets/book_tab.png" id="4_p57ef"]
+[ext_resource type="Texture2D" uid="uid://c0sw7ff8v4dvb" path="res://assets/spritesheets/thermometer.png" id="5_iywne"]
+[ext_resource type="Script" uid="uid://dj30d0hgnscu5" path="res://scripts/thermometer.gd" id="5_p57ef"]
+[ext_resource type="Texture2D" uid="uid://clvbjgfe4252e" path="res://assets/mocks/thermometer_empty.png" id="6_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://c4pfidxh07lfa" path="res://scenes/pause_menu.tscn" id="9_0tnpc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6f8o3"]
+size = Vector2(2264, 627)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qr0ht"]
+size = Vector2(647, 1393)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1esiv"]
+size = Vector2(192, 1385)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r0jt"]
+size = Vector2(2264, 151)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nepv3"]
+atlas = ExtResource("5_iywne")
+region = Rect2(0, 0, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7025r"]
+atlas = ExtResource("5_iywne")
+region = Rect2(120, 0, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4url"]
+atlas = ExtResource("5_iywne")
+region = Rect2(240, 0, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ool0"]
+atlas = ExtResource("5_iywne")
+region = Rect2(360, 0, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr1ej"]
+atlas = ExtResource("5_iywne")
+region = Rect2(480, 0, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05nbr"]
+atlas = ExtResource("5_iywne")
+region = Rect2(0, 300, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sl42"]
+atlas = ExtResource("5_iywne")
+region = Rect2(120, 300, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oaba0"]
+atlas = ExtResource("5_iywne")
+region = Rect2(240, 300, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_458eo"]
+atlas = ExtResource("5_iywne")
+region = Rect2(360, 300, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3rex"]
+atlas = ExtResource("5_iywne")
+region = Rect2(480, 300, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fedci"]
+atlas = ExtResource("5_iywne")
+region = Rect2(0, 600, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qswn"]
+atlas = ExtResource("5_iywne")
+region = Rect2(120, 600, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rm0al"]
+atlas = ExtResource("5_iywne")
+region = Rect2(240, 600, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4re6"]
+atlas = ExtResource("5_iywne")
+region = Rect2(360, 600, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf7vy"]
+atlas = ExtResource("5_iywne")
+region = Rect2(480, 600, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8ni1"]
+atlas = ExtResource("5_iywne")
+region = Rect2(0, 900, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hbvx"]
+atlas = ExtResource("5_iywne")
+region = Rect2(120, 900, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8j3a"]
+atlas = ExtResource("5_iywne")
+region = Rect2(240, 900, 120, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms3bu"]
+atlas = ExtResource("5_iywne")
+region = Rect2(360, 900, 120, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sn0t7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nepv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7025r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4url")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ool0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr1ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05nbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sl42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oaba0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_458eo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3rex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fedci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qswn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rm0al")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4re6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf7vy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8ni1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hbvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8j3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ms3bu")
+}],
+"loop": 1,
+"name": &"thermometer",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
 atlas = ExtResource("3_iywne")
@@ -356,8 +513,6 @@ shape = SubResource("RectangleShape2D_1esiv")
 position = Vector2(940, 1155.5)
 shape = SubResource("RectangleShape2D_2r0jt")
 
-[node name="PauseMenu" parent="." unique_id=1704919904 instance=ExtResource("6_u5sy4")]
-
 [node name="Thermometer" type="CharacterBody2D" parent="Level1/Table" unique_id=1544112515]
 position = Vector2(244, 712)
 input_pickable = true
@@ -550,6 +705,8 @@ libraries/ = SubResource("AnimationLibrary_kvpfn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/Table/InstructionBook" unique_id=1014973014]
 shape = SubResource("RectangleShape2D_sn0t7")
 metadata/_edit_lock_ = true
+
+[node name="PauseMenu" parent="." unique_id=1704919904 instance=ExtResource("9_0tnpc")]
 
 [connection signal="input_event" from="Level1/Table/Thermometer" to="Level1/Table/Thermometer" method="_on_thermometer_input_event"]
 [connection signal="input_event" from="Level1/Table/InstructionBook" to="Level1/Table/InstructionBook" method="_on_instruction_book_input_event"]
