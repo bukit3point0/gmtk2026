@@ -13,7 +13,7 @@ func unpause():
 	clock_node.countdown()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# If escape is pressed it triggers the func to pause timer and open pause menu
 	if Input.is_action_just_pressed("Escape"):
 		pause_trigger()
