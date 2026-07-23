@@ -1,7 +1,9 @@
 extends Node2D
 
 @onready var settings = get_node("Settings")
+
 var game_root
+
 signal restart_signal
 
 func _ready() -> void:
@@ -14,7 +16,6 @@ func _on_resume_button_pressed() -> void:
 	game_script.unpause()
 	visible = false
 
-#kill current scene, reinstatiate it and add it to game root and restart time
 func _on_restart_level_button_pressed() -> void:
 	emit_signal("restart_signal")
 
