@@ -1,15 +1,12 @@
 extends Node2D
 
-var lives_left = 3
+var lives_left = GlobalVariables.player_lives
 
 @onready var life_1: Sprite2D = $Life1
 @onready var life_2: Sprite2D = $Life2
 @onready var life_3: Sprite2D = $Life3
 
 func _ready() -> void:
-	set_lives()
-
-func _process(delta: float) -> void:
 	set_lives()
 
 func set_lives() -> void:
@@ -24,4 +21,7 @@ func set_lives() -> void:
 		1:
 			life_1.texture = lost_life
 			life_2.texture = lost_life
-			
+
+func remove_a_life() -> void:
+	GlobalVariables.player_lives -= 1
+	set_lives()

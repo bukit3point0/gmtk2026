@@ -23,12 +23,15 @@ func _ready() -> void:
 
 func _on_master_volume_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(_master_volume, master_slider.value)
+	SaveLoad.save_game()
 
 func _on_music_volume_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(_master_volume, music_slider.value)
+	SaveLoad.save_game()
 
 func _on_gameplay_volume_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(_master_volume, gameplay_slider.value)
+	SaveLoad.save_game()
 
 func _on_return_button_pressed() -> void:
 	visible = false
