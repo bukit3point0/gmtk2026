@@ -1,5 +1,7 @@
 extends Node2D
 
+var game_starting = false
+
 const GAME = preload("uid://crn0td2ubi874")
 
 func _ready() -> void:

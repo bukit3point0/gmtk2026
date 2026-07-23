@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://crn0td2ubi874"]
 
+[ext_resource type="Script" uid="uid://gmeqcgwpu5hb" path="res://scripts/game.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://bpn3sdvipin1v" path="res://scenes/background.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://ck24iy167p2x" path="res://scripts/instruction_book.gd" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cv8rrwwrwqrkc" path="res://assets/spritesheets/book_flip_page.png" id="3_iywne"]
 [ext_resource type="Texture2D" uid="uid://bvq0yewxmio1m" path="res://assets/spritesheets/book_tab.png" id="4_p57ef"]
+[ext_resource type="PackedScene" uid="uid://c4pfidxh07lfa" path="res://pause_menu.tscn" id="6_u5sy4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
 atlas = ExtResource("3_iywne")
@@ -295,6 +297,7 @@ size = Vector2(192, 1385)
 size = Vector2(2264, 151)
 
 [node name="Game" type="Node2D" unique_id=1055144618]
+script = ExtResource("1_p57ef")
 
 [node name="Level1" type="Node2D" parent="." unique_id=799543503]
 
@@ -362,6 +365,8 @@ shape = SubResource("RectangleShape2D_1esiv")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Level1/Table/Walls/StaticBody2D" unique_id=115024064]
 position = Vector2(940, 1155.5)
 shape = SubResource("RectangleShape2D_2r0jt")
+
+[node name="PauseMenu" parent="." unique_id=1704919904 instance=ExtResource("6_u5sy4")]
 
 [connection signal="input_event" from="Level1/Table/InstructionBook" to="Level1/Table/InstructionBook" method="_on_instruction_book_input_event"]
 [connection signal="pressed" from="Level1/Table/InstructionBook/Button" to="Level1/Table/InstructionBook" method="_on_button_pressed"]
