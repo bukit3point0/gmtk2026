@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://bcxenai86xxb3" path="res://assets/images/clock.png" id="9_8efq7"]
 [ext_resource type="FontFile" uid="uid://bmf2rg5bx3vti" path="res://assets/fonts/ShareTechMono.ttf" id="10_8efq7"]
 [ext_resource type="Script" uid="uid://5srp6jc65v2g" path="res://scripts/launch_countdown.gd" id="10_da6cc"]
+[ext_resource type="Script" uid="uid://bqiy3hfjuutns" path="res://scripts/choice_buttons.gd" id="12_r2thq"]
+[ext_resource type="Texture2D" uid="uid://db8wwcpsbbigi" path="res://assets/mocks/green_button.png" id="12_td6w2"]
+[ext_resource type="Texture2D" uid="uid://bef1j7iyxvuyy" path="res://assets/mocks/red_button.png" id="13_r2thq"]
 
 [node name="Background" type="Node2D" unique_id=2126150908]
 
@@ -137,3 +140,26 @@ theme_override_font_sizes/normal_font_size = 150
 text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ChoiceButtons" type="Node2D" parent="TextureRect" unique_id=1786030307]
+position = Vector2(10, 10)
+script = ExtResource("12_r2thq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/ChoiceButtons" unique_id=1483165118]
+offset_left = 1175.0
+offset_top = 988.0
+offset_right = 1409.0
+offset_bottom = 1064.0
+
+[node name="ConfirmButton" type="Button" parent="TextureRect/ChoiceButtons/HBoxContainer" unique_id=123232915]
+layout_mode = 2
+icon = ExtResource("12_td6w2")
+flat = true
+
+[node name="RejectButton" type="Button" parent="TextureRect/ChoiceButtons/HBoxContainer" unique_id=1698930841]
+layout_mode = 2
+icon = ExtResource("13_r2thq")
+flat = true
+
+[connection signal="pressed" from="TextureRect/ChoiceButtons/HBoxContainer/ConfirmButton" to="TextureRect/ChoiceButtons" method="_on_confirm_button_pressed"]
+[connection signal="pressed" from="TextureRect/ChoiceButtons/HBoxContainer/RejectButton" to="TextureRect/ChoiceButtons" method="_on_reject_button_pressed"]

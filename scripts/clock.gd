@@ -4,6 +4,8 @@ var level_time = 15 # 5m in seconds as a default for now
 
 @onready var clock_time: RichTextLabel = $Sprite2D/MarginContainer/RichTextLabel
 
+var pause_countdown = false
+
 func _ready() -> void:
 	countdown()
 
@@ -11,15 +13,12 @@ func countdown() -> void:
 	var launch_countdown = get_parent().get_node("LaunchCountdown")
 	set_time_on_clock()
 	await get_tree().create_timer(1.0).timeout
-	while level_time > 0:
-		print("level_time", level_time)
+	while level_time > 0 and !pause_countdown:
 		level_time -= 1
 		set_time_on_clock()
+		if level_time <= 10:
+			launch_countdown.show_countdown_timer(level_time)
 		await get_tree().create_timer(1.0).timeout
-		print("level_time", level_time)
-		if level_time <= 11:
-			launch_countdown.show_countdown_timer(level_time - 1)
-		print(" ")
 
 func set_time_on_clock() -> void:
 	var minutes = int(floor(level_time / 60.0))
