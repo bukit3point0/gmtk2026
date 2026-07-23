@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bl7qw5d1kfdtl" path="res://assets/images/dot_matrix.png" id="2_y0upk"]
 [ext_resource type="Script" uid="uid://bni6xaul56pow" path="res://scripts/dot_matrix.gd" id="3_jougr"]
 [ext_resource type="AudioStream" uid="uid://7vda1wwp4s8f" path="res://assets/audio/dot_matrix_printer.wav" id="4_cbsqf"]
+[ext_resource type="Texture2D" uid="uid://ydigpjl7nnn8" path="res://assets/images/ground_to_ship_messaging.png" id="5_wax1t"]
+[ext_resource type="AudioStream" uid="uid://hhq3cuk0xo7a" path="res://assets/audio/typing.mp3" id="6_1tmhi"]
+[ext_resource type="Script" uid="uid://b6k024tjn6xmo" path="res://scripts/ground_to_ship_text.gd" id="6_l5f8m"]
 
 [node name="Background" type="Node2D" unique_id=2126150908]
 
@@ -27,9 +30,65 @@ theme_override_constants/margin_right = 35
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/DotMatrix/MarginContainer" unique_id=703460623]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text "
+text = "This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text "
 scroll_following = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TextureRect/DotMatrix/MarginContainer" unique_id=858414349]
 stream = ExtResource("4_cbsqf")
 bus = &"Gameplay"
+
+[node name="GroundToShipText" type="Sprite2D" parent="TextureRect" unique_id=716613478]
+position = Vector2(1676, 229)
+texture = ExtResource("5_wax1t")
+script = ExtResource("6_l5f8m")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/GroundToShipText" unique_id=1576876080]
+offset_left = -222.5
+offset_top = -200.0
+offset_right = 222.5
+offset_bottom = 200.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/GroundToShipText/MarginContainer" unique_id=1728408951]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 1, 0.4, 1)
+text = "Ground Control to Major Tom
+Ground Control to Major Tom
+Take your protein pills and put your helmet on
+(Ten) Ground Control (Nine) to Major Tom (Eight, seven)
+(Six) Commencing (Five) countdown, engines on
+(Four, three, two)
+Check ignition (One) and may God's love (Lift off) be with you
+This is Ground Control to Major Tom
+You've really made the grade
+And the papers want to know whose shirts you wear
+Now it's time to leave the capsule if you dare
+This is Major Tom to Ground Control
+I'm stepping through the door
+And I'm floating in a most peculiar way
+And the stars look very different today
+For here, am I sitting in a tin can
+Far, above the world
+Planet Earth is blue
+And there's nothing I can do
+Though I'm past one hundred thousand miles
+I'm feeling very still
+And I think my spaceship knows which way to go
+Tell my wife I love her very much, she knows
+Ground Control to Major Tom
+Your circuit's dead, there's something wrong
+Can you hear me, Major Tom?
+Can you hear me, Major Tom?
+Can you hear me, Major Tom?
+Can you-
+Here, am I floating 'round my tin can
+Far, above the moon
+Planet Earth is blue
+And there's nothing I can do"
+scroll_following = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TextureRect/GroundToShipText/MarginContainer" unique_id=2006671506]
+stream = ExtResource("6_1tmhi")
