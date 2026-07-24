@@ -26,10 +26,12 @@ offset_bottom = 40.0
 texture = ExtResource("1_bkp1e")
 
 [node name="DotMatrix" type="Sprite2D" parent="TextureRect" unique_id=907441809]
-position = Vector2(1453, 490)
+position = Vector2(1471, 85)
+scale = Vector2(0.9258428, 0.9000001)
 texture = ExtResource("2_y0upk")
 centered = false
 script = ExtResource("3_jougr")
+metadata/_edit_group_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureRect/DotMatrix" unique_id=922834297]
 offset_right = 445.0
@@ -49,9 +51,10 @@ stream = ExtResource("4_cbsqf")
 bus = &"Gameplay"
 
 [node name="GroundToShipText" type="Sprite2D" parent="TextureRect" unique_id=716613478]
-position = Vector2(1676, 229)
+position = Vector2(1677, 816)
 texture = ExtResource("5_wax1t")
 script = ExtResource("6_l5f8m")
+metadata/_edit_group_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureRect/GroundToShipText" unique_id=1576876080]
 offset_left = -222.5
