@@ -39,6 +39,7 @@ theme_override_constants/margin_right = 35
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/DotMatrix/MarginContainer" unique_id=703460623]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
 text = "This is dot matrix text This is dot matrix text This is dot matrix text This is dot matrix text "
 scroll_following = true
 
@@ -64,6 +65,7 @@ theme_override_constants/margin_bottom = 16
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/GroundToShipText/MarginContainer" unique_id=1728408951]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 1, 0.4, 1)
+theme_override_font_sizes/normal_font_size = 20
 text = "Ground Control to Major Tom
 Ground Control to Major Tom
 Take your protein pills and put your helmet on

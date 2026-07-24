@@ -701,6 +701,7 @@ texture = ExtResource("6_u5sy4")
 libraries/ = SubResource("AnimationLibrary_kvpfn")
 
 [node name="Cody1" type="Node2D" parent="Level1/Table/InstructionBook/Pages" unique_id=138420742]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="PageTitle" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=99320038]
@@ -710,7 +711,7 @@ offset_right = -10.0
 offset_bottom = -28.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
-text = "Thermometer"
+text = "Cody1"
 horizontal_alignment = 1
 
 [node name="LeftText" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=1313603129]
@@ -864,6 +865,7 @@ texture = ExtResource("6_u5sy4")
 libraries/ = SubResource("AnimationLibrary_kvpfn")
 
 [node name="Cody2" type="Node2D" parent="Level1/Table/InstructionBook/Pages" unique_id=592914226]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="PageTitle" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=791229377]
@@ -873,7 +875,7 @@ offset_right = -10.0
 offset_bottom = -28.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
-text = "Thermometer"
+text = "Cody2"
 horizontal_alignment = 1
 
 [node name="LeftText" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=1691945324]
