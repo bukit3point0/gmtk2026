@@ -7,13 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://ydigpjl7nnn8" path="res://assets/images/ground_to_ship_messaging.png" id="5_wax1t"]
 [ext_resource type="AudioStream" uid="uid://hhq3cuk0xo7a" path="res://assets/audio/typing.mp3" id="6_1tmhi"]
 [ext_resource type="Script" uid="uid://b6k024tjn6xmo" path="res://scripts/ground_to_ship_text.gd" id="6_l5f8m"]
+[ext_resource type="PackedScene" uid="uid://boll10tgej5mt" path="res://scenes/option_button.tscn" id="7_5xduy"]
 [ext_resource type="Script" uid="uid://ddt5ycwbcq5ai" path="res://scripts/clock.gd" id="8_6vm3t"]
 [ext_resource type="Texture2D" uid="uid://bcxenai86xxb3" path="res://assets/images/clock.png" id="9_8efq7"]
 [ext_resource type="FontFile" uid="uid://bmf2rg5bx3vti" path="res://assets/fonts/ShareTechMono.ttf" id="10_8efq7"]
 [ext_resource type="Script" uid="uid://5srp6jc65v2g" path="res://scripts/launch_countdown.gd" id="10_da6cc"]
 [ext_resource type="Script" uid="uid://bqiy3hfjuutns" path="res://scripts/choice_buttons.gd" id="12_r2thq"]
-[ext_resource type="Texture2D" uid="uid://db8wwcpsbbigi" path="res://assets/mocks/green_button.png" id="12_td6w2"]
-[ext_resource type="Texture2D" uid="uid://bef1j7iyxvuyy" path="res://assets/mocks/red_button.png" id="13_r2thq"]
+[ext_resource type="Texture2D" uid="uid://cw6gutjdu28ml" path="res://assets/images/approve_button.png" id="14_5xduy"]
+[ext_resource type="Texture2D" uid="uid://dd2cvhfsq4k23" path="res://assets/images/reject_button.png" id="15_fligg"]
 [ext_resource type="Script" uid="uid://dcqkm34267kvf" path="res://scripts/player_lives.gd" id="15_ivgg2"]
 [ext_resource type="Texture2D" uid="uid://d3th7nm1kllde" path="res://assets/images/player_life.png" id="16_r4ipc"]
 [ext_resource type="Texture2D" uid="uid://dxu8ahg5x2ca2" path="res://assets/mocks/metal plate.png" id="17_r4ipc"]
@@ -66,44 +67,33 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/GroundToShipText/MarginContainer" unique_id=1728408951]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/GroundToShipText/MarginContainer" unique_id=1650970089]
 layout_mode = 2
-theme_override_colors/default_color = Color(0, 1, 0.4, 1)
-theme_override_font_sizes/normal_font_size = 20
-text = "Ground Control to Major Tom
-Ground Control to Major Tom
-Take your protein pills and put your helmet on
-(Ten) Ground Control (Nine) to Major Tom (Eight, seven)
-(Six) Commencing (Five) countdown, engines on
-(Four, three, two)
-Check ignition (One) and may God's love (Lift off) be with you
-This is Ground Control to Major Tom
-You've really made the grade
-And the papers want to know whose shirts you wear
-Now it's time to leave the capsule if you dare
-This is Major Tom to Ground Control
-I'm stepping through the door
-And I'm floating in a most peculiar way
-And the stars look very different today
-For here, am I sitting in a tin can
-Far, above the world
-Planet Earth is blue
-And there's nothing I can do
-Though I'm past one hundred thousand miles
-I'm feeling very still
-And I think my spaceship knows which way to go
-Tell my wife I love her very much, she knows
-Ground Control to Major Tom
-Your circuit's dead, there's something wrong
-Can you hear me, Major Tom?
-Can you hear me, Major Tom?
-Can you hear me, Major Tom?
-Can you-
-Here, am I floating 'round my tin can
-Far, above the moon
-Planet Earth is blue
-And there's nothing I can do"
-scroll_following = true
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Option" parent="TextureRect/GroundToShipText/MarginContainer/VBoxContainer" unique_id=1999699601 instance=ExtResource("7_5xduy")]
+layout_mode = 2
+text = "Option 1 is one line long"
+
+[node name="Option2" parent="TextureRect/GroundToShipText/MarginContainer/VBoxContainer" unique_id=121116202 instance=ExtResource("7_5xduy")]
+layout_mode = 2
+text = "Option 2 is two lines long
+Option 2 is two lines long"
+
+[node name="Option3" parent="TextureRect/GroundToShipText/MarginContainer/VBoxContainer" unique_id=925805235 instance=ExtResource("7_5xduy")]
+layout_mode = 2
+text = "Option 3 is four lines long
+Option 3 is four lines long
+Option 3 is four lines long
+Option 3 is four lines long
+"
+
+[node name="Option4" parent="TextureRect/GroundToShipText/MarginContainer/VBoxContainer" unique_id=1397638276 instance=ExtResource("7_5xduy")]
+layout_mode = 2
+text = "Option 4 is three lines long
+Option 4 is three lines long
+Option 4 is three lines long"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TextureRect/GroundToShipText/MarginContainer" unique_id=2006671506]
 stream = ExtResource("6_1tmhi")
@@ -154,22 +144,30 @@ position = Vector2(10, 10)
 script = ExtResource("12_r2thq")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/ChoiceButtons" unique_id=1483165118]
-offset_left = 1175.0
-offset_top = 988.0
+custom_minimum_size = Vector2(0, 100)
+custom_maximum_size = Vector2(-1, 100)
+offset_left = 1151.0
+offset_top = 970.0
 offset_right = 1409.0
-offset_bottom = 1064.0
+offset_bottom = 1070.0
+theme_override_constants/separation = 20
 
 [node name="ConfirmButton" type="Button" parent="TextureRect/ChoiceButtons/HBoxContainer" unique_id=123232915]
+custom_minimum_size = Vector2(108, 0)
 layout_mode = 2
 tooltip_text = "Approve Mission"
-icon = ExtResource("12_td6w2")
+icon = ExtResource("14_5xduy")
 flat = true
+expand_icon = true
 
 [node name="RejectButton" type="Button" parent="TextureRect/ChoiceButtons/HBoxContainer" unique_id=1698930841]
+custom_minimum_size = Vector2(108, 0)
+custom_maximum_size = Vector2(108, -1)
 layout_mode = 2
 tooltip_text = "Cancel Mission"
-icon = ExtResource("13_r2thq")
+icon = ExtResource("15_fligg")
 flat = true
+expand_icon = true
 
 [node name="PlayerLives" type="Node2D" parent="TextureRect" unique_id=1660213540]
 visible = false
