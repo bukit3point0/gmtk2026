@@ -6,6 +6,8 @@ extends CharacterBody2D
 @onready var tab_2_animation_player: AnimationPlayer = $Pages/Cody1/Tab2AnimationPlayer
 @onready var tab_3_animation: AnimatedSprite2D = $Pages/Cody2/Tab3Animation
 @onready var tab_3_animation_player: AnimationPlayer = $Pages/Cody2/Tab3AnimationPlayer
+@onready var tab_4_animation: AnimatedSprite2D = $Pages/Lightbulbs/Tab4Animation
+@onready var tab_4_animation_player: AnimationPlayer = $Pages/Lightbulbs/Tab4AnimationPlayer
 @onready var pages: Node2D = $Pages
 
 var instruction_book_dragging = false
@@ -13,6 +15,7 @@ var currently_open_tab = 1
 var tab_1_opened = false
 var tab_2_opened = false
 var tab_3_opened = false
+var tab_4_opened = false
 
 signal instruction_book_drag_signal
 
@@ -61,17 +64,31 @@ func _on_tab_3_button_pressed() -> void:
 	close_other_tabs()
 	tab_3_opened = true
 
+func _on_tab_4_button_pressed() -> void:
+	if currently_open_tab != 4:
+		play_tab_4()
+	currently_open_tab = 4
+	close_other_tabs()
+	tab_4_opened = true
+
 func close_other_tabs() -> void:
 	match currently_open_tab:
 		1:
 			play_tab_2(false)
 			play_tab_3(false)
+			play_tab_4(false)
 		2:
 			play_tab_1(false)
 			play_tab_3(false)
+			play_tab_4(false)
 		3:
 			play_tab_1(false)
 			play_tab_2(false)
+			play_tab_4(false)
+		4:
+			play_tab_1(false)
+			play_tab_2(false)
+			play_tab_3(false)
 
 func play_tab_1(open: bool = true) -> void:
 	var page = pages.get_node("Thermometer")
@@ -138,3 +155,26 @@ func play_tab_3(open: bool = true) -> void:
 	book_image.visible = open
 	instructions.visible = open
 	tab_3_opened = open
+
+func play_tab_4(open: bool = true) -> void:
+	var page = pages.get_node("Lightbulbs")
+	var title = page.get_node("PageTitle")
+	var left_text = page.get_node("LeftText")
+	var book_image = page.get_node("BookImage")
+	var instructions = page.get_node("Instructions")
+	title.visible = false
+	left_text.visible = false
+	book_image.visible = false
+	instructions.visible = false
+	if tab_4_opened and !open:
+		tab_4_animation.play("close_tab")
+		tab_4_animation_player.play("close_tab")
+	elif !tab_4_opened and open:
+		tab_4_animation.play("open_tab")
+		tab_4_animation_player.play("open_tab")
+	title.visible = open
+	left_text.visible = open
+	book_image.visible = open
+	instructions.visible = open
+	tab_4_opened = open
+	
