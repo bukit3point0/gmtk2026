@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c1d010mfwdtvd"]
+
+[ext_resource type="Texture2D" uid="uid://bnssduf646c6d" path="res://assets/images/documents/Paperbackground.png" id="1_mskvo"]
+
+[node name="ConstructionReport" type="Node2D" unique_id=905180527]
+
+[node name="Paperbackground" type="Sprite2D" parent="." unique_id=1116466726]
+scale = Vector2(3.3, 4.63)
+texture = ExtResource("1_mskvo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=862810031]
+offset_left = -197.0
+offset_top = -281.0
+offset_right = 201.0
+offset_bottom = 287.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "Test text for sizing
+
+[b]Deck plating[/b] te"
