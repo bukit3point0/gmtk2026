@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://b4qhjw6ikhwnj"]
+
+[ext_resource type="Texture2D" uid="uid://ctl34c38murvo" path="res://assets/images/unlit_lightbulb.png" id="1_o01s3"]
+[ext_resource type="Script" uid="uid://d0kwfw3611dio" path="res://scenes/lightswitch_board.gd" id="1_wllbv"]
+[ext_resource type="Texture2D" uid="uid://djdavkyeuyedt" path="res://assets/mocks/light_switch_on.png" id="2_wllbv"]
+
+[node name="LightswitchBoard" type="Node2D" unique_id=1007271350]
+script = ExtResource("1_wllbv")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1351162680]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/h_separation = 16
+columns = 5
+
+[node name="Lightbulb" type="TextureRect" parent="GridContainer" unique_id=14493608]
+custom_minimum_size = Vector2(0, 217)
+layout_mode = 2
+texture = ExtResource("1_o01s3")
+expand_mode = 3
+
+[node name="Lightbulb2" type="TextureRect" parent="GridContainer" unique_id=1716928656]
+custom_minimum_size = Vector2(0, 217)
+layout_mode = 2
+texture = ExtResource("1_o01s3")
+expand_mode = 3
+
+[node name="Lightbulb3" type="TextureRect" parent="GridContainer" unique_id=1129625981]
+custom_minimum_size = Vector2(0, 217)
+layout_mode = 2
+texture = ExtResource("1_o01s3")
+expand_mode = 3
+
+[node name="Lightbulb4" type="TextureRect" parent="GridContainer" unique_id=789322544]
+custom_minimum_size = Vector2(0, 217)
+layout_mode = 2
+texture = ExtResource("1_o01s3")
+expand_mode = 3
+
+[node name="Lightbulb5" type="TextureRect" parent="GridContainer" unique_id=1155379761]
+custom_minimum_size = Vector2(0, 217)
+layout_mode = 2
+texture = ExtResource("1_o01s3")
+expand_mode = 3
+
+[node name="Switch" type="Button" parent="GridContainer" unique_id=1799488727]
+custom_minimum_size = Vector2(0, 219.858)
+layout_mode = 2
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Switch" unique_id=1935412089]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 219.85815
+texture = ExtResource("2_wllbv")
+expand_mode = 5
+
+[node name="Switch2" type="Button" parent="GridContainer" unique_id=1156992408]
+custom_minimum_size = Vector2(0, 219.858)
+layout_mode = 2
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Switch2" unique_id=120541661]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 219.85815
+texture = ExtResource("2_wllbv")
+expand_mode = 5
+
+[node name="Switch3" type="Button" parent="GridContainer" unique_id=631619217]
+custom_minimum_size = Vector2(0, 219.858)
+layout_mode = 2
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Switch3" unique_id=1252616235]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 219.85815
+texture = ExtResource("2_wllbv")
+expand_mode = 5
+
+[node name="Switch4" type="Button" parent="GridContainer" unique_id=1406446184]
+custom_minimum_size = Vector2(0, 219.858)
+layout_mode = 2
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Switch4" unique_id=1418285870]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 219.85815
+texture = ExtResource("2_wllbv")
+expand_mode = 5
+
+[node name="Switch5" type="Button" parent="GridContainer" unique_id=1842672175]
+custom_minimum_size = Vector2(0, 219.858)
+layout_mode = 2
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Switch5" unique_id=1314446475]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 219.85815
+texture = ExtResource("2_wllbv")
+expand_mode = 5
+
+[connection signal="pressed" from="GridContainer/Switch" to="." method="_on_switch_1_pressed"]
+[connection signal="pressed" from="GridContainer/Switch2" to="." method="_on_switch_2_pressed"]
+[connection signal="pressed" from="GridContainer/Switch3" to="." method="_on_switch_3_pressed"]
+[connection signal="pressed" from="GridContainer/Switch4" to="." method="_on_switch_4_pressed"]
+[connection signal="pressed" from="GridContainer/Switch5" to="." method="_on_switch_5_pressed"]
