@@ -534,8 +534,8 @@ script = ExtResource("2_lnu2h")
 position = Vector2(-2, -7)
 sprite_frames = SubResource("SpriteFrames_bhunq")
 animation = &"open_book"
-frame = 8
-frame_progress = 0.55724597
+frame = 3
+frame_progress = 0.41941753
 
 [node name="Pages" type="Node2D" parent="Level1/Table/InstructionBook" unique_id=714027308]
 
@@ -700,6 +700,332 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("6_u5sy4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Level1/Table/InstructionBook/Pages/Thermometer" unique_id=1458929969]
+libraries/ = SubResource("AnimationLibrary_kvpfn")
+
+[node name="Cody1" type="Node2D" parent="Level1/Table/InstructionBook/Pages" unique_id=138420742]
+metadata/_edit_lock_ = true
+
+[node name="PageTitle" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=99320038]
+offset_left = -229.0
+offset_top = -51.0
+offset_right = -10.0
+offset_bottom = -28.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Thermometer"
+horizontal_alignment = 1
+
+[node name="LeftText" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=1313603129]
+offset_left = -229.0
+offset_top = -26.0
+offset_right = -10.0
+offset_bottom = 138.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "The thermometer gauge holds the temperature of the hottest it got during testing, and is used to test the theraml protection system."
+
+[node name="BookImage" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=1542908340]
+position = Vector2(-133, -130)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_u5sy4")
+centered = false
+
+[node name="Instructions" type="VBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=1071019482]
+offset_left = 11.0
+offset_top = -140.0
+offset_right = 229.0
+offset_bottom = 138.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Headers" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions" unique_id=237423047]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions/Headers" unique_id=1719284830]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "If the thermostat reads..."
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions/Headers" unique_id=1472008314]
+custom_minimum_size = Vector2(83, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Do..."
+fit_content = true
+vertical_alignment = 2
+
+[node name="Instruction1" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions" unique_id=923712006]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions/Instruction1" unique_id=1331928031]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "0°C - 999°C"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions/Instruction1" unique_id=920645328]
+custom_minimum_size = Vector2(83, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Abort mission"
+fit_content = true
+
+[node name="Instruction2" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions" unique_id=826755209]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions/Instruction2" unique_id=1547382210]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "1,000°C - 1,249°C"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions/Instruction2" unique_id=460126436]
+custom_minimum_size = Vector2(83, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Hold until timer ends in 3"
+fit_content = true
+
+[node name="Instruction3" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions" unique_id=1100480206]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions/Instruction3" unique_id=1073155218]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "1,250°C - 2,499°C"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions/Instruction3" unique_id=1268679265]
+custom_minimum_size = Vector2(83, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Thermometer cleared"
+fit_content = true
+
+[node name="Instruction4" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions" unique_id=1713231875]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions/Instruction4" unique_id=647703026]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "2,500°C - ???"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions/Instruction4" unique_id=797993928]
+custom_minimum_size = Vector2(83, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Abort mission"
+fit_content = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1/Instructions" unique_id=1410291589]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+
+[node name="Tab1Animation" type="AnimatedSprite2D" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=1192924990]
+position = Vector2(255, -103)
+sprite_frames = SubResource("SpriteFrames_riqys")
+animation = &"open_tab"
+
+[node name="Button" type="Button" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=726560034]
+offset_left = 239.0
+offset_top = -113.0
+offset_right = 271.0
+offset_bottom = -93.0
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="TabImage" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=815371111]
+position = Vector2(253, -133)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_u5sy4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=1838001381]
+libraries/ = SubResource("AnimationLibrary_kvpfn")
+
+[node name="Cody2" type="Node2D" parent="Level1/Table/InstructionBook/Pages" unique_id=592914226]
+metadata/_edit_lock_ = true
+
+[node name="PageTitle" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=791229377]
+offset_left = -229.0
+offset_top = -51.0
+offset_right = -10.0
+offset_bottom = -28.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Thermometer"
+horizontal_alignment = 1
+
+[node name="LeftText" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=1691945324]
+offset_left = -229.0
+offset_top = -26.0
+offset_right = -10.0
+offset_bottom = 138.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "The thermometer gauge holds the temperature of the hottest it got during testing, and is used to test the theraml protection system."
+
+[node name="BookImage" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=1211351157]
+position = Vector2(-133, -130)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_u5sy4")
+centered = false
+
+[node name="Instructions" type="VBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=217628378]
+offset_left = 11.0
+offset_top = -140.0
+offset_right = 229.0
+offset_bottom = 138.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Headers" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions" unique_id=225560622]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions/Headers" unique_id=482162913]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "If the thermostat reads..."
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions/Headers" unique_id=472702807]
+custom_minimum_size = Vector2(83, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Do..."
+fit_content = true
+vertical_alignment = 2
+
+[node name="Instruction1" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions" unique_id=771172252]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions/Instruction1" unique_id=1234130645]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "0°C - 999°C"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions/Instruction1" unique_id=350363869]
+custom_minimum_size = Vector2(83, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Abort mission"
+fit_content = true
+
+[node name="Instruction2" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions" unique_id=220851551]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions/Instruction2" unique_id=611114018]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "1,000°C - 1,249°C"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions/Instruction2" unique_id=1999760512]
+custom_minimum_size = Vector2(83, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Hold until timer ends in 3"
+fit_content = true
+
+[node name="Instruction3" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions" unique_id=1855562580]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions/Instruction3" unique_id=1018780572]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "1,250°C - 2,499°C"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions/Instruction3" unique_id=1616627579]
+custom_minimum_size = Vector2(83, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Thermometer cleared"
+fit_content = true
+
+[node name="Instruction4" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions" unique_id=2098840590]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions/Instruction4" unique_id=1997402328]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "2,500°C - ???"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions/Instruction4" unique_id=1368936844]
+custom_minimum_size = Vector2(83, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Abort mission"
+fit_content = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2/Instructions" unique_id=1008755326]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+
+[node name="Tab1Animation" type="AnimatedSprite2D" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=617707095]
+position = Vector2(255, -73)
+sprite_frames = SubResource("SpriteFrames_riqys")
+animation = &"open_tab"
+
+[node name="Button" type="Button" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=1023795922]
+offset_left = 239.0
+offset_top = -83.0
+offset_right = 271.0
+offset_bottom = -63.0
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="TabImage" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=1079256611]
+position = Vector2(253, -133)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_u5sy4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=887556302]
 libraries/ = SubResource("AnimationLibrary_kvpfn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/Table/InstructionBook" unique_id=1014973014]

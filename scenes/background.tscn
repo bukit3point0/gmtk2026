@@ -164,6 +164,7 @@ icon = ExtResource("13_r2thq")
 flat = true
 
 [node name="PlayerLives" type="Node2D" parent="TextureRect" unique_id=1660213540]
+visible = false
 script = ExtResource("15_ivgg2")
 metadata/_edit_group_ = true
 
