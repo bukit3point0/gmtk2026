@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dj30d0hgnscu5" path="res://scripts/thermometer.gd" id="5_p57ef"]
 [ext_resource type="Texture2D" uid="uid://clvbjgfe4252e" path="res://assets/mocks/thermometer_empty.png" id="6_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://c4pfidxh07lfa" path="res://scenes/pause_menu.tscn" id="9_0tnpc"]
+[ext_resource type="Script" uid="uid://d00itm13ksven" path="res://scripts/table_item/lightswitch_board.gd" id="9_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://b4qhjw6ikhwnj" path="res://scenes/lightswitch_board.tscn" id="9_vtaks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6f8o3"]
@@ -591,6 +592,8 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn0t7"]
 size = Vector2(635, 406)
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_bhunq"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
 size = Vector2(684, 431)
 
@@ -600,6 +603,7 @@ script = ExtResource("1_p57ef")
 [node name="Level1" type="Node2D" parent="." unique_id=799543503]
 
 [node name="Background" parent="Level1" unique_id=2126150908 instance=ExtResource("1_uwrxv")]
+show_behind_parent = true
 
 [node name="Table" type="Node2D" parent="Level1" unique_id=1942911392]
 
@@ -627,7 +631,7 @@ position = Vector2(940, 1155.5)
 shape = SubResource("RectangleShape2D_2r0jt")
 
 [node name="Thermometer" type="CharacterBody2D" parent="Level1/Table" unique_id=1544112515]
-position = Vector2(86, 903)
+position = Vector2(75, 921)
 input_pickable = true
 script = ExtResource("5_p57ef")
 metadata/_edit_group_ = true
@@ -696,7 +700,7 @@ text = "1,000"
 fit_content = true
 
 [node name="InstructionBook" type="CharacterBody2D" parent="Level1/Table" unique_id=762449066]
-position = Vector2(965, 727)
+position = Vector2(1046, 651)
 input_pickable = true
 script = ExtResource("2_lnu2h")
 metadata/_edit_group_ = true
@@ -1224,14 +1228,22 @@ position = Vector2(0.5, 3)
 shape = SubResource("RectangleShape2D_sn0t7")
 metadata/_edit_lock_ = true
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Level1/Table" unique_id=319225547]
-position = Vector2(144.99998, 450.99997)
+[node name="LightswitchBoard" type="CharacterBody2D" parent="Level1/Table" unique_id=319225547]
+position = Vector2(21.000023, 402.99997)
 scale = Vector2(0.8, 0.8)
+input_pickable = true
+script = ExtResource("9_kvpfn")
 metadata/_edit_group_ = true
 
-[node name="Node2D" parent="Level1/Table/CharacterBody2D" unique_id=1007271350 instance=ExtResource("9_vtaks")]
+[node name="Sprite2D" type="Sprite2D" parent="Level1/Table/LightswitchBoard" unique_id=1686555981]
+visible = false
+position = Vector2(341.87497, 215.62508)
+scale = Vector2(683.75, 431.25006)
+texture = SubResource("CanvasTexture_bhunq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/Table/CharacterBody2D" unique_id=2138706299]
+[node name="BulbsAndSwitches" parent="Level1/Table/LightswitchBoard" unique_id=1007271350 instance=ExtResource("9_vtaks")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/Table/LightswitchBoard" unique_id=2138706299]
 position = Vector2(342, 215.5)
 shape = SubResource("RectangleShape2D_bhunq")
 
@@ -1242,3 +1254,6 @@ shape = SubResource("RectangleShape2D_bhunq")
 [connection signal="pressed" from="Level1/Table/InstructionBook/Pages/Thermometer/Tab1Button" to="Level1/Table/InstructionBook" method="_on_tab_1_button_pressed"]
 [connection signal="pressed" from="Level1/Table/InstructionBook/Pages/Cody1/Tab2Button" to="Level1/Table/InstructionBook" method="_on_tab_2_button_pressed"]
 [connection signal="pressed" from="Level1/Table/InstructionBook/Pages/Cody2/Tab3Button" to="Level1/Table/InstructionBook" method="_on_tab_3_button_pressed"]
+[connection signal="input_event" from="Level1/Table/LightswitchBoard" to="Level1/Table/LightswitchBoard" method="_on_lightswitch_input_event"]
+[connection signal="lightswitch_drag_signal" from="Level1/Table/LightswitchBoard" to="Level1/Table/LightswitchBoard" method="_on_lightswitch_drag_signal"]
+[connection signal="mouse_entered" from="Level1/Table/LightswitchBoard" to="Level1/Table/LightswitchBoard" method="_on_mouse_entered"]
