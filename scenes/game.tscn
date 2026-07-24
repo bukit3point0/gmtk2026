@@ -534,8 +534,6 @@ script = ExtResource("2_lnu2h")
 position = Vector2(-2, -7)
 sprite_frames = SubResource("SpriteFrames_bhunq")
 animation = &"open_book"
-frame = 3
-frame_progress = 0.41941753
 
 [node name="Pages" type="Node2D" parent="Level1/Table/InstructionBook" unique_id=714027308]
 
@@ -844,7 +842,7 @@ size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 
-[node name="Tab1Animation" type="AnimatedSprite2D" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=1192924990]
+[node name="Tab2Animation" type="AnimatedSprite2D" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=1192924990]
 position = Vector2(255, -103)
 sprite_frames = SubResource("SpriteFrames_riqys")
 animation = &"open_tab"
@@ -1007,7 +1005,7 @@ size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 
-[node name="Tab1Animation" type="AnimatedSprite2D" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=617707095]
+[node name="Tab3Animation" type="AnimatedSprite2D" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=617707095]
 position = Vector2(255, -73)
 sprite_frames = SubResource("SpriteFrames_riqys")
 animation = &"open_tab"
@@ -1037,3 +1035,5 @@ metadata/_edit_lock_ = true
 [connection signal="input_event" from="Level1/Table/Thermometer" to="Level1/Table/Thermometer" method="_on_thermometer_input_event"]
 [connection signal="input_event" from="Level1/Table/InstructionBook" to="Level1/Table/InstructionBook" method="_on_instruction_book_input_event"]
 [connection signal="pressed" from="Level1/Table/InstructionBook/Pages/Thermometer/Button" to="Level1/Table/InstructionBook" method="_on_tab_1_button_pressed"]
+[connection signal="pressed" from="Level1/Table/InstructionBook/Pages/Cody1/Button" to="Level1/Table/InstructionBook" method="_on_tab_2_button_pressed"]
+[connection signal="pressed" from="Level1/Table/InstructionBook/Pages/Cody2/Button" to="Level1/Table/InstructionBook" method="_on_tab_3_button_pressed"]
