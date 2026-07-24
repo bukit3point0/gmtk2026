@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
 @onready var tab_1_animation: AnimatedSprite2D = $Pages/Thermometer/Tab1Animation
-@onready var tab_1_animation_player: AnimationPlayer = $Pages/Thermometer/AnimationPlayer
+@onready var tab_1_animation_player: AnimationPlayer = $Pages/Thermometer/Tab1AnimationPlayer
 @onready var tab_2_animation: AnimatedSprite2D = $Pages/Cody1/Tab2Animation
-@onready var tab_2_animation_player: AnimationPlayer = $Pages/Cody1/AnimationPlayer
+@onready var tab_2_animation_player: AnimationPlayer = $Pages/Cody1/Tab2AnimationPlayer
 @onready var tab_3_animation: AnimatedSprite2D = $Pages/Cody2/Tab3Animation
-@onready var tab_3_animation_player: AnimationPlayer = $Pages/Cody2/AnimationPlayer
+@onready var tab_3_animation_player: AnimationPlayer = $Pages/Cody2/Tab3AnimationPlayer
 @onready var pages: Node2D = $Pages
 
 var instruction_book_dragging = false
