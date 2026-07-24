@@ -9,10 +9,10 @@ scale = Vector2(3.3, 4.63)
 texture = ExtResource("1_mskvo")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=862810031]
-offset_left = -197.0
-offset_top = -281.0
-offset_right = 201.0
-offset_bottom = 287.0
+offset_left = -94.0
+offset_top = -270.0
+offset_right = 304.0
+offset_bottom = 298.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 20
