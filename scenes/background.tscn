@@ -21,7 +21,7 @@
 [ext_resource type="Script" uid="uid://dcqkm34267kvf" path="res://scripts/player_lives.gd" id="15_ivgg2"]
 [ext_resource type="Texture2D" uid="uid://d3th7nm1kllde" path="res://assets/images/player_life.png" id="16_r4ipc"]
 [ext_resource type="Texture2D" uid="uid://dxu8ahg5x2ca2" path="res://assets/mocks/metal plate.png" id="17_r4ipc"]
-[ext_resource type="Texture2D" uid="uid://bf12x55o2xloh" path="res://assets/images/settings [#1491].png" id="22_iquee"]
+[ext_resource type="Texture2D" uid="uid://bf12x55o2xloh" path="res://assets/images/settings.png" id="22_iquee"]
 
 [node name="Background" type="Node2D" unique_id=2126150908]
 script = ExtResource("1_fligg")
