@@ -17,10 +17,7 @@ var tab_2_opened = false
 var tab_3_opened = false
 var tab_4_opened = false
 
-signal instruction_book_drag_signal
-
 func _ready() -> void:
-	connect("instruction_book_drag_signal", Callable(self, "_set_instruction_book_drag"))
 	play_tab_1()
 	close_other_tabs()
 
@@ -36,9 +33,9 @@ func _set_instruction_book_drag() -> void:
 func _on_instruction_book_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			emit_signal("instruction_book_drag_signal")
+			instruction_book_dragging = true
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
-			emit_signal("instruction_book_drag_signal")
+			instruction_book_dragging = false
 	elif event is InputEventScreenTouch:
 		if event.pressed and event.get_index() == 0:
 			self.position = event.get_position()
