@@ -32,8 +32,14 @@ func countdown() -> void:
 	while level_time > 0 and !pause_countdown:
 		level_time -= 1
 		update_time_on_clock()
+		if level_time == 149:
+			$OfficeAmbience.play()
+			
 		if level_time <= 10:
 			launch_countdown.show_countdown_timer(level_time)
+		
+		if level_time == 10:
+			$Countdown.play()
 		
 		if get_tree() != null:
 			await get_tree().create_timer(1.0).timeout

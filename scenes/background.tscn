@@ -13,7 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://bcxenai86xxb3" path="res://assets/images/clock.png" id="9_8efq7"]
 [ext_resource type="FontFile" uid="uid://bmf2rg5bx3vti" path="res://assets/fonts/ShareTechMono.ttf" id="10_8efq7"]
 [ext_resource type="Script" uid="uid://5srp6jc65v2g" path="res://scripts/launch_countdown.gd" id="10_da6cc"]
+[ext_resource type="AudioStream" uid="uid://cv1b5085r2ok5" path="res://assets/audio/Countdown.mp3" id="12_mhjnw"]
 [ext_resource type="Script" uid="uid://bqiy3hfjuutns" path="res://scripts/choice_buttons.gd" id="12_r2thq"]
+[ext_resource type="AudioStream" uid="uid://c0fc1tpfnog8d" path="res://assets/audio/OfficeAmbience.mp3" id="13_0y13x"]
 [ext_resource type="Texture2D" uid="uid://cw6gutjdu28ml" path="res://assets/images/approve_button.png" id="14_5xduy"]
 [ext_resource type="Texture2D" uid="uid://dd2cvhfsq4k23" path="res://assets/images/reject_button.png" id="15_fligg"]
 [ext_resource type="Script" uid="uid://dcqkm34267kvf" path="res://scripts/player_lives.gd" id="15_ivgg2"]
@@ -121,6 +123,12 @@ theme_override_font_sizes/normal_font_size = 46
 text = "13:00"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Countdown" type="AudioStreamPlayer2D" parent="TextureRect/Clock" unique_id=440895168]
+stream = ExtResource("12_mhjnw")
+
+[node name="OfficeAmbience" type="AudioStreamPlayer2D" parent="TextureRect/Clock" unique_id=2135912476]
+stream = ExtResource("13_0y13x")
 
 [node name="LaunchCountdown" type="Node2D" parent="TextureRect" unique_id=685275471]
 visible = false
