@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 @onready var tab_1_animation: AnimatedSprite2D = $Pages/Thermometer/Tab1Animation
 @onready var tab_1_animation_player: AnimationPlayer = $Pages/Thermometer/Tab1AnimationPlayer
-@onready var tab_2_animation: AnimatedSprite2D = $Pages/Cody1/Tab2Animation
-@onready var tab_2_animation_player: AnimationPlayer = $Pages/Cody1/Tab2AnimationPlayer
+@onready var tab_2_animation: AnimatedSprite2D = $Pages/ReactivityChart/Tab2Animation
+@onready var tab_2_animation_player: AnimationPlayer = $Pages/ReactivityChart/Tab2AnimationPlayer
 @onready var tab_3_animation: AnimatedSprite2D = $Pages/Cody2/Tab3Animation
 @onready var tab_3_animation_player: AnimationPlayer = $Pages/Cody2/Tab3AnimationPlayer
 @onready var tab_4_animation: AnimatedSprite2D = $Pages/Lightbulbs/Tab4Animation
@@ -18,6 +18,9 @@ var tab_3_opened = false
 var tab_4_opened = false
 
 func _ready() -> void:
+	for child in pages.get_children():
+		child.visible = true
+		
 	play_tab_1()
 	close_other_tabs()
 
@@ -110,47 +113,31 @@ func play_tab_1(open: bool = true) -> void:
 	tab_1_opened = open
 
 func play_tab_2(open: bool = true) -> void:
-	var page = pages.get_node("Cody1")
-	var title = page.get_node("PageTitle")
-	var left_text = page.get_node("LeftText")
-	var book_image = page.get_node("BookImage")
-	var instructions = page.get_node("Instructions")
-	title.visible = false
-	left_text.visible = false
-	book_image.visible = false
-	instructions.visible = false
+	var page = pages.get_node("ReactivityChart")
+	var contents = page.get_node("Contents")
+	
 	if tab_2_opened and !open:
 		tab_2_animation.play("close_tab")
 		tab_2_animation_player.play("close_tab")
 	elif !tab_2_opened and open:
 		tab_2_animation.play("open_tab")
 		tab_2_animation_player.play("open_tab")
-	title.visible = open
-	left_text.visible = open
-	book_image.visible = open
-	instructions.visible = open
+	
+	contents.visible = open
 	tab_2_opened = open
 
 func play_tab_3(open: bool = true) -> void:
 	var page = pages.get_node("Cody2")
-	var title = page.get_node("PageTitle")
-	var left_text = page.get_node("LeftText")
-	var book_image = page.get_node("BookImage")
-	var instructions = page.get_node("Instructions")
-	title.visible = false
-	left_text.visible = false
-	book_image.visible = false
-	instructions.visible = false
+	var contents = page.get_node("Contents")
+	
 	if tab_3_opened and !open:
 		tab_3_animation.play("close_tab")
 		tab_3_animation_player.play("close_tab")
 	elif !tab_3_opened and open:
 		tab_3_animation.play("open_tab")
 		tab_3_animation_player.play("open_tab")
-	title.visible = open
-	left_text.visible = open
-	book_image.visible = open
-	instructions.visible = open
+	
+	contents.visible = open
 	tab_3_opened = open
 
 func play_tab_4(open: bool = true) -> void:
