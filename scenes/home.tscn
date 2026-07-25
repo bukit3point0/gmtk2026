@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bo2hvopdyrqm4" path="res://scenes/settings_button.tscn" id="2_w18ys"]
 [ext_resource type="PackedScene" uid="uid://cefb85vh8t844" path="res://scenes/settings.tscn" id="3_w18ys"]
 [ext_resource type="AudioStream" uid="uid://c7qj5punbrc50" path="res://assets/audio/GameJamTitleMusic.mp3" id="4_reixx"]
+[ext_resource type="Script" uid="uid://frsvf1py67cb" path="res://scripts/fullscreen_button.gd" id="6_yxilm"]
 
 [node name="Home" type="Node2D" unique_id=262647136]
 script = ExtResource("1_uhids")
@@ -56,6 +57,19 @@ volume_db = 10.0
 autoplay = true
 bus = &"Music"
 
+[node name="CheckButton" type="Node2D" parent="." unique_id=1987508080]
+script = ExtResource("6_yxilm")
+
+[node name="CheckButton" type="Button" parent="CheckButton" unique_id=1882831136]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 201.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 28
+text = "Fullscreen"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PlayGameButton" to="MarginContainer/VBoxContainer" method="_on_play_game_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SettingsButton" to="MarginContainer/VBoxContainer" method="_on_settings_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="MarginContainer/VBoxContainer" method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CheckButton/CheckButton" to="CheckButton" method="_on_check_button_pressed"]
+[connection signal="toggled" from="CheckButton/CheckButton" to="CheckButton" method="_on_check_button_toggled"]
