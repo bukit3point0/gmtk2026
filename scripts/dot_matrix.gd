@@ -20,7 +20,8 @@ func display_word_by_word() -> void:
 	rich_text_label.text = ""
 	for word in words:
 		rich_text_label.text += word + " "
-		await get_tree().create_timer(0.2).timeout
+		if get_tree() != null:
+			await get_tree().create_timer(0.2).timeout
 	is_printing_words = false
 	rich_text_label.text += "\n" # line break for the next set of text
 

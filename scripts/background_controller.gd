@@ -5,3 +5,6 @@ class_name Background
 
 func stop_clock() -> void:
 	clock.stop_clock()
+
+func trigger_final_countdown():
+	clock.set_time(5)

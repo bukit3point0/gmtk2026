@@ -18,12 +18,18 @@ func load_game() -> void:
 	level.connect("_win_level", _on_win_level)
 	level.connect("_fail_level", _on_fail_level)
 	current_level = level
+
 	remove_child($Home)
 
 func go_to_transition(win: bool):
 	remove_child(current_level)
+
 	var transition = TRANSITION.instantiate()
 	add_child(transition)
+	if win:
+		transition.show_win()
+	else:
+		transition.show_fail()
 
 func _on_win_level(_condition: int):
 	go_to_transition(true)

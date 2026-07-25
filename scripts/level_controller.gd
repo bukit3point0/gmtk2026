@@ -6,23 +6,39 @@ signal _fail_level(condition: int)
 
 @onready var background: Background = %Background
 
+var level_ended: bool = false
+
 func _ready() -> void:
 	EventBus.connect("_abort_launch", _on_abort_launch)
 	EventBus.connect("_confirm_launch", _on_confirm_launch)
+	EventBus.connect("_countdown_ended", _on_countdown_ended)
 
 func _on_abort_launch() -> void:
+	if level_ended:
+		return #ignore further input
+
 	print("Launch aborted")
 	background.stop_clock()
 
 	var condition = rocket_condition()
-	if condition == 0:
+	if condition != 0:
 		_win_level.emit(condition)
 	else:
 		_fail_level.emit(condition)
 
 func _on_confirm_launch() -> void:
+	if level_ended:
+		return #ignore further input
+	
 	print("Launch confirmed")
-	breakpoint
+	background.trigger_final_countdown()
+
+func _on_countdown_ended():
+	var condition = rocket_condition()
+	if condition == 0:
+		_win_level.emit(condition)
+	else:
+		_fail_level.emit(condition)
 
 func rocket_condition() -> int:
 	var condition: int = 0
