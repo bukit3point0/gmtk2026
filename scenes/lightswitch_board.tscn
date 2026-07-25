@@ -61,60 +61,56 @@ flat = true
 layout_mode = 2
 texture = ExtResource("2_wllbv")
 expand_mode = 5
-metadata/_edit_group_ = true
 
-[node name="SwitchButton" type="Button" parent="GridContainer/Switch2" unique_id=679798178]
+[node name="SwitchButton2" type="Button" parent="GridContainer/Switch2" unique_id=1443879885]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 71.0
-offset_right = 77.0
-offset_bottom = 143.0
+offset_left = 45.0
+offset_top = 74.0
+offset_right = 76.0
+offset_bottom = 146.0
 flat = true
 
 [node name="Switch3" type="TextureRect" parent="GridContainer" unique_id=1538411182]
 layout_mode = 2
 texture = ExtResource("2_wllbv")
 expand_mode = 5
-metadata/_edit_group_ = true
 
-[node name="SwitchButton" type="Button" parent="GridContainer/Switch3" unique_id=19564232]
+[node name="SwitchButton3" type="Button" parent="GridContainer/Switch3" unique_id=758567623]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 71.0
-offset_right = 77.0
-offset_bottom = 143.0
+offset_left = 47.0
+offset_top = 70.0
+offset_right = 78.0
+offset_bottom = 142.0
 flat = true
 
 [node name="Switch4" type="TextureRect" parent="GridContainer" unique_id=1468906553]
 layout_mode = 2
 texture = ExtResource("2_wllbv")
 expand_mode = 5
-metadata/_edit_group_ = true
 
-[node name="SwitchButton" type="Button" parent="GridContainer/Switch4" unique_id=3172415]
+[node name="SwitchButton4" type="Button" parent="GridContainer/Switch4" unique_id=488198154]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 71.0
-offset_right = 77.0
-offset_bottom = 143.0
+offset_left = 45.0
+offset_top = 72.0
+offset_right = 76.0
+offset_bottom = 144.0
 flat = true
 
 [node name="Switch5" type="TextureRect" parent="GridContainer" unique_id=249968653]
 layout_mode = 2
 texture = ExtResource("2_wllbv")
 expand_mode = 5
-metadata/_edit_group_ = true
 
-[node name="SwitchButton" type="Button" parent="GridContainer/Switch5" unique_id=1388802579]
+[node name="SwitchButton5" type="Button" parent="GridContainer/Switch5" unique_id=664099086]
 layout_mode = 0
 offset_left = 46.0
-offset_top = 71.0
+offset_top = 70.0
 offset_right = 77.0
-offset_bottom = 143.0
+offset_bottom = 142.0
 flat = true
 
-[connection signal="pressed" from="GridContainer/Switch/SwitchButton" to="." method="_on_switch_1_pressed"]
-[connection signal="pressed" from="GridContainer/Switch2/SwitchButton" to="." method="_on_switch_2_pressed"]
-[connection signal="pressed" from="GridContainer/Switch3/SwitchButton" to="." method="_on_switch_3_pressed"]
-[connection signal="pressed" from="GridContainer/Switch4/SwitchButton" to="." method="_on_switch_4_pressed"]
-[connection signal="pressed" from="GridContainer/Switch5/SwitchButton" to="." method="_on_switch_5_pressed"]
+[connection signal="pressed" from="GridContainer/Switch/SwitchButton" to="." method="_on_switch_button_pressed" binds= [0]]
+[connection signal="pressed" from="GridContainer/Switch2/SwitchButton2" to="." method="_on_switch_button_pressed" binds= [1]]
+[connection signal="pressed" from="GridContainer/Switch3/SwitchButton3" to="." method="_on_switch_button_pressed" binds= [2]]
+[connection signal="pressed" from="GridContainer/Switch4/SwitchButton4" to="." method="_on_switch_button_pressed" binds= [3]]
+[connection signal="pressed" from="GridContainer/Switch5/SwitchButton5" to="." method="_on_switch_button_pressed" binds= [4]]
