@@ -1,4 +1,5 @@
 extends Node2D
+class_name Clock
 
 var level_time = 300 # 5m in seconds as a default for now
 
@@ -32,5 +33,8 @@ func set_time_on_clock() -> void:
 	else:
 		seconds = str(seconds)
 	clock_time.text = minutes + ":" + seconds
+
+func stop_clock() -> void:
+	pause_countdown = true
 	
 	

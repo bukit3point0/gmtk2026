@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://bsd2ufd7fim7q"
 
 GlobalVariables="*uid://bxvpu7p7cv0xj"
 SaveLoad="*uid://yynx3lqauper"
+EventBus="*uid://dfbwyc0f7cf2g"
 
 [display]
 

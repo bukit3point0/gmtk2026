@@ -1,5 +1,18 @@
 extends Node2D
 
+@onready var background: Background = %Background
+
+func _ready() -> void:
+	EventBus.connect("_abort_launch", _on_abort_launch)
+	EventBus.connect("_confirm_launch", _on_confirm_launch)
+
+func _on_abort_launch() -> void:
+	print("Launch aborted")
+	background.stop_clock()
+
+func _on_confirm_launch() -> void:
+	print("Launch confirmed")
+
 func pause_trigger():
 	var clock_node = get_node("Level1/Background/TextureRect/Clock")
 	clock_node.pause_countdown = true
