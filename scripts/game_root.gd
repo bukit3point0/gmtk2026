@@ -2,7 +2,7 @@ extends Node2D
 
 var game_starting = false
 
-const GAME = preload("uid://crn0td2ubi874")
+const GAME = preload("uid://c3cc25nyiaeyd")
 const TRANSITION = preload("res://scenes/transition_screen.tscn")
 
 const LEVEL_2 = preload("res://scenes/level2.tscn")

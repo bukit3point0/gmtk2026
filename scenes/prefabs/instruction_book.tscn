@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://clvbjgfe4252e" path="res://assets/mocks/thermometer_empty.png" id="3_ev1xt"]
 [ext_resource type="Texture2D" uid="uid://bvq0yewxmio1m" path="res://assets/spritesheets/book_tab.png" id="4_nvh1c"]
 [ext_resource type="Texture2D" uid="uid://den8akhwdtr4x" path="res://assets/images/lit_lightbulb.png" id="5_4j6de"]
+[ext_resource type="Script" uid="uid://bhl2f18swwpct" path="res://scripts/lightbulbs.gd" id="5_nvh1c"]
+[ext_resource type="Texture2D" path="res://assets/images/arrow_right [#336].png" id="7_4j6de"]
+[ext_resource type="Texture2D" uid="uid://q3x6qdjsxvbq" path="res://assets/images/arrow_left.png" id="8_6bl1r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
 atlas = ExtResource("2_q1o0x")
@@ -430,6 +433,117 @@ _data = {
 &"open_tab": SubResource("Animation_264po")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgjk3"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(192, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vdxj"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(160, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d55q"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(128, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oofih"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(96, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti8bi"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(64, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntaq6"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(32, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xma6x"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(0, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_542uw"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(0, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pvji"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(32, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3g45w"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(64, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vub0"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(96, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f25dc"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(128, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tifab"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(160, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpcqp"]
+atlas = ExtResource("4_nvh1c")
+region = Rect2(192, 0, 32, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ebppv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgjk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vdxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d55q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oofih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti8bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntaq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xma6x")
+}],
+"loop": 0,
+"name": &"close_tab",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_542uw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pvji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3g45w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vub0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f25dc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tifab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpcqp")
+}],
+"loop": 0,
+"name": &"open_tab",
+"speed": 14.0
+}]
+
 [sub_resource type="Animation" id="Animation_ca42v"]
 length = 0.001
 tracks/0/type = "value"
@@ -477,7 +591,7 @@ tracks/0/keys = {
 "values": [Vector2(324.25, -86), Vector2(336.25, -86)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_37s47"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_su3bg"]
 _data = {
 &"RESET": SubResource("Animation_ca42v"),
 &"close_tab": SubResource("Animation_1kice"),
@@ -677,6 +791,7 @@ texture = ExtResource("3_ev1xt")
 libraries/ = SubResource("AnimationLibrary_dinhu")
 
 [node name="ReactivityChart" type="Node2D" parent="Pages" unique_id=428925323]
+visible = false
 
 [node name="Contents" type="Node2D" parent="Pages/ReactivityChart" unique_id=772998569]
 
@@ -918,15 +1033,18 @@ texture = ExtResource("3_ev1xt")
 [node name="Tab3AnimationPlayer" type="AnimationPlayer" parent="Pages/Cody2" unique_id=613816853]
 libraries/ = SubResource("AnimationLibrary_1kice")
 
-[node name="Lightbulbs" type="Node2D" parent="Pages" unique_id=1386665907]
-visible = false
+[node name="Lightbulbs" type="Node2D" parent="Pages" unique_id=785265382]
+script = ExtResource("5_nvh1c")
 metadata/_edit_lock_ = true
 
-[node name="PageTitle" type="RichTextLabel" parent="Pages/Lightbulbs" unique_id=857616981]
+[node name="Page1" type="Node2D" parent="Pages/Lightbulbs" unique_id=968897906]
+visible = false
+
+[node name="PageTitle" type="RichTextLabel" parent="Pages/Lightbulbs/Page1" unique_id=713024890]
 offset_left = -297.0
-offset_top = -95.0
+offset_top = -83.0
 offset_right = -14.0
-offset_bottom = -72.0
+offset_bottom = -60.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
@@ -934,23 +1052,535 @@ text = "Lightbulbs"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="LeftText" type="RichTextLabel" parent="Pages/Lightbulbs" unique_id=1354250928]
+[node name="LeftText" type="RichTextLabel" parent="Pages/Lightbulbs/Page1" unique_id=18612673]
 offset_left = -297.0
-offset_top = -72.0
+offset_top = -58.0
 offset_right = -14.0
 offset_bottom = 181.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 14
-text = "The thermometer gauge holds the temperature of the hottest it got during testing, and is used to test the thermal protection system."
+theme_override_font_sizes/normal_font_size = 20
+text = "Did you know: astronauts can't see in the dark! These light bulbs need to be tested in a very specific way: in the order of the CEO's favorite numbers 1 - 5. Unfortunately, this changes based on what his favorite number was"
 
-[node name="BookImage" type="Sprite2D" parent="Pages/Lightbulbs" unique_id=36923799]
-position = Vector2(-170, -175)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_ev1xt")
+[node name="RightText" type="RichTextLabel" parent="Pages/Lightbulbs/Page1" unique_id=250515400]
+offset_left = 15.0
+offset_top = -179.0
+offset_right = 299.0
+offset_bottom = 181.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "on the day the rocket was created. Use the chart to map out in what order to flip the switches.
+
+If the sum of the numbers in the rocket ID is even, your starting order is \"12345\".
+
+If the sum of the numbers in the rocket ID is odd, your starting order is \"54321\"."
+
+[node name="BookImage" type="Sprite2D" parent="Pages/Lightbulbs/Page1" unique_id=1049632705]
+position = Vector2(-183, -175)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_4j6de")
 centered = false
 
-[node name="Instructions" type="VBoxContainer" parent="Pages/Lightbulbs" unique_id=207543498]
+[node name="NextPageButton" type="Button" parent="Pages/Lightbulbs/Page1" unique_id=1947455053]
+offset_left = 174.0
+offset_top = 127.0
+offset_right = 294.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 20
+text = "Next Page"
+icon = ExtResource("7_4j6de")
+icon_alignment = 2
+expand_icon = true
+
+[node name="Page2" type="Node2D" parent="Pages/Lightbulbs" unique_id=430351340]
+
+[node name="LeftPage" type="GridContainer" parent="Pages/Lightbulbs/Page2" unique_id=2007138734]
+offset_left = -297.0
+offset_top = -179.0
+offset_right = -14.0
+offset_bottom = 181.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="EmtpyContainer" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=1436771402]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+
+[node name="NumberOrder1" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=1823716439]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/NumberOrder1" unique_id=917268035]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Pos1"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketColor" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=289245421]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfRocketColor" unique_id=499945948]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_right = 212.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "If the rocket is [color]:"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketInstruction1" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=1131853804]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfRocketInstruction1" unique_id=373854143]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_right = 71.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos2"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfPlate1Letter" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=2036373233]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfPlate1Letter" unique_id=99309529]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_right = 212.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "If the plate has 1 letter:"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfPlate1LetterInstruction1" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=221908030]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfPlate1LetterInstruction1" unique_id=469425081]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_right = 71.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos4"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfLowThermometer" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=259124300]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfLowThermometer" unique_id=1992094355]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_right = 212.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "If the themomter reads under 2,000°C:"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfThermometerInstruction1" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=1202582315]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfThermometerInstruction1" unique_id=1657352178]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_right = 71.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos5"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightPage" type="GridContainer" parent="Pages/Lightbulbs/Page2" unique_id=1286254008]
+offset_left = 15.0
+offset_top = -179.0
+offset_right = 299.0
+offset_bottom = 181.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 4
+
+[node name="NumberOrder2" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=1810571875]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/NumberOrder2" unique_id=1652179655]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Pos2"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumberOrder3" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=28180671]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/NumberOrder3" unique_id=275627960]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Pos3"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumberOrder4" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=80652187]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/NumberOrder4" unique_id=1197645283]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Pos4"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumberOrder5" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=414266453]
+custom_minimum_size = Vector2(70, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/NumberOrder5" unique_id=1806463710]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Pos5"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketInstruction2" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=769926432]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction2" unique_id=1006680416]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos1"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketInstruction3" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=141753877]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction3" unique_id=1145827638]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Keep"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketInstruction4" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=328397256]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction4" unique_id=1877893412]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Keep"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketInstruction5" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=243938251]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction5" unique_id=1863755142]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Keep"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfPlate1LetterInstruction2" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=361243327]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction2" unique_id=1539068107]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Keep"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfPlate1LetterInstruction3" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=1074778719]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction3" unique_id=1071297730]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos1"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfPlate1LetterInstruction4" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=613496594]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction4" unique_id=851512441]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos3"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfPlate1LetterInstruction5" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=380321530]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction5" unique_id=165824119]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Keep"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfThermometerInstruction2" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=1593302938]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction2" unique_id=262111971]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos3"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfThermometerInstruction3" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=1626384265]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction3" unique_id=269059376]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos4"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfThermometerInstruction4" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=334695229]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction4" unique_id=744199920]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos1"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfThermometerInstruction5" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=965156952]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction5" unique_id=299807250]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos2"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextPageButton" type="Button" parent="Pages/Lightbulbs/Page2" unique_id=212352073]
+offset_left = -293.0
+offset_top = 127.0
+offset_right = -173.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 20
+text = "Last Page"
+icon = ExtResource("8_6bl1r")
+expand_icon = true
+
+[node name="Instructions" type="VBoxContainer" parent="Pages/Lightbulbs" unique_id=1248383558]
+visible = false
 offset_left = 15.0
 offset_top = -179.0
 offset_right = 298.0
@@ -958,137 +1588,25 @@ offset_bottom = 181.0
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Headers" type="HBoxContainer" parent="Pages/Lightbulbs/Instructions" unique_id=1189258445]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Lightbulbs/Instructions/Headers" unique_id=1942559436]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "If the thermometer reads..."
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Instructions/Headers" unique_id=384767188]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Do..."
-fit_content = true
-vertical_alignment = 2
-
-[node name="ColorRect" type="ColorRect" parent="Pages/Lightbulbs/Instructions" unique_id=648118520]
-custom_minimum_size = Vector2(0, 1)
-layout_mode = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Instruction1" type="HBoxContainer" parent="Pages/Lightbulbs/Instructions" unique_id=422983778]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Lightbulbs/Instructions/Instruction1" unique_id=609587993]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "0°C - 999°C"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Instructions/Instruction1" unique_id=1750345748]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Abort mission"
-fit_content = true
-
-[node name="Instruction2" type="HBoxContainer" parent="Pages/Lightbulbs/Instructions" unique_id=118997451]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Lightbulbs/Instructions/Instruction2" unique_id=1692831162]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "1,000°C - 1,249°C"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Instructions/Instruction2" unique_id=1181520821]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Hold until timer ends in 3"
-fit_content = true
-
-[node name="Instruction3" type="HBoxContainer" parent="Pages/Lightbulbs/Instructions" unique_id=1298476954]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Lightbulbs/Instructions/Instruction3" unique_id=1074484716]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "1,250°C - 2,499°C"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Instructions/Instruction3" unique_id=1993405030]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Thermometer cleared"
-fit_content = true
-
-[node name="Instruction4" type="HBoxContainer" parent="Pages/Lightbulbs/Instructions" unique_id=1693165197]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Lightbulbs/Instructions/Instruction4" unique_id=620634456]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "2,500°C - ???"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Instructions/Instruction4" unique_id=570012076]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Abort mission"
-fit_content = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Lightbulbs/Instructions" unique_id=1416645990]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 14
-
-[node name="Tab4Animation" type="AnimatedSprite2D" parent="Pages/Lightbulbs" unique_id=1101025623]
+[node name="Tab4Animation" type="AnimatedSprite2D" parent="Pages/Lightbulbs" unique_id=2120898417]
 position = Vector2(327, -86)
-sprite_frames = SubResource("SpriteFrames_riqys")
+sprite_frames = SubResource("SpriteFrames_ebppv")
 animation = &"open_tab"
 
-[node name="Tab4Button" type="Button" parent="Pages/Lightbulbs" unique_id=1123330422]
+[node name="Tab4Button" type="Button" parent="Pages/Lightbulbs" unique_id=450162732]
 offset_left = 311.0
 offset_top = -96.0
 offset_right = 343.0
 offset_bottom = -76.0
 flat = true
 
-[node name="Tab4Image" type="Sprite2D" parent="Pages/Lightbulbs" unique_id=751558360]
+[node name="Tab4Image" type="Sprite2D" parent="Pages/Lightbulbs" unique_id=887121680]
 position = Vector2(336.25, -86)
 scale = Vector2(0.017, 0.017)
 texture = ExtResource("5_4j6de")
 
-[node name="Tab4AnimationPlayer" type="AnimationPlayer" parent="Pages/Lightbulbs" unique_id=165214824]
-libraries/ = SubResource("AnimationLibrary_37s47")
+[node name="Tab4AnimationPlayer" type="AnimationPlayer" parent="Pages/Lightbulbs" unique_id=1642015572]
+libraries/ = SubResource("AnimationLibrary_su3bg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1828500977]
 visible = false
@@ -1102,4 +1620,4 @@ metadata/_edit_lock_ = true
 [connection signal="pressed" from="Pages/Thermometer/Tab1Button" to="." method="_on_tab_1_button_pressed"]
 [connection signal="pressed" from="Pages/ReactivityChart/Tab2Button" to="." method="_on_tab_2_button_pressed"]
 [connection signal="pressed" from="Pages/Cody2/Tab3Button" to="." method="_on_tab_3_button_pressed"]
-[connection signal="pressed" from="Pages/Lightbulbs/Tab4Button" to="." method="_on_tab_4_button_pressed"]
+[connection signal="pressed" from="Pages/Lightbulbs/Page1/NextPageButton" to="Pages/Lightbulbs" method="_on_next_page_from_1_button_pressed"]

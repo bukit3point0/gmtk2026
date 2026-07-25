@@ -1,0 +1,434 @@
+[gd_scene format=3 uid="uid://b8lgao4rxe2oh"]
+
+[ext_resource type="Texture2D" uid="uid://cxnm0528wouxf" path="res://assets/images/wire_box.png" id="1_v1hhp"]
+[ext_resource type="Texture2D" uid="uid://d1slipdxbodvd" path="res://assets/images/wire_one_long.png" id="2_0sh31"]
+[ext_resource type="Texture2D" uid="uid://cllcbgl8y7mjf" path="res://assets/images/wire_two_long.png" id="3_escsa"]
+[ext_resource type="Texture2D" uid="uid://c5dhvoxkndj65" path="res://assets/images/wire_three_long.png" id="4_tgln5"]
+[ext_resource type="Texture2D" uid="uid://d2sj7dr523rq0" path="res://assets/images/wire_four_long.png" id="5_i6uub"]
+[ext_resource type="Texture2D" uid="uid://cl4y4orp1bvay" path="res://assets/images/wire_five_long.png" id="6_1od7k"]
+[ext_resource type="Texture2D" uid="uid://cgxpun558t5wk" path="res://assets/images/wire_six_long.png" id="7_pn5va"]
+
+[node name="Wires" type="Node2D" unique_id=1598723071]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=135833443]
+offset_right = 46.0
+offset_bottom = 75.0
+texture = ExtResource("1_v1hhp")
+
+[node name="Wire1Red" type="Node2D" parent="." unique_id=854924099]
+
+[node name="WireLength1" type="Button" parent="Wire1Red" unique_id=690617654]
+visible = false
+modulate = Color(1, 0, 0, 1)
+offset_left = 18.0
+offset_top = 10.0
+offset_right = 259.0
+offset_bottom = 48.0
+icon = ExtResource("2_0sh31")
+flat = true
+
+[node name="WireLength2" type="Button" parent="Wire1Red" unique_id=1872928833]
+visible = false
+modulate = Color(1, 0, 0, 1)
+offset_left = 21.0
+offset_top = 17.0
+offset_right = 255.0
+offset_bottom = 114.0
+icon = ExtResource("3_escsa")
+flat = true
+
+[node name="WireLength3" type="Button" parent="Wire1Red" unique_id=1479154108]
+visible = false
+modulate = Color(1, 0, 0, 1)
+offset_left = 22.0
+offset_top = 21.0
+offset_right = 253.0
+offset_bottom = 179.0
+icon = ExtResource("4_tgln5")
+flat = true
+
+[node name="WireLength4" type="Button" parent="Wire1Red" unique_id=1762167887]
+visible = false
+modulate = Color(1, 0, 0, 1)
+offset_left = 21.0
+offset_top = 17.0
+offset_right = 252.0
+offset_bottom = 262.0
+icon = ExtResource("5_i6uub")
+flat = true
+
+[node name="WireLength5" type="Button" parent="Wire1Red" unique_id=1404707636]
+visible = false
+modulate = Color(1, 0, 0, 1)
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 257.0
+offset_bottom = 320.0
+icon = ExtResource("6_1od7k")
+flat = true
+
+[node name="WireLength6" type="Button" parent="Wire1Red" unique_id=977359359]
+visible = false
+modulate = Color(1, 0, 0, 1)
+offset_left = 23.0
+offset_top = 22.0
+offset_right = 253.0
+offset_bottom = 373.0
+icon = ExtResource("7_pn5va")
+flat = true
+
+[node name="Wire2Blue" type="Node2D" parent="." unique_id=824027222]
+
+[node name="WireLength1" type="Button" parent="Wire2Blue" unique_id=210110593]
+visible = false
+modulate = Color(0, 0, 1, 1)
+offset_left = 15.0
+offset_top = 77.0
+offset_right = 249.00002
+offset_bottom = 174.0
+rotation = -0.54105204
+icon = ExtResource("3_escsa")
+flat = true
+
+[node name="WireLength2" type="Button" parent="Wire2Blue" unique_id=1598040943]
+visible = false
+modulate = Color(0, 0, 1, 1)
+offset_left = 17.0
+offset_top = 65.0
+offset_right = 258.0
+offset_bottom = 103.0
+rotation = 0.05235988
+icon = ExtResource("2_0sh31")
+flat = true
+
+[node name="WireLength3" type="Button" parent="Wire2Blue" unique_id=408579831]
+visible = false
+modulate = Color(0, 0, 1, 1)
+offset_left = 26.0
+offset_top = 76.99999
+offset_right = 260.0
+offset_bottom = 174.0
+rotation = 0.05235988
+icon = ExtResource("3_escsa")
+flat = true
+
+[node name="WireLength4" type="Button" parent="Wire2Blue" unique_id=1524091369]
+visible = false
+modulate = Color(0, 0, 1, 1)
+offset_left = 22.0
+offset_top = 77.0
+offset_right = 253.0
+offset_bottom = 235.0
+rotation = 0.05235988
+scale = Vector2(1.05, 1.05)
+icon = ExtResource("4_tgln5")
+flat = true
+
+[node name="WireLength5" type="Button" parent="Wire2Blue" unique_id=1605858498]
+visible = false
+modulate = Color(0, 0, 1, 1)
+offset_left = 16.0
+offset_top = 73.0
+offset_right = 247.0
+offset_bottom = 318.0
+scale = Vector2(1.02, 1.02)
+icon = ExtResource("5_i6uub")
+flat = true
+
+[node name="WireLength6" type="Button" parent="Wire2Blue" unique_id=449371167]
+visible = false
+modulate = Color(0, 0, 1, 1)
+offset_left = 20.0
+offset_top = 69.0
+offset_right = 258.0
+offset_bottom = 371.0
+icon = ExtResource("6_1od7k")
+flat = true
+
+[node name="Wire1Yellow" type="Node2D" parent="." unique_id=586480422]
+
+[node name="WireLength1" type="Button" parent="Wire1Yellow" unique_id=1062180362]
+visible = false
+modulate = Color(1, 1, 0, 1)
+offset_left = 14.000003
+offset_top = 153.0
+offset_right = 245.0
+offset_bottom = 311.0
+rotation = -1.0646509
+icon = ExtResource("4_tgln5")
+flat = true
+
+[node name="WireLength2" type="Button" parent="Wire1Yellow" unique_id=1994689997]
+visible = false
+modulate = Color(1, 1, 0, 1)
+offset_left = 20.0
+offset_top = 143.0
+offset_right = 254.0
+offset_bottom = 240.0
+rotation = -0.54105204
+icon = ExtResource("3_escsa")
+flat = true
+
+[node name="WireLength3" type="Button" parent="Wire1Yellow" unique_id=1915089101]
+visible = false
+modulate = Color(1, 1, 0, 1)
+offset_left = 20.0
+offset_top = 136.0
+offset_right = 261.0
+offset_bottom = 174.0
+rotation = 0.05235988
+icon = ExtResource("2_0sh31")
+flat = true
+
+[node name="WireLength4" type="Button" parent="Wire1Yellow" unique_id=509881107]
+visible = false
+modulate = Color(1, 1, 0, 1)
+offset_left = 24.999998
+offset_top = 146.99998
+offset_right = 259.0
+offset_bottom = 243.99998
+rotation = 0.06981317
+icon = ExtResource("3_escsa")
+flat = true
+
+[node name="WireLength5" type="Button" parent="Wire1Yellow" unique_id=1338092093]
+visible = false
+modulate = Color(1, 1, 0, 1)
+offset_left = 20.99997
+offset_top = 150.0
+offset_right = 251.99997
+offset_bottom = 308.0
+rotation = 0.017453292
+scale = Vector2(1.02, 1.02)
+icon = ExtResource("4_tgln5")
+flat = true
+
+[node name="WireLength6" type="Button" parent="Wire1Yellow" unique_id=1915219449]
+visible = false
+modulate = Color(1, 1, 0, 1)
+offset_left = 15.0
+offset_top = 142.99998
+offset_right = 246.0
+offset_bottom = 388.0
+rotation = -0.05235988
+icon = ExtResource("5_i6uub")
+flat = true
+
+[node name="Wire1Green" type="Node2D" parent="." unique_id=1842309733]
+
+[node name="WireLength1" type="Button" parent="Wire1Green" unique_id=1492772173]
+visible = false
+modulate = Color(0, 1, 0, 1)
+offset_left = 23.000008
+offset_top = 221.00002
+offset_right = 254.0
+offset_bottom = 379.0
+rotation = -1.2915436
+scale = Vector2(1.1, 1.1)
+icon = ExtResource("4_tgln5")
+flat = true
+
+[node name="WireLength2" type="Button" parent="Wire1Green" unique_id=802671114]
+visible = false
+modulate = Color(0, 1, 0, 1)
+offset_left = 23.0
+offset_top = 205.0
+offset_right = 257.0
+offset_bottom = 302.0
+rotation = -0.7941248
+scale = Vector2(1.05, 1.05)
+icon = ExtResource("3_escsa")
+flat = true
+
+[node name="WireLength3" type="Button" parent="Wire1Green" unique_id=1022898304]
+visible = false
+modulate = Color(0, 1, 0, 1)
+offset_left = 26.0
+offset_top = 197.0
+offset_right = 267.0
+offset_bottom = 235.0
+rotation = -0.20943952
+scale = Vector2(0.98, 0.98)
+icon = ExtResource("2_0sh31")
+flat = true
+
+[node name="WireLength4" type="Button" parent="Wire1Green" unique_id=1247941898]
+visible = false
+modulate = Color(0, 1, 0, 1)
+offset_left = 30.0
+offset_top = 197.00002
+offset_right = 271.0
+offset_bottom = 235.00002
+rotation = 0.13962634
+scale = Vector2(0.95, 0.95)
+icon = ExtResource("2_0sh31")
+flat = true
+
+[node name="WireLength5" type="Button" parent="Wire1Green" unique_id=1462992406]
+visible = false
+modulate = Color(0, 1, 0, 1)
+offset_left = 21.999998
+offset_top = 204.0
+offset_right = 256.0
+offset_bottom = 301.0
+rotation = 0.08726646
+scale = Vector2(1.05, 1.05)
+icon = ExtResource("3_escsa")
+flat = true
+
+[node name="WireLength6" type="Button" parent="Wire1Green" unique_id=1602280108]
+visible = false
+modulate = Color(0, 1, 0, 1)
+offset_left = 26.0
+offset_top = 209.00002
+offset_right = 257.0
+offset_bottom = 367.0
+rotation = 0.017453292
+scale = Vector2(1.03, 1.03)
+icon = ExtResource("4_tgln5")
+flat = true
+
+[node name="Wire1Purple" type="Node2D" parent="." unique_id=65616097]
+
+[node name="WireLength1" type="Button" parent="Wire1Purple" unique_id=1547299610]
+visible = false
+modulate = Color(0.69411767, 0, 0.8, 1)
+offset_left = 26.000004
+offset_top = 293.0
+offset_right = 264.0
+offset_bottom = 595.0
+rotation = -1.7627826
+scale = Vector2(0.93, 0.93)
+icon = ExtResource("6_1od7k")
+flat = true
+
+[node name="WireLength2" type="Button" parent="Wire1Purple" unique_id=825996528]
+visible = false
+modulate = Color(0.69411767, 0, 0.8, 1)
+offset_left = 21.000002
+offset_top = 291.99997
+offset_right = 252.0
+offset_bottom = 537.0
+rotation = -1.5184364
+scale = Vector2(0.95, 0.95)
+icon = ExtResource("5_i6uub")
+flat = true
+
+[node name="WireLength3" type="Button" parent="Wire1Purple" unique_id=1166254629]
+visible = false
+modulate = Color(0.69411767, 0, 0.8, 1)
+offset_left = 22.0
+offset_top = 278.0
+offset_right = 253.0
+offset_bottom = 436.0
+rotation = -1.0297443
+scale = Vector2(0.95, 0.95)
+icon = ExtResource("4_tgln5")
+flat = true
+
+[node name="WireLength4" type="Button" parent="Wire1Purple" unique_id=1877030949]
+visible = false
+modulate = Color(0.6943651, 0.0010486728, 0.8007031, 1)
+offset_left = 26.0
+offset_top = 267.0
+offset_right = 267.0
+offset_bottom = 305.0
+rotation = -0.19198622
+scale = Vector2(0.97, 0.97)
+icon = ExtResource("2_0sh31")
+flat = true
+
+[node name="WireLength5" type="Button" parent="Wire1Purple" unique_id=926317670]
+visible = false
+modulate = Color(0.6943651, 0.0010486728, 0.8007031, 1)
+offset_left = 26.0
+offset_top = 267.0
+offset_right = 267.0
+offset_bottom = 305.0
+rotation = 0.10471976
+scale = Vector2(0.97, 0.97)
+icon = ExtResource("2_0sh31")
+flat = true
+
+[node name="WireLength6" type="Button" parent="Wire1Purple" unique_id=931384129]
+visible = false
+modulate = Color(0.69411767, 0, 0.8, 1)
+offset_left = 25.0
+offset_top = 270.0
+offset_right = 259.0
+offset_bottom = 367.0
+rotation = 0.034906585
+icon = ExtResource("3_escsa")
+flat = true
+
+[node name="Wire1Black" type="Node2D" parent="." unique_id=962888896]
+
+[node name="WireLength1" type="Button" parent="Wire1Black" unique_id=276410743]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = 27.000008
+offset_top = 369.00003
+offset_right = 257.0
+offset_bottom = 720.0
+rotation = -1.9896754
+icon = ExtResource("7_pn5va")
+flat = true
+
+[node name="WireLength2" type="Button" parent="Wire1Black" unique_id=30347586]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = 23.999996
+offset_top = 368.0
+offset_right = 262.0
+offset_bottom = 670.0
+rotation = -1.7802359
+scale = Vector2(0.97, 0.97)
+icon = ExtResource("6_1od7k")
+flat = true
+
+[node name="WireLength3" type="Button" parent="Wire1Black" unique_id=1096283912]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = 32.000004
+offset_top = 361.00003
+offset_right = 263.0
+offset_bottom = 606.0
+rotation = -1.5358897
+scale = Vector2(0.92, 0.92)
+icon = ExtResource("5_i6uub")
+flat = true
+
+[node name="WireLength4" type="Button" parent="Wire1Black" unique_id=1210890356]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = 30.0
+offset_top = 353.0
+offset_right = 261.0
+offset_bottom = 511.0
+rotation = -1.0821041
+scale = Vector2(0.95, 0.95)
+icon = ExtResource("4_tgln5")
+flat = true
+
+[node name="WireLength5" type="Button" parent="Wire1Black" unique_id=402765733]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = 16.999985
+offset_top = 349.0
+offset_right = 250.99998
+offset_bottom = 446.0
+rotation = -0.5235988
+icon = ExtResource("3_escsa")
+flat = true
+
+[node name="WireLength6" type="Button" parent="Wire1Black" unique_id=598004391]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = 24.0
+offset_top = 335.0
+offset_right = 265.0
+offset_bottom = 373.0
+rotation = 0.05235988
+scale = Vector2(0.98, 0.98)
+icon = ExtResource("2_0sh31")
+flat = true

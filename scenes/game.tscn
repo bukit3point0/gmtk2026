@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://crn0td2ubi874"]
+[gd_scene format=3 uid="uid://cljs8pyaj2g7l"]
 
-[ext_resource type="Script" uid="uid://gmeqcgwpu5hb" path="res://scripts/game.gd" id="1_p57ef"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://bpn3sdvipin1v" path="res://scenes/background.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://ck24iy167p2x" path="res://scripts/instruction_book.gd" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cv8rrwwrwqrkc" path="res://assets/spritesheets/book_flip_page.png" id="3_iywne"]
@@ -11,7 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c4pfidxh07lfa" path="res://scenes/pause_menu.tscn" id="9_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://den8akhwdtr4x" path="res://assets/images/lit_lightbulb.png" id="9_dinhu"]
 [ext_resource type="Script" uid="uid://d00itm13ksven" path="res://scripts/table_item/lightswitch_board.gd" id="9_kvpfn"]
+[ext_resource type="Script" uid="uid://bhl2f18swwpct" path="res://scripts/lightbulbs.gd" id="9_trtic"]
 [ext_resource type="PackedScene" uid="uid://b4qhjw6ikhwnj" path="res://scenes/lightswitch_board.tscn" id="9_vtaks"]
+[ext_resource type="Texture2D" uid="uid://bgic2l407flvg" path="res://assets/images/arrow_right [#336].png" id="10_kvuet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6f8o3"]
 size = Vector2(2264, 551)
@@ -26,79 +28,79 @@ size = Vector2(192, 1385)
 size = Vector2(2264, 151)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nepv3"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(0, 0, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7025r"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(120, 0, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m4url"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(240, 0, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ool0"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(360, 0, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pr1ej"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(480, 0, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_05nbr"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(0, 300, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0sl42"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(120, 300, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oaba0"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(240, 300, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_458eo"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(360, 300, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h3rex"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(480, 300, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fedci"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(0, 600, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qswn"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(120, 600, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rm0al"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(240, 600, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i4re6"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(360, 600, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pf7vy"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(480, 600, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o8ni1"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(0, 900, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3hbvx"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(120, 900, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q8j3a"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(240, 900, 120, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ms3bu"]
-atlas = ExtResource("4_13hs1")
+atlas = ExtResource("5_iywne")
 region = Rect2(360, 900, 120, 300)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sn0t7"]
@@ -167,79 +169,79 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(0, 371, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iywne"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(500, 371, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(1000, 371, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u5sy4"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(1500, 371, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gee14"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(2000, 371, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0tnpc"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(2500, 371, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vtaks"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(3000, 371, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvpfn"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(3500, 371, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dinhu"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(0, 0, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvuet"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(0, 0, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trtic"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(0, 0, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ir15t"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(500, 0, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ca42v"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(1000, 0, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rysoc"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(1500, 0, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ssvqc"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(2000, 0, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_264po"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(2500, 0, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kice"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(3000, 0, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5newe"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(3500, 0, 500, 371)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37s47"]
-atlas = ExtResource("6_bakr3")
+atlas = ExtResource("3_iywne")
 region = Rect2(0, 371, 500, 371)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
@@ -318,59 +320,59 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bt5mj"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(192, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e1j6l"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(160, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pl11u"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(128, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bhx41"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(96, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qnb83"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(64, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sww3w"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(32, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_suyxu"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(0, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qouja"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(0, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wljb1"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(32, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v2yb1"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(64, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_js0lu"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(96, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gxtfn"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(128, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_twgab"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(160, 0, 32, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02fa5"]
-atlas = ExtResource("8_ni2ok")
+atlas = ExtResource("4_p57ef")
 region = Rect2(192, 0, 32, 20)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_riqys"]
@@ -651,11 +653,11 @@ size = Vector2(635, 406)
 size = Vector2(684, 431)
 
 [node name="Game" type="Node2D" unique_id=1055144618]
-script = ExtResource("1_fyxdr")
+script = ExtResource("1_p57ef")
 
 [node name="Level1" type="Node2D" parent="." unique_id=799543503]
 
-[node name="Background" parent="Level1" unique_id=2126150908 instance=ExtResource("2_kpk0m")]
+[node name="Background" parent="Level1" unique_id=2126150908 instance=ExtResource("1_uwrxv")]
 show_behind_parent = true
 
 [node name="Table" type="Node2D" parent="Level1" unique_id=1942911392]
@@ -695,7 +697,7 @@ shape = SubResource("RectangleShape2D_2r0jt")
 [node name="Thermometer" type="CharacterBody2D" parent="Level1/Table" unique_id=1544112515]
 position = Vector2(75, 921)
 input_pickable = true
-script = ExtResource("3_qs1vn")
+script = ExtResource("5_p57ef")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level1/Table/Thermometer" unique_id=1569470345]
@@ -765,7 +767,7 @@ fit_content = true
 [node name="InstructionBook" type="CharacterBody2D" parent="Level1/Table" unique_id=762449066]
 position = Vector2(1070, 654)
 input_pickable = true
-script = ExtResource("5_fptmo")
+script = ExtResource("2_lnu2h")
 metadata/_edit_group_ = true
 
 [node name="BookAnimation" type="AnimatedSprite2D" parent="Level1/Table/InstructionBook" unique_id=1481968154]
@@ -807,7 +809,7 @@ text = "The thermometer gauge holds the temperature of the hottest it got during
 [node name="BookImage" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Thermometer" unique_id=92084920]
 position = Vector2(-170, -175)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("7_jqmoj")
+texture = ExtResource("6_u5sy4")
 centered = false
 
 [node name="Instructions" type="VBoxContainer" parent="Level1/Table/InstructionBook/Pages/Thermometer" unique_id=1787575615]
@@ -947,7 +949,7 @@ flat = true
 [node name="Tab1Image" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Thermometer" unique_id=399437667]
 position = Vector2(337, -176)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("7_jqmoj")
+texture = ExtResource("6_u5sy4")
 
 [node name="Tab1AnimationPlayer" type="AnimationPlayer" parent="Level1/Table/InstructionBook/Pages/Thermometer" unique_id=2002057829]
 libraries/ = SubResource("AnimationLibrary_dinhu")
@@ -978,7 +980,7 @@ text = "The thermometer gauge holds the temperature of the hottest it got during
 [node name="BookImage" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=325395772]
 position = Vector2(-170, -175)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("7_jqmoj")
+texture = ExtResource("6_u5sy4")
 centered = false
 
 [node name="Instructions" type="VBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=746684842]
@@ -1117,7 +1119,7 @@ flat = true
 [node name="Tab2Image" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=686160355]
 position = Vector2(325, -146)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("7_jqmoj")
+texture = ExtResource("6_u5sy4")
 
 [node name="Tab2AnimationPlayer" type="AnimationPlayer" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=845544074]
 libraries/ = SubResource("AnimationLibrary_ca42v")
@@ -1148,7 +1150,7 @@ text = "The thermometer gauge holds the temperature of the hottest it got during
 [node name="BookImage" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=1747899356]
 position = Vector2(-170, -175)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("7_jqmoj")
+texture = ExtResource("6_u5sy4")
 centered = false
 
 [node name="Instructions" type="VBoxContainer" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=1980965638]
@@ -1287,7 +1289,7 @@ flat = true
 [node name="Tab3Image" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=580966717]
 position = Vector2(325, -116)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("7_jqmoj")
+texture = ExtResource("6_u5sy4")
 
 [node name="Tab3AnimationPlayer" type="AnimationPlayer" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=1735229581]
 libraries/ = SubResource("AnimationLibrary_1kice")
@@ -1334,10 +1336,10 @@ If the sum of the numbers in the rocket ID is even, your starting order is \"123
 
 If the sum of the numbers in the rocket ID is odd, your starting order is \"54321\"."
 
-[node name="BookImage" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Lightbulbs" unique_id=1236857483]
-position = Vector2(-170, -175)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("6_u5sy4")
+[node name="BookImage" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page1" unique_id=1236857483]
+position = Vector2(-183, -175)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_dinhu")
 centered = false
 
 [node name="NextPageButton" type="Button" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page1" unique_id=1437951751]
@@ -1420,18 +1422,18 @@ offset_right = 71.0
 offset_bottom = 42.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 18
-text = "Switch with 2"
+text = "Move to Pos2"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NumberOrder4" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=1719026351]
+[node name="IfPlate1Letter" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=1719026351]
 custom_minimum_size = Vector2(71, 42)
 layout_mode = 2
 border_color = Color(0, 0, 0, 1)
 editor_only = false
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage/NumberOrder4" unique_id=1901807913]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage/IfPlate1Letter" unique_id=1901807913]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 0
 offset_left = -1.0
@@ -1439,25 +1441,62 @@ offset_right = 212.0
 offset_bottom = 42.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 18
-text = "If the rocket is [color]:"
+text = "If the plate has 1 letter:"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ReferenceRect5" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=1063453857]
+[node name="IfPlate1LetterInstruction1" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=1063453857]
 custom_minimum_size = Vector2(71, 23)
 layout_mode = 2
 border_color = Color(0, 0, 0, 1)
 editor_only = false
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage/ReferenceRect5" unique_id=988307926]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage/IfPlate1LetterInstruction1" unique_id=988307926]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 0
 offset_right = 71.0
 offset_bottom = 42.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 18
-text = "Switch with 2"
+text = "Move to Pos4"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfLowThermometer" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=1496528373]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage/IfLowThermometer" unique_id=1866977832]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_right = 212.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "If the themomter reads under 2,000°C:"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfThermometerInstruction1" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=1850610322]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage/IfThermometerInstruction1" unique_id=1109729162]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_right = 71.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos5"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1566,7 +1605,7 @@ offset_right = 69.0
 offset_bottom = 24.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 18
-text = "Switch with 1"
+text = "Move to Pos1"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1631,6 +1670,166 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="IfPlate1LetterInstruction2" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=478477989]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction2" unique_id=1383497703]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Keep"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfPlate1LetterInstruction3" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=771106945]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction3" unique_id=1971467882]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos1"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfPlate1LetterInstruction4" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=704400851]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction4" unique_id=552165559]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos3"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfPlate1LetterInstruction5" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=208950188]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction5" unique_id=621716009]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Keep"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfThermometerInstruction2" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=1617457670]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction2" unique_id=1268740283]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos3"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfThermometerInstruction3" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=553570167]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction3" unique_id=259958375]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos4"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfThermometerInstruction4" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=426333427]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction4" unique_id=1925376495]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos1"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfThermometerInstruction5" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=1045775582]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction5" unique_id=217638373]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Move to Pos2"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Instructions" type="VBoxContainer" parent="Level1/Table/InstructionBook/Pages/Lightbulbs" unique_id=1395995721]
 visible = false
 offset_left = 15.0
@@ -1655,7 +1854,7 @@ flat = true
 [node name="Tab4Image" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Lightbulbs" unique_id=1932944636]
 position = Vector2(336.25, -86)
 scale = Vector2(0.017, 0.017)
-texture = ExtResource("9_hnsbs")
+texture = ExtResource("9_dinhu")
 
 [node name="Tab4AnimationPlayer" type="AnimationPlayer" parent="Level1/Table/InstructionBook/Pages/Lightbulbs" unique_id=129837177]
 libraries/ = SubResource("AnimationLibrary_37s47")
@@ -1672,10 +1871,10 @@ metadata/_edit_lock_ = true
 position = Vector2(21.000023, 402.99997)
 scale = Vector2(0.8, 0.8)
 input_pickable = true
-script = ExtResource("10_rv6en")
+script = ExtResource("9_kvpfn")
 metadata/_edit_group_ = true
 
-[node name="BulbsAndSwitches" parent="Level1/Table/LightswitchBoard" unique_id=1007271350 instance=ExtResource("11_tugu3")]
+[node name="BulbsAndSwitches" parent="Level1/Table/LightswitchBoard" unique_id=1007271350 instance=ExtResource("9_vtaks")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/Table/LightswitchBoard" unique_id=2138706299]
 light_mask = 4
@@ -1684,7 +1883,7 @@ position = Vector2(341.99997, 215.49997)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_bhunq")
 
-[node name="PauseMenu" parent="." unique_id=1704919904 instance=ExtResource("12_kqfx7")]
+[node name="PauseMenu" parent="." unique_id=1704919904 instance=ExtResource("9_0tnpc")]
 
 [connection signal="input_event" from="Level1/Table/Thermometer" to="Level1/Table/Thermometer" method="_on_thermometer_input_event"]
 [connection signal="input_event" from="Level1/Table/InstructionBook" to="Level1/Table/InstructionBook" method="_on_instruction_book_input_event"]
