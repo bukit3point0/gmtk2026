@@ -7,4 +7,4 @@ func stop_clock() -> void:
 	clock.stop_clock()
 
 func trigger_final_countdown():
-	clock.set_time(5)
+	clock.set_time(11)
