@@ -11,7 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c4pfidxh07lfa" path="res://scenes/pause_menu.tscn" id="9_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://den8akhwdtr4x" path="res://assets/images/lit_lightbulb.png" id="9_dinhu"]
 [ext_resource type="Script" uid="uid://d00itm13ksven" path="res://scripts/table_item/lightswitch_board.gd" id="9_kvpfn"]
+[ext_resource type="Script" uid="uid://bhl2f18swwpct" path="res://scripts/lightbulbs.gd" id="9_trtic"]
 [ext_resource type="PackedScene" uid="uid://b4qhjw6ikhwnj" path="res://scenes/lightswitch_board.tscn" id="9_vtaks"]
+[ext_resource type="Texture2D" uid="uid://bgic2l407flvg" path="res://assets/images/arrow_right [#336].png" id="10_kvuet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6f8o3"]
 size = Vector2(2264, 551)
@@ -779,6 +781,7 @@ frame_progress = 0.55724597
 [node name="Pages" type="Node2D" parent="Level1/Table/InstructionBook" unique_id=714027308]
 
 [node name="Thermometer" type="Node2D" parent="Level1/Table/InstructionBook/Pages" unique_id=1626234633]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="PageTitle" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Thermometer" unique_id=1042964705]
@@ -952,6 +955,7 @@ texture = ExtResource("6_u5sy4")
 libraries/ = SubResource("AnimationLibrary_dinhu")
 
 [node name="Cody1" type="Node2D" parent="Level1/Table/InstructionBook/Pages" unique_id=1501219190]
+visible = false
 
 [node name="PageTitle" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody1" unique_id=637067227]
 offset_left = -297.0
@@ -1121,6 +1125,7 @@ texture = ExtResource("6_u5sy4")
 libraries/ = SubResource("AnimationLibrary_ca42v")
 
 [node name="Cody2" type="Node2D" parent="Level1/Table/InstructionBook/Pages" unique_id=2130532128]
+visible = false
 
 [node name="PageTitle" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Cody2" unique_id=241369301]
 offset_left = -297.0
@@ -1290,13 +1295,17 @@ texture = ExtResource("6_u5sy4")
 libraries/ = SubResource("AnimationLibrary_1kice")
 
 [node name="Lightbulbs" type="Node2D" parent="Level1/Table/InstructionBook/Pages" unique_id=315947870]
+script = ExtResource("9_trtic")
 metadata/_edit_lock_ = true
 
-[node name="PageTitle" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs" unique_id=1614256454]
+[node name="Page1" type="Node2D" parent="Level1/Table/InstructionBook/Pages/Lightbulbs" unique_id=1942264191]
+visible = false
+
+[node name="PageTitle" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page1" unique_id=1614256454]
 offset_left = -297.0
-offset_top = -95.0
+offset_top = -83.0
 offset_right = -14.0
-offset_bottom = -72.0
+offset_bottom = -60.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
@@ -1304,141 +1313,334 @@ text = "Lightbulbs"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="LeftText" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs" unique_id=1512941580]
+[node name="LeftText" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page1" unique_id=1512941580]
 offset_left = -297.0
-offset_top = -72.0
+offset_top = -58.0
 offset_right = -14.0
 offset_bottom = 181.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 14
-text = "The thermometer gauge holds the temperature of the hottest it got during testing, and is used to test the thermal protection system."
+theme_override_font_sizes/normal_font_size = 20
+text = "Did you know: astronauts can't see in the dark! These light bulbs need to be tested in a very specific way: in the order of the CEO's favorite numbers 1 - 5. Unfortunately, this changes based on what his favorite number was"
 
-[node name="BookImage" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Lightbulbs" unique_id=1236857483]
-position = Vector2(-170, -175)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("6_u5sy4")
+[node name="RightText" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page1" unique_id=947394475]
+offset_left = 15.0
+offset_top = -179.0
+offset_right = 299.0
+offset_bottom = 181.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "on the day the rocket was created. Use the chart to map out in what order to flip the switches.
+
+If the sum of the numbers in the rocket ID is even, your starting order is \"12345\".
+
+If the sum of the numbers in the rocket ID is odd, your starting order is \"54321\"."
+
+[node name="BookImage" type="Sprite2D" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page1" unique_id=1236857483]
+position = Vector2(-183, -175)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_dinhu")
 centered = false
 
+[node name="NextPageButton" type="Button" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page1" unique_id=1437951751]
+offset_left = 174.0
+offset_top = 127.0
+offset_right = 294.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 20
+text = "Next Page"
+icon = ExtResource("10_kvuet")
+icon_alignment = 2
+expand_icon = true
+
+[node name="Page2" type="Node2D" parent="Level1/Table/InstructionBook/Pages/Lightbulbs" unique_id=1095446120]
+
+[node name="LeftPage" type="GridContainer" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2" unique_id=223971789]
+offset_left = -297.0
+offset_top = -179.0
+offset_right = -14.0
+offset_bottom = 181.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="EmtpyContainer" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=1380507762]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+
+[node name="NumberOrder1" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=412982061]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage/NumberOrder1" unique_id=321154324]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Pos1"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketColor" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=546298458]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage/IfRocketColor" unique_id=1904759054]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_right = 212.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "If the rocket is [color]:"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketInstruction1" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=2133790973]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage/IfRocketInstruction1" unique_id=463431415]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_right = 71.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Switch with 2"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumberOrder4" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=1719026351]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage/NumberOrder4" unique_id=1901807913]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_right = 212.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "If the rocket is [color]:"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReferenceRect5" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage" unique_id=1063453857]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/LeftPage/ReferenceRect5" unique_id=988307926]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_right = 71.0
+offset_bottom = 42.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Switch with 2"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightPage" type="GridContainer" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2" unique_id=1743434214]
+offset_left = 15.0
+offset_top = -179.0
+offset_right = 299.0
+offset_bottom = 181.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 4
+
+[node name="NumberOrder2" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=1780732995]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/NumberOrder2" unique_id=278598121]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Pos2"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumberOrder3" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=1041460987]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/NumberOrder3" unique_id=1895566555]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Pos3"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumberOrder4" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=870084856]
+custom_minimum_size = Vector2(71, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/NumberOrder4" unique_id=865673352]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Pos4"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumberOrder5" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=607873474]
+custom_minimum_size = Vector2(70, 23)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/NumberOrder5" unique_id=439690574]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Pos5"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketInstruction2" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=1545922366]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction2" unique_id=1907925557]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Switch with 1"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketInstruction3" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=1069916559]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction3" unique_id=1216113493]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Keep"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketInstruction4" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=867831557]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction4" unique_id=1237691888]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Keep"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IfRocketInstruction5" type="ReferenceRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage" unique_id=776828163]
+custom_minimum_size = Vector2(71, 42)
+layout_mode = 2
+border_color = Color(0, 0, 0, 1)
+editor_only = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction5" unique_id=428323138]
+custom_minimum_size = Vector2(64, 42)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Keep"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Instructions" type="VBoxContainer" parent="Level1/Table/InstructionBook/Pages/Lightbulbs" unique_id=1395995721]
+visible = false
 offset_left = 15.0
 offset_top = -179.0
 offset_right = 298.0
 offset_bottom = 181.0
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
-
-[node name="Headers" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions" unique_id=920086961]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions/Headers" unique_id=915871989]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "If the thermometer reads..."
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions/Headers" unique_id=1992533199]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Do..."
-fit_content = true
-vertical_alignment = 2
-
-[node name="ColorRect" type="ColorRect" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions" unique_id=336571777]
-custom_minimum_size = Vector2(0, 1)
-layout_mode = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Instruction1" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions" unique_id=551235341]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions/Instruction1" unique_id=954200290]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "0°C - 999°C"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions/Instruction1" unique_id=328017372]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Abort mission"
-fit_content = true
-
-[node name="Instruction2" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions" unique_id=1284364125]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions/Instruction2" unique_id=156656645]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "1,000°C - 1,249°C"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions/Instruction2" unique_id=510247201]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Hold until timer ends in 3"
-fit_content = true
-
-[node name="Instruction3" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions" unique_id=1755382802]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions/Instruction3" unique_id=917954109]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "1,250°C - 2,499°C"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions/Instruction3" unique_id=646117124]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Thermometer cleared"
-fit_content = true
-
-[node name="Instruction4" type="HBoxContainer" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions" unique_id=666564186]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions/Instruction4" unique_id=125428565]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "2,500°C - ???"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions/Instruction4" unique_id=539017173]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Abort mission"
-fit_content = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Level1/Table/InstructionBook/Pages/Lightbulbs/Instructions" unique_id=642544860]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 14
 
 [node name="Tab4Animation" type="AnimatedSprite2D" parent="Level1/Table/InstructionBook/Pages/Lightbulbs" unique_id=1628285932]
 position = Vector2(327, -86)
@@ -1461,6 +1663,7 @@ texture = ExtResource("9_dinhu")
 libraries/ = SubResource("AnimationLibrary_37s47")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/Table/InstructionBook" unique_id=1014973014]
+visible = false
 light_mask = 2
 visibility_layer = 2
 position = Vector2(0.5, 3)
@@ -1490,6 +1693,7 @@ shape = SubResource("RectangleShape2D_bhunq")
 [connection signal="pressed" from="Level1/Table/InstructionBook/Pages/Thermometer/Tab1Button" to="Level1/Table/InstructionBook" method="_on_tab_1_button_pressed"]
 [connection signal="pressed" from="Level1/Table/InstructionBook/Pages/Cody1/Tab2Button" to="Level1/Table/InstructionBook" method="_on_tab_2_button_pressed"]
 [connection signal="pressed" from="Level1/Table/InstructionBook/Pages/Cody2/Tab3Button" to="Level1/Table/InstructionBook" method="_on_tab_3_button_pressed"]
+[connection signal="pressed" from="Level1/Table/InstructionBook/Pages/Lightbulbs/Page1/NextPageButton" to="Level1/Table/InstructionBook/Pages/Lightbulbs" method="_on_next_page_from_1_button_pressed"]
 [connection signal="pressed" from="Level1/Table/InstructionBook/Pages/Lightbulbs/Tab4Button" to="Level1/Table/InstructionBook" method="_on_tab_4_button_pressed"]
 [connection signal="input_event" from="Level1/Table/LightswitchBoard" to="Level1/Table/LightswitchBoard" method="_on_lightswitch_input_event"]
 [connection signal="lightswitch_drag_signal" from="Level1/Table/LightswitchBoard" to="Level1/Table/LightswitchBoard" method="_on_lightswitch_drag_signal"]

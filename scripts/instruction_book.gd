@@ -177,4 +177,3 @@ func play_tab_4(open: bool = true) -> void:
 	book_image.visible = open
 	instructions.visible = open
 	tab_4_opened = open
-	
