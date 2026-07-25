@@ -56,8 +56,9 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_vertical = 4
-step = 10.0
-rounded = true
+min_value = -20.0
+max_value = 20.0
+value = 1.0
 tick_count = 10
 ticks_on_borders = true
 ticks_position = 1
@@ -83,8 +84,9 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_vertical = 4
-step = 10.0
-rounded = true
+min_value = -20.0
+max_value = 20.0
+value = 1.0
 tick_count = 10
 ticks_on_borders = true
 ticks_position = 1
@@ -110,8 +112,9 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_vertical = 4
-step = 10.0
-rounded = true
+min_value = -20.0
+max_value = 20.0
+value = 1.0
 tick_count = 10
 ticks_on_borders = true
 ticks_position = 1
@@ -123,6 +126,7 @@ theme_override_font_sizes/font_size = 32
 text = "Return"
 
 [connection signal="value_changed" from="ColorRect/MarginContainer/VBoxContainer/SettingsContainer/MasterVolume/HSlider" to="." method="_on_master_volume_value_changed"]
+[connection signal="value_changed" from="ColorRect/MarginContainer/VBoxContainer/SettingsContainer/MasterVolume/HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="ColorRect/MarginContainer/VBoxContainer/SettingsContainer/Music/HSlider" to="." method="_on_music_volume_value_changed"]
 [connection signal="value_changed" from="ColorRect/MarginContainer/VBoxContainer/SettingsContainer/GameplaySounds/HSlider" to="." method="_on_gameplay_volume_value_changed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

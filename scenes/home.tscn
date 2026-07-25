@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://be4hawxc1gp7v"]
 
 [ext_resource type="Script" uid="uid://dysvmlrhyse1v" path="res://scripts/home_settings.gd" id="1_u4wd2"]
+[ext_resource type="Script" uid="uid://ccy6qnbd6s1r" path="res://scripts/home.gd" id="1_uhids"]
 [ext_resource type="PackedScene" uid="uid://bo2hvopdyrqm4" path="res://scenes/settings_button.tscn" id="2_w18ys"]
 [ext_resource type="PackedScene" uid="uid://cefb85vh8t844" path="res://scenes/settings.tscn" id="3_w18ys"]
+[ext_resource type="AudioStream" uid="uid://c7qj5punbrc50" path="res://assets/audio/GameJamTitleMusic.mp3" id="4_reixx"]
 
 [node name="Home" type="Node2D" unique_id=262647136]
+script = ExtResource("1_uhids")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=553442227]
 offset_right = 1920.0
@@ -46,6 +49,12 @@ text = "Quit"
 
 [node name="Settings" parent="." unique_id=1476206606 instance=ExtResource("3_w18ys")]
 visible = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2066417667]
+stream = ExtResource("4_reixx")
+volume_db = 10.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PlayGameButton" to="MarginContainer/VBoxContainer" method="_on_play_game_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SettingsButton" to="MarginContainer/VBoxContainer" method="_on_settings_button_pressed"]
