@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://i8afgcl4mdvi"]
+
+[node name="TransitionScreen" type="Node2D" unique_id=1325931215]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1140736192]
+offset_left = 318.0
+offset_top = 213.0
+offset_right = 847.0
+offset_bottom = 501.0
+text = "Get owned nerd"

@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://c1d010mfwdtvd"]
 
+[ext_resource type="Script" uid="uid://cicx4jcdxfmo7" path="res://scripts/ship_problems/construction_report.gd" id="1_lpot6"]
 [ext_resource type="Texture2D" uid="uid://bnssduf646c6d" path="res://assets/images/documents/Paperbackground.png" id="1_mskvo"]
 
 [node name="ConstructionReport" type="Node2D" unique_id=905180527]
+script = ExtResource("1_lpot6")
 
 [node name="Paperbackground" type="Sprite2D" parent="." unique_id=1116466726]
 scale = Vector2(3.3, 4.63)

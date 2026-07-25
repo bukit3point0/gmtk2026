@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3cc25nyiaeyd"]
 
-[ext_resource type="Script" uid="uid://gmeqcgwpu5hb" path="res://scripts/game.gd" id="1_8g4ke"]
+[ext_resource type="Script" uid="uid://gmeqcgwpu5hb" path="res://scripts/level_controller.gd" id="1_8g4ke"]
 [ext_resource type="PackedScene" uid="uid://bpn3sdvipin1v" path="res://scenes/background.tscn" id="2_56gwk"]
 [ext_resource type="Script" uid="uid://dj30d0hgnscu5" path="res://scripts/thermometer.gd" id="3_ve5ok"]
 [ext_resource type="Texture2D" uid="uid://c0sw7ff8v4dvb" path="res://assets/spritesheets/thermometer.png" id="4_cleqw"]
@@ -1485,10 +1485,10 @@ position = Vector2(341.99997, 215.49997)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_bhunq")
 
-[node name="PauseMenu" parent="." unique_id=1704919904 instance=ExtResource("12_y6lc1")]
-
-[node name="ConstructionReport" parent="." unique_id=905180527 instance=ExtResource("13_56gwk")]
+[node name="ConstructionReport" parent="Game/Table" unique_id=905180527 groups=["rocket_problems"] instance=ExtResource("13_56gwk")]
 position = Vector2(477, 762)
+
+[node name="PauseMenu" parent="." unique_id=1704919904 instance=ExtResource("12_y6lc1")]
 
 [connection signal="input_event" from="Game/Table/Thermometer" to="Game/Table/Thermometer" method="_on_thermometer_input_event"]
 [connection signal="input_event" from="Game/Table/InstructionBook" to="Game/Table/InstructionBook" method="_on_instruction_book_input_event"]

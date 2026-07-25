@@ -1,4 +1,8 @@
 extends Node2D
+class_name Level
+
+signal _win_level(condition: int)
+signal _fail_level(condition: int)
 
 @onready var background: Background = %Background
 
@@ -10,8 +14,25 @@ func _on_abort_launch() -> void:
 	print("Launch aborted")
 	background.stop_clock()
 
+	var condition = rocket_condition()
+	if condition == 0:
+		_win_level.emit(condition)
+	else:
+		_fail_level.emit(condition)
+
 func _on_confirm_launch() -> void:
 	print("Launch confirmed")
+	breakpoint
+
+func rocket_condition() -> int:
+	var condition: int = 0
+
+	var possible_problems = get_tree().get_nodes_in_group("rocket_problems")
+	for problem in possible_problems:
+		if problem.has_method("get_problem_level"):
+			condition = max(condition, problem.get_problem_level())
+			
+	return condition
 
 func pause_trigger():
 	var clock_node = get_node("Level1/Background/TextureRect/Clock")

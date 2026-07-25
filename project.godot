@@ -33,6 +33,10 @@ window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+rocket_problems="Tagged on objects which could produce an issue for the rocket"
+
 [gui]
 
 theme/custom_font="uid://bmf2rg5bx3vti"
