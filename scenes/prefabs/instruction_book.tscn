@@ -705,7 +705,7 @@ Brass		 0.3
 Copper	 0.2
 Iron		-0.4
 Magnesium	-1.1
-Nickle		-0.3
+Nickel		-0.3
 Steel		-0.1
 Titanium	 0.4
 Zinc		-0.7"
@@ -747,6 +747,7 @@ texture = ExtResource("3_ev1xt")
 libraries/ = SubResource("AnimationLibrary_ca42v")
 
 [node name="Cody2" type="Node2D" parent="Pages" unique_id=2121371317]
+visible = false
 
 [node name="Contents" type="Node2D" parent="Pages/Cody2" unique_id=139109660]
 
@@ -918,6 +919,7 @@ texture = ExtResource("3_ev1xt")
 libraries/ = SubResource("AnimationLibrary_1kice")
 
 [node name="Lightbulbs" type="Node2D" parent="Pages" unique_id=1386665907]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="PageTitle" type="RichTextLabel" parent="Pages/Lightbulbs" unique_id=857616981]
