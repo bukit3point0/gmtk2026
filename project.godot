@@ -23,14 +23,18 @@ buses/default_bus_layout="uid://bsd2ufd7fim7q"
 
 GlobalVariables="*uid://bxvpu7p7cv0xj"
 SaveLoad="*uid://yynx3lqauper"
+EventBus="*uid://dfbwyc0f7cf2g"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[global_group]
+
+rocket_problems="Tagged on objects which could produce an issue for the rocket"
 
 [gui]
 

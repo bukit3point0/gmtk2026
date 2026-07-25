@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Report" format=3 uid="uid://dkjwimq0ykkb6"]
+
+[ext_resource type="Script" uid="uid://cjekrg1ku48ek" path="res://scripts/types/report_type.gd" id="1_1oq5t"]
+
+[resource]
+script = ExtResource("1_1oq5t")
+contents = "Deck Plates		Iron
+Exterior bolts		Iron
+Fuel pipes		Brass
+Fuel tank		Copper
+Interior bolts		Titanium
+Structural Members	Titanium"
+condition = 2
+metadata/_custom_type_script = "uid://cjekrg1ku48ek"

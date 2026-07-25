@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpn3sdvipin1v"]
 
 [ext_resource type="Texture2D" uid="uid://ntkki1lc1tjv" path="res://assets/mocks/office_background.png" id="1_bkp1e"]
+[ext_resource type="Script" uid="uid://dabmy8h4nlkq7" path="res://scripts/background_controller.gd" id="1_fligg"]
 [ext_resource type="Texture2D" uid="uid://bl7qw5d1kfdtl" path="res://assets/images/dot_matrix.png" id="2_y0upk"]
 [ext_resource type="Script" uid="uid://bni6xaul56pow" path="res://scripts/dot_matrix.gd" id="3_jougr"]
 [ext_resource type="AudioStream" uid="uid://7vda1wwp4s8f" path="res://assets/audio/dot_matrix_printer.wav" id="4_cbsqf"]
@@ -20,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dxu8ahg5x2ca2" path="res://assets/mocks/metal plate.png" id="17_r4ipc"]
 
 [node name="Background" type="Node2D" unique_id=2126150908]
+script = ExtResource("1_fligg")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1104701256]
 offset_right = 40.0
@@ -99,6 +101,7 @@ Option 4 is three lines long"
 stream = ExtResource("6_1tmhi")
 
 [node name="Clock" type="Node2D" parent="TextureRect" unique_id=1730704484]
+unique_name_in_owner = true
 script = ExtResource("8_6vm3t")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
