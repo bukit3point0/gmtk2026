@@ -9,9 +9,17 @@ var pause_countdown = false
 
 func _ready() -> void:
 	countdown()
+	EventBus.connect("_pause", stop_clock)
+	EventBus.connect("_unpause", start_clock)
+
 
 func stop_clock() -> void:
 	pause_countdown = true
+
+func start_clock() -> void:
+	pause_countdown = false
+	countdown()
+
 
 func set_time(new_time: int):
 	level_time = min(new_time, level_time)
