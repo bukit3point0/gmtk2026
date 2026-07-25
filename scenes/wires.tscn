@@ -463,10 +463,11 @@ offset_bottom = 400.0
 color = Color(0.6255971, 0.6255971, 0.6255971, 1)
 
 [node name="Label1" type="TextureRect" parent="Labels" unique_id=1762029516]
-offset_left = -23.0
-offset_top = 23.0
-offset_right = 11.0
-offset_bottom = 34.0
+offset_left = -54.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 35.0
+rotation = -0.26529005
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
@@ -474,265 +475,276 @@ metadata/_edit_group_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label1" unique_id=201776964]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "1"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="TextureRect" parent="Labels" unique_id=628889685]
-offset_left = -21.0
-offset_top = 80.0
-offset_right = 13.0
-offset_bottom = 91.0
+[node name="Label2" type="TextureRect" parent="Labels" unique_id=488236337]
+offset_left = -55.999996
+offset_top = 63.0
+offset_right = 43.000004
+offset_bottom = 94.0
+rotation = -0.26529005
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label2" unique_id=1877321763]
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label2" unique_id=1168444261]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "2"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="TextureRect" parent="Labels" unique_id=1866832676]
-offset_left = -22.0
-offset_top = 148.0
-offset_right = 12.0
-offset_bottom = 159.0
+[node name="Label3" type="TextureRect" parent="Labels" unique_id=418250519]
+offset_left = -55.999996
+offset_top = 129.0
+offset_right = 43.000004
+offset_bottom = 160.0
+rotation = -0.26529005
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label3" unique_id=1317187262]
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label3" unique_id=1772951728]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "3"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label4" type="TextureRect" parent="Labels" unique_id=281361187]
-offset_left = -19.0
-offset_top = 209.0
-offset_right = 15.0
-offset_bottom = 220.0
+[node name="Label4" type="TextureRect" parent="Labels" unique_id=1632677920]
+offset_left = -60.999996
+offset_top = 194.0
+offset_right = 38.000004
+offset_bottom = 225.0
+rotation = -0.26529005
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label4" unique_id=917546733]
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label4" unique_id=2080341401]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "4"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label5" type="TextureRect" parent="Labels" unique_id=858411075]
-offset_left = -19.0
-offset_top = 276.0
-offset_right = 15.0
-offset_bottom = 287.0
+[node name="Label5" type="TextureRect" parent="Labels" unique_id=869280399]
+offset_left = -51.999996
+offset_top = 259.0
+offset_right = 47.000004
+offset_bottom = 290.0
+rotation = -0.26529005
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label5" unique_id=952858730]
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label5" unique_id=78763124]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "5"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label6" type="TextureRect" parent="Labels" unique_id=433150251]
-offset_left = -20.0
-offset_top = 347.0
-offset_right = 14.0
+[node name="Label6" type="TextureRect" parent="Labels" unique_id=442276055]
+offset_left = -53.000004
+offset_top = 327.0
+offset_right = 45.999996
 offset_bottom = 358.0
+rotation = -0.26529005
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label6" unique_id=652313875]
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label6" unique_id=1344298452]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "6"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LabelA" type="TextureRect" parent="Labels" unique_id=1189022375]
-offset_left = 267.0
-offset_top = 22.0
-offset_right = 301.0
-offset_bottom = 33.0
+[node name="LabelA" type="TextureRect" parent="Labels" unique_id=298599533]
+offset_left = 230.0
+offset_top = -24.000004
+offset_right = 329.0
+offset_bottom = 6.999996
+rotation = 0.2635447
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelA" unique_id=221252135]
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelA" unique_id=1610104185]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "A"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LabelB" type="TextureRect" parent="Labels" unique_id=1216062572]
-offset_left = 269.0
-offset_top = 90.0
-offset_right = 303.0
-offset_bottom = 101.0
+[node name="LabelB" type="TextureRect" parent="Labels" unique_id=1320674125]
+offset_left = 234.00002
+offset_top = 42.999996
+offset_right = 333.0
+offset_bottom = 74.0
+rotation = 0.2635447
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelB" unique_id=343545564]
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelB" unique_id=1902245702]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "B"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LabelC" type="TextureRect" parent="Labels" unique_id=857436302]
-offset_left = 269.0
-offset_top = 161.0
-offset_right = 303.0
-offset_bottom = 172.0
+[node name="LabelC" type="TextureRect" parent="Labels" unique_id=619455515]
+offset_left = 232.00002
+offset_top = 116.0
+offset_right = 331.0
+offset_bottom = 147.0
+rotation = 0.2635447
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelC" unique_id=1195231832]
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelC" unique_id=1267189141]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "C"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LabelD" type="TextureRect" parent="Labels" unique_id=1414435928]
-offset_left = 268.0
-offset_top = 238.0
-offset_right = 302.0
-offset_bottom = 249.0
+[node name="LabelD" type="TextureRect" parent="Labels" unique_id=1648312646]
+offset_left = 234.99998
+offset_top = 192.0
+offset_right = 333.99997
+offset_bottom = 223.0
+rotation = 0.2635447
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelD" unique_id=2064147674]
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelD" unique_id=1858949278]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "D"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LabelE" type="TextureRect" parent="Labels" unique_id=2133166907]
-offset_left = 269.0
-offset_top = 303.0
-offset_right = 303.0
-offset_bottom = 314.0
+[node name="LabelE" type="TextureRect" parent="Labels" unique_id=1519333565]
+offset_left = 245.00002
+offset_top = 260.0
+offset_right = 344.0
+offset_bottom = 291.0
+rotation = 0.2635447
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelE" unique_id=1677973354]
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelE" unique_id=1323356268]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "E"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LabelF" type="TextureRect" parent="Labels" unique_id=1025286760]
-offset_left = 269.0
-offset_top = 357.0
-offset_right = 303.0
-offset_bottom = 368.0
+[node name="LabelF" type="TextureRect" parent="Labels" unique_id=1541268629]
+offset_left = 229.99998
+offset_top = 369.0
+offset_right = 328.99997
+offset_bottom = 400.0
+rotation = 0.2635447
 texture = ExtResource("9_tgln5")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelF" unique_id=2136406304]
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelF" unique_id=566950465]
 layout_mode = 0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 15.0
+offset_top = -15.0
+offset_right = 99.0
+offset_bottom = 43.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_i6uub")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
 text = "F"
 scroll_active = false
 horizontal_alignment = 1

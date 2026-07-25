@@ -21,13 +21,14 @@
 [ext_resource type="Script" uid="uid://dcqkm34267kvf" path="res://scripts/player_lives.gd" id="15_ivgg2"]
 [ext_resource type="Texture2D" uid="uid://d3th7nm1kllde" path="res://assets/images/player_life.png" id="16_r4ipc"]
 [ext_resource type="Texture2D" uid="uid://dxu8ahg5x2ca2" path="res://assets/mocks/metal plate.png" id="17_r4ipc"]
+[ext_resource type="Texture2D" uid="uid://bf12x55o2xloh" path="res://assets/images/settings.png" id="22_iquee"]
 
 [node name="Background" type="Node2D" unique_id=2126150908]
 script = ExtResource("1_fligg")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1104701256]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("1_bkp1e")
 
 [node name="DotMatrix" type="Sprite2D" parent="TextureRect" unique_id=907441809]
@@ -217,6 +218,16 @@ text = "8675309A"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="." unique_id=2016498875]
+modulate = Color(0.3403396, 0.3403392, 0.34033927, 1)
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 110.0
+offset_bottom = 110.0
+icon = ExtResource("22_iquee")
+flat = true
+expand_icon = true
 
 [connection signal="pressed" from="TextureRect/ChoiceButtons/HBoxContainer/ConfirmButton" to="TextureRect/ChoiceButtons" method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="TextureRect/ChoiceButtons/HBoxContainer/RejectButton" to="TextureRect/ChoiceButtons" method="_on_reject_button_pressed"]
