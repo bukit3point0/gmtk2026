@@ -109,8 +109,8 @@ offset_right = 77.0
 offset_bottom = 142.0
 flat = true
 
-[connection signal="pressed" from="GridContainer/Switch/SwitchButton" to="." method="_on_switch_button_pressed" binds= [1]]
-[connection signal="pressed" from="GridContainer/Switch2/SwitchButton2" to="." method="_on_switch_button_pressed" binds= [2]]
-[connection signal="pressed" from="GridContainer/Switch3/SwitchButton3" to="." method="_on_switch_button_pressed" binds= [3]]
-[connection signal="pressed" from="GridContainer/Switch4/SwitchButton4" to="." method="_on_switch_button_pressed" binds= [4]]
-[connection signal="pressed" from="GridContainer/Switch5/SwitchButton5" to="." method="_on_switch_button_pressed" binds= [5]]
+[connection signal="pressed" from="GridContainer/Switch/SwitchButton" to="." method="_on_switch_button_pressed" binds= [0]]
+[connection signal="pressed" from="GridContainer/Switch2/SwitchButton2" to="." method="_on_switch_button_pressed" binds= [1]]
+[connection signal="pressed" from="GridContainer/Switch3/SwitchButton3" to="." method="_on_switch_button_pressed" binds= [2]]
+[connection signal="pressed" from="GridContainer/Switch4/SwitchButton4" to="." method="_on_switch_button_pressed" binds= [3]]
+[connection signal="pressed" from="GridContainer/Switch5/SwitchButton5" to="." method="_on_switch_button_pressed" binds= [4]]
