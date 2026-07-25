@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dj30d0hgnscu5" path="res://scripts/thermometer.gd" id="3_ve5ok"]
 [ext_resource type="Texture2D" uid="uid://c0sw7ff8v4dvb" path="res://assets/spritesheets/thermometer.png" id="4_cleqw"]
 [ext_resource type="PackedScene" uid="uid://b6at7x8phf37l" path="res://scenes/prefabs/instruction_book.tscn" id="5_xa7n4"]
+[ext_resource type="Resource" uid="uid://dkjwimq0ykkb6" path="res://rocket_data/construction_reports/bad_report_1.tres" id="9_bo4dx"]
 [ext_resource type="Script" uid="uid://d00itm13ksven" path="res://scripts/table_item/lightswitch_board.gd" id="10_s4es8"]
 [ext_resource type="PackedScene" uid="uid://b4qhjw6ikhwnj" path="res://scenes/lightswitch_board.tscn" id="11_63e4f"]
 [ext_resource type="PackedScene" uid="uid://c4pfidxh07lfa" path="res://scenes/pause_menu.tscn" id="12_y6lc1"]
@@ -300,6 +301,7 @@ shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="ConstructionReport" parent="Game/Table" unique_id=905180527 groups=["rocket_problems"] instance=ExtResource("13_56gwk")]
 position = Vector2(477, 762)
+report_data = ExtResource("9_bo4dx")
 
 [node name="PauseMenu" parent="." unique_id=1704919904 instance=ExtResource("12_y6lc1")]
 

@@ -10,7 +10,7 @@ script = ExtResource("1_lpot6")
 scale = Vector2(3.3, 4.63)
 texture = ExtResource("1_mskvo")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=862810031]
+[node name="Text" type="RichTextLabel" parent="." unique_id=862810031]
 offset_left = -197.0
 offset_top = -281.0
 offset_right = 201.0

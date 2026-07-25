@@ -1,6 +1,9 @@
 extends Node2D
 
-var problem_level: int = 1
+@export var report_data: Report
+
+func _ready():
+	$Text.text = report_data.contents
 
 func get_problem_level() -> int:
-	return problem_level
+	return report_data.condition
