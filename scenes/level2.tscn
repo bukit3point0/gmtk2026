@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dj30d0hgnscu5" path="res://scripts/thermometer.gd" id="3_ve5ok"]
 [ext_resource type="Texture2D" uid="uid://c0sw7ff8v4dvb" path="res://assets/spritesheets/thermometer.png" id="4_cleqw"]
 [ext_resource type="PackedScene" uid="uid://b6at7x8phf37l" path="res://scenes/prefabs/instruction_book.tscn" id="5_xa7n4"]
+[ext_resource type="Script" uid="uid://nbhdbkrs6pss" path="res://scripts/construction_report_page.gd" id="8_76toy"]
 [ext_resource type="Resource" uid="uid://dkjwimq0ykkb6" path="res://rocket_data/construction_reports/bad_report_1.tres" id="9_bo4dx"]
 [ext_resource type="Script" uid="uid://d00itm13ksven" path="res://scripts/table_item/lightswitch_board.gd" id="10_s4es8"]
 [ext_resource type="PackedScene" uid="uid://b4qhjw6ikhwnj" path="res://scenes/lightswitch_board.tscn" id="11_63e4f"]
@@ -167,6 +168,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
 size = Vector2(684, 431)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sn0t7"]
+size = Vector2(422, 594)
+
 [node name="Level2" type="Node2D" unique_id=1055144618]
 script = ExtResource("1_8g4ke")
 
@@ -299,9 +303,17 @@ position = Vector2(341.99997, 215.49997)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_bhunq")
 
-[node name="ConstructionReport" parent="Game/Table" unique_id=905180527 groups=["rocket_problems"] instance=ExtResource("13_56gwk")]
-position = Vector2(477, 762)
+[node name="ConstructionReportPage" type="CharacterBody2D" parent="Game/Table" unique_id=1967828674]
+position = Vector2(511, 752)
+input_pickable = true
+script = ExtResource("8_76toy")
+metadata/_edit_group_ = true
+
+[node name="ConstructionReport" parent="Game/Table/ConstructionReportPage" unique_id=905180527 groups=["rocket_problems"] instance=ExtResource("13_56gwk")]
 report_data = ExtResource("9_bo4dx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Table/ConstructionReportPage" unique_id=1553051897]
+shape = SubResource("RectangleShape2D_sn0t7")
 
 [node name="PauseMenu" parent="." unique_id=1704919904 instance=ExtResource("12_y6lc1")]
 

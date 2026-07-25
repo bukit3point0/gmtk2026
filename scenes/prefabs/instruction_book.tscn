@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bvq0yewxmio1m" path="res://assets/spritesheets/book_tab.png" id="4_nvh1c"]
 [ext_resource type="Texture2D" uid="uid://den8akhwdtr4x" path="res://assets/images/lit_lightbulb.png" id="5_4j6de"]
 [ext_resource type="Script" uid="uid://bhl2f18swwpct" path="res://scripts/lightbulbs.gd" id="5_nvh1c"]
-[ext_resource type="Texture2D" path="res://assets/images/arrow_right [#336].png" id="7_4j6de"]
+[ext_resource type="Texture2D" uid="uid://cne3a65t5l4w0" path="res://assets/images/arrow_right.png" id="7_nvh1c"]
 [ext_resource type="Texture2D" uid="uid://q3x6qdjsxvbq" path="res://assets/images/arrow_left.png" id="8_6bl1r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
@@ -1088,7 +1088,7 @@ offset_right = 294.0
 offset_bottom = 169.0
 theme_override_font_sizes/font_size = 20
 text = "Next Page"
-icon = ExtResource("7_4j6de")
+icon = ExtResource("7_nvh1c")
 icon_alignment = 2
 expand_icon = true
 

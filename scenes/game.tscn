@@ -13,7 +13,7 @@
 [ext_resource type="Script" uid="uid://d00itm13ksven" path="res://scripts/table_item/lightswitch_board.gd" id="9_kvpfn"]
 [ext_resource type="Script" uid="uid://bhl2f18swwpct" path="res://scripts/lightbulbs.gd" id="9_trtic"]
 [ext_resource type="PackedScene" uid="uid://b4qhjw6ikhwnj" path="res://scenes/lightswitch_board.tscn" id="9_vtaks"]
-[ext_resource type="Texture2D" uid="uid://bgic2l407flvg" path="res://assets/images/arrow_right [#336].png" id="10_kvuet"]
+[ext_resource type="Texture2D" uid="uid://cne3a65t5l4w0" path="res://assets/images/arrow_right.png" id="11_trtic"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6f8o3"]
 size = Vector2(2264, 551)
@@ -1349,7 +1349,7 @@ offset_right = 294.0
 offset_bottom = 169.0
 theme_override_font_sizes/font_size = 20
 text = "Next Page"
-icon = ExtResource("10_kvuet")
+icon = ExtResource("11_trtic")
 icon_alignment = 2
 expand_icon = true
 

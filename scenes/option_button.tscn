@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://boll10tgej5mt"]
 
-[ext_resource type="Texture2D" uid="uid://bgic2l407flvg" path="res://assets/images/arrow_right [#336].png" id="1_3ob2s"]
+[ext_resource type="Texture2D" uid="uid://cne3a65t5l4w0" path="res://assets/images/arrow_right.png" id="1_3ob2s"]
 
 [node name="Option" type="Button" unique_id=1999699601]
 custom_maximum_size = Vector2(413, -1)
