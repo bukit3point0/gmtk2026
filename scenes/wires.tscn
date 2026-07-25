@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b8lgao4rxe2oh"]
 
+[ext_resource type="Script" uid="uid://bi0pjf812dmux" path="res://scripts/wires.gd" id="1_0sh31"]
 [ext_resource type="Texture2D" uid="uid://cxnm0528wouxf" path="res://assets/images/wire_box.png" id="1_v1hhp"]
 [ext_resource type="Texture2D" uid="uid://d1slipdxbodvd" path="res://assets/images/wire_one_long.png" id="2_0sh31"]
 [ext_resource type="Texture2D" uid="uid://cllcbgl8y7mjf" path="res://assets/images/wire_two_long.png" id="3_escsa"]
@@ -7,12 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://d2sj7dr523rq0" path="res://assets/images/wire_four_long.png" id="5_i6uub"]
 [ext_resource type="Texture2D" uid="uid://cl4y4orp1bvay" path="res://assets/images/wire_five_long.png" id="6_1od7k"]
 [ext_resource type="Texture2D" uid="uid://cgxpun558t5wk" path="res://assets/images/wire_six_long.png" id="7_pn5va"]
+[ext_resource type="Texture2D" uid="uid://ctuybhwsueen2" path="res://assets/images/masking_tape.png" id="9_tgln5"]
+[ext_resource type="FontFile" uid="uid://d18alb8uyr3dg" path="res://assets/fonts/PermanentMarker.ttf" id="10_i6uub"]
 
 [node name="Wires" type="Node2D" unique_id=1598723071]
+script = ExtResource("1_0sh31")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=135833443]
-offset_right = 46.0
-offset_bottom = 75.0
+offset_right = 280.0
+offset_bottom = 400.0
 texture = ExtResource("1_v1hhp")
 
 [node name="Wire1Red" type="Node2D" parent="." unique_id=854924099]
@@ -20,10 +24,10 @@ texture = ExtResource("1_v1hhp")
 [node name="WireLength1" type="Button" parent="Wire1Red" unique_id=690617654]
 visible = false
 modulate = Color(1, 0, 0, 1)
-offset_left = 18.0
-offset_top = 10.0
-offset_right = 259.0
-offset_bottom = 48.0
+offset_left = 19.0
+offset_top = 9.0
+offset_right = 260.0
+offset_bottom = 47.0
 icon = ExtResource("2_0sh31")
 flat = true
 
@@ -76,6 +80,18 @@ offset_right = 253.0
 offset_bottom = 373.0
 icon = ExtResource("7_pn5va")
 flat = true
+
+[node name="Button" type="TextureButton" parent="Wire1Red" unique_id=480441888]
+visible = false
+modulate = Color(1, 0, 0, 1)
+offset_left = 19.0
+offset_top = 9.0
+offset_right = 260.0
+offset_bottom = 47.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Wire1Red/Button" unique_id=209027395]
+position = Vector2(120, 20)
+texture = ExtResource("2_0sh31")
 
 [node name="Wire2Blue" type="Node2D" parent="." unique_id=824027222]
 
@@ -432,3 +448,295 @@ rotation = 0.05235988
 scale = Vector2(0.98, 0.98)
 icon = ExtResource("2_0sh31")
 flat = true
+
+[node name="Labels" type="Node2D" parent="." unique_id=610548580]
+
+[node name="ColorRect" type="ColorRect" parent="Labels" unique_id=960354576]
+offset_left = -24.0
+offset_bottom = 400.0
+color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Labels" unique_id=503261896]
+offset_left = 280.0
+offset_right = 304.0
+offset_bottom = 400.0
+color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+
+[node name="Label1" type="TextureRect" parent="Labels" unique_id=1762029516]
+offset_left = -23.0
+offset_top = 23.0
+offset_right = 11.0
+offset_bottom = 34.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label1" unique_id=201776964]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "1"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="TextureRect" parent="Labels" unique_id=628889685]
+offset_left = -21.0
+offset_top = 80.0
+offset_right = 13.0
+offset_bottom = 91.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label2" unique_id=1877321763]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "2"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="TextureRect" parent="Labels" unique_id=1866832676]
+offset_left = -22.0
+offset_top = 148.0
+offset_right = 12.0
+offset_bottom = 159.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label3" unique_id=1317187262]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "3"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="TextureRect" parent="Labels" unique_id=281361187]
+offset_left = -19.0
+offset_top = 209.0
+offset_right = 15.0
+offset_bottom = 220.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label4" unique_id=917546733]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "4"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="TextureRect" parent="Labels" unique_id=858411075]
+offset_left = -19.0
+offset_top = 276.0
+offset_right = 15.0
+offset_bottom = 287.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label5" unique_id=952858730]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "5"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="TextureRect" parent="Labels" unique_id=433150251]
+offset_left = -20.0
+offset_top = 347.0
+offset_right = 14.0
+offset_bottom = 358.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/Label6" unique_id=652313875]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "6"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelA" type="TextureRect" parent="Labels" unique_id=1189022375]
+offset_left = 267.0
+offset_top = 22.0
+offset_right = 301.0
+offset_bottom = 33.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelA" unique_id=221252135]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "A"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelB" type="TextureRect" parent="Labels" unique_id=1216062572]
+offset_left = 269.0
+offset_top = 90.0
+offset_right = 303.0
+offset_bottom = 101.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelB" unique_id=343545564]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "B"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelC" type="TextureRect" parent="Labels" unique_id=857436302]
+offset_left = 269.0
+offset_top = 161.0
+offset_right = 303.0
+offset_bottom = 172.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelC" unique_id=1195231832]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "C"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelD" type="TextureRect" parent="Labels" unique_id=1414435928]
+offset_left = 268.0
+offset_top = 238.0
+offset_right = 302.0
+offset_bottom = 249.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelD" unique_id=2064147674]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "D"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelE" type="TextureRect" parent="Labels" unique_id=2133166907]
+offset_left = 269.0
+offset_top = 303.0
+offset_right = 303.0
+offset_bottom = 314.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelE" unique_id=1677973354]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "E"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelF" type="TextureRect" parent="Labels" unique_id=1025286760]
+offset_left = 269.0
+offset_top = 357.0
+offset_right = 303.0
+offset_bottom = 368.0
+texture = ExtResource("9_tgln5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Labels/LabelF" unique_id=2136406304]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 34.0
+offset_bottom = 15.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_i6uub")
+theme_override_font_sizes/normal_font_size = 10
+text = "F"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Wire1Red/WireLength1" to="." method="_on_wire_length_1_pressed"]
+[connection signal="pressed" from="Wire1Red/Button" to="." method="_on_button_pressed"]
