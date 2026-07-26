@@ -31,8 +31,9 @@
 script = ExtResource("1_fligg")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1104701256]
+offset_top = 1.0
 offset_right = 1920.0
-offset_bottom = 1080.0
+offset_bottom = 1081.0
 texture = ExtResource("2_nj1e1")
 
 [node name="DotMatrix" type="Sprite2D" parent="TextureRect" unique_id=907441809]
@@ -236,17 +237,17 @@ metadata/_edit_use_anchors_ = true
 show_behind_parent = true
 
 [node name="Rocket" type="Sprite2D" parent="TextureRect/Node" unique_id=730375857]
-position = Vector2(498, 406)
-scale = Vector2(0.2, 0.2)
+position = Vector2(609, 313)
+scale = Vector2(0.23, 0.23)
 texture = ExtResource("23_wx42w")
 script = ExtResource("24_582at")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/Node" unique_id=1812223027]
 show_behind_parent = true
-offset_left = 130.0
-offset_top = 125.0
-offset_right = 890.0
-offset_bottom = 679.0
+offset_left = 114.0
+offset_top = 14.0
+offset_right = 1155.0
+offset_bottom = 512.0
 texture = ExtResource("25_emhnm")
 
 [node name="Button" type="Button" parent="." unique_id=2016498875]
@@ -258,6 +259,7 @@ offset_bottom = 110.0
 icon = ExtResource("22_iquee")
 flat = true
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="TextureRect/ChoiceButtons/HBoxContainer/ConfirmButton" to="TextureRect/ChoiceButtons" method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="TextureRect/ChoiceButtons/HBoxContainer/RejectButton" to="TextureRect/ChoiceButtons" method="_on_reject_button_pressed"]
