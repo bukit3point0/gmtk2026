@@ -296,8 +296,8 @@ collision_mask = 2
 
 [node name="ConstructionReportPage" type="CharacterBody2D" parent="Game/Table" unique_id=1967828674]
 position = Vector2(519, 757)
-collision_layer = 8
-collision_mask = 8
+collision_layer = 4
+collision_mask = 4
 input_pickable = true
 script = ExtResource("8_76toy")
 metadata/_edit_group_ = true
