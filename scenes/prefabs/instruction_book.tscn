@@ -620,6 +620,7 @@ metadata/_edit_lock_ = true
 [node name="Pages" type="Node2D" parent="." unique_id=1046660015]
 
 [node name="Thermometer" type="Node2D" parent="Pages" unique_id=1469277322]
+visible = false
 
 [node name="PageTitle" type="RichTextLabel" parent="Pages/Thermometer" unique_id=1258747618]
 offset_left = -297.0
@@ -769,7 +770,6 @@ texture = ExtResource("3_ev1xt")
 libraries/ = SubResource("AnimationLibrary_1kice")
 
 [node name="Lightbulbs" type="Node2D" parent="Pages" unique_id=785265382]
-visible = false
 script = ExtResource("5_nvh1c")
 metadata/_edit_lock_ = true
 
