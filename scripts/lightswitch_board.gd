@@ -16,8 +16,8 @@ extends Node2D
 
 var unlit_bulb = preload("uid://ctl34c38murvo")
 var lit_bulb = preload("uid://den8akhwdtr4x")
-var switch_on = preload("uid://bcigmnpnb71u1")
-var switch_off = preload("uid://djdavkyeuyedt")
+var switch_on = preload("uid://bsdacw00b0gem")
+var switch_off = preload("uid://lp42ulfjx0cx")
 
 var switches_on = [false, false, false, false, false]
 
@@ -25,12 +25,11 @@ func _ready() -> void:
 	pass
 
 func _on_switch_button_pressed(button_index) -> void:
-	print("button pressed")
-	print(button_index)
-
 	switches_on[button_index] = !switches_on[button_index]
-
+	
 	if switches_on[button_index]:
 		switches[button_index].texture = switch_on
+		lights[button_index].texture = lit_bulb
 	else:
 		switches[button_index].texture = switch_off
+		lights[button_index].texture = unlit_bulb
