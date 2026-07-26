@@ -4,4 +4,8 @@
 
 [resource]
 script = ExtResource("1_ofpki")
+condition = 1
+temperature_test = 2
+ship_plate_id = "W55H8ED2"
+wires_array = Array[int]([4, 2, 0, 0, 5, -1])
 metadata/_custom_type_script = "uid://imixhkfy73l4"
