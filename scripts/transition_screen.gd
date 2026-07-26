@@ -7,6 +7,7 @@ func launch_bad(text):
 	$RocketExplosion.play()
 
 func launch_good(text):
+	label.text = text
 	$Cheering.play()
 	await get_tree().create_timer(4.0).timeout
 	$RocketLaunch.play()

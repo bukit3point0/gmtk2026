@@ -48,6 +48,7 @@ func update_time_on_clock() -> void:
 	if level_time <= 0:
 		level_time = 0
 		EventBus._countdown_ended.emit()
+	if level_time <= -3:
 		stop_clock()
 
 	var minutes = int(floor(level_time / 60.0))

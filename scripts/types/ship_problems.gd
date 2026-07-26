@@ -12,7 +12,6 @@ enum LightsTestResult { PASS, CRIT, WARN }
 
 @export var condition: int
 
-@export var temperature_test: TestResult
 @export var ship_plate_id: String
 @export var wires_test: TestResult
 @export var wires_array: Array[int]
@@ -20,5 +19,5 @@ enum LightsTestResult { PASS, CRIT, WARN }
 # four steps for lights
 @export var switches_on: Array[bool]
 @export var nsc1: NSc1TestResult
-@export var esa3: LightsTestResult
+@export var temperature_test: TestResult
 @export var final: LightsTestResult

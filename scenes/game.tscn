@@ -763,7 +763,7 @@ text = "1,000"
 fit_content = true
 
 [node name="InstructionBook" type="CharacterBody2D" parent="Level1/Table" unique_id=762449066]
-position = Vector2(1070, 654)
+position = Vector2(1072, 731)
 input_pickable = true
 script = ExtResource("2_lnu2h")
 metadata/_edit_group_ = true
@@ -1866,7 +1866,7 @@ shape = SubResource("RectangleShape2D_sn0t7")
 metadata/_edit_lock_ = true
 
 [node name="LightswitchBoard" type="CharacterBody2D" parent="Level1/Table" unique_id=319225547]
-position = Vector2(21.000023, 402.99997)
+position = Vector2(91.99999, 592)
 scale = Vector2(0.8, 0.8)
 input_pickable = true
 script = ExtResource("9_kvpfn")

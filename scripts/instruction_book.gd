@@ -101,11 +101,9 @@ func play_tab_1(open: bool = true) -> void:
 	var title = page.get_node("PageTitle")
 	var left_text = page.get_node("LeftText")
 	var book_image = page.get_node("BookImage")
-	var instructions = page.get_node("Instructions")
 	title.visible = false
 	left_text.visible = false
 	book_image.visible = false
-	instructions.visible = false
 	if tab_1_opened and !open:
 		tab_1_animation.play("close_tab")
 		tab_1_animation_player.play("close_tab")
@@ -115,7 +113,6 @@ func play_tab_1(open: bool = true) -> void:
 	title.visible = open
 	left_text.visible = open
 	book_image.visible = open
-	instructions.visible = open
 	tab_1_opened = open
 
 func play_tab_2(open: bool = true) -> void:
@@ -148,6 +145,11 @@ func play_tab_3(open: bool = true) -> void:
 func play_tab_4(open: bool = true) -> void:
 	var page = pages.get_node("Lightbulbs")
 	page.get_node("Page1").visible = open
+
+	if open == false:
+		page.get_node("Page2").visible = open
+		page.get_node("Page3").visible = open
+	
 	if tab_4_opened and !open:
 		tab_4_animation.play("close_tab")
 		tab_4_animation_player.play("close_tab")
