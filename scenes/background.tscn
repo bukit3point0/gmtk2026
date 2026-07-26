@@ -155,21 +155,20 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ChoiceButtons" type="Node2D" parent="TextureRect" unique_id=1786030307]
-position = Vector2(10, 10)
+position = Vector2(1163, 959)
 script = ExtResource("12_r2thq")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/ChoiceButtons" unique_id=1483165118]
 custom_minimum_size = Vector2(0, 100)
 custom_maximum_size = Vector2(-1, 100)
-offset_left = 1151.0
-offset_top = 970.0
-offset_right = 1387.0
-offset_bottom = 1070.0
+offset_right = 237.0
+offset_bottom = 100.0
 theme_override_constants/separation = 20
 
 [node name="ConfirmButton" type="TextureButton" parent="TextureRect/ChoiceButtons/HBoxContainer" unique_id=99023367]
 custom_minimum_size = Vector2(108, 0)
 layout_mode = 2
+offset_transform_enabled = true
 tooltip_text = "Approve Mission"
 texture_normal = ExtResource("14_5xduy")
 texture_pressed = ExtResource("18_nji80")
@@ -180,6 +179,7 @@ stretch_mode = 4
 custom_minimum_size = Vector2(108, 100)
 custom_maximum_size = Vector2(108, -1)
 layout_mode = 2
+offset_transform_enabled = true
 tooltip_text = "Cancel Mission"
 texture_normal = ExtResource("15_fligg")
 texture_pressed = ExtResource("20_wx42w")
