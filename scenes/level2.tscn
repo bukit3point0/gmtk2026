@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c3cc25nyiaeyd"]
 
 [ext_resource type="Script" uid="uid://gmeqcgwpu5hb" path="res://scripts/level_controller.gd" id="1_8g4ke"]
+[ext_resource type="Resource" uid="uid://du4nghlymnske" path="res://rocket_data/level_data/level_data_2.tres" id="2_8g4ke"]
 [ext_resource type="PackedScene" uid="uid://bpn3sdvipin1v" path="res://scenes/background.tscn" id="2_56gwk"]
 [ext_resource type="Script" uid="uid://dj30d0hgnscu5" path="res://scripts/thermometer.gd" id="3_ve5ok"]
 [ext_resource type="Texture2D" uid="uid://c0sw7ff8v4dvb" path="res://assets/spritesheets/thermometer.png" id="4_cleqw"]
@@ -170,6 +171,7 @@ size = Vector2(422, 594)
 
 [node name="Level2" type="Node2D" unique_id=1055144618]
 script = ExtResource("1_8g4ke")
+level_data = ExtResource("2_8g4ke")
 
 [node name="Game" type="Node2D" parent="." unique_id=799543503]
 
