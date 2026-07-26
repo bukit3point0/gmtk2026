@@ -4,4 +4,8 @@
 
 [resource]
 script = ExtResource("1_mob1e")
+temperature_test = 1
+ship_plate_id = "OS5FBR5K"
+wires_test = 2
+wires_array = Array[int]([0, 0, 0, 0, 0, 0])
 metadata/_custom_type_script = "uid://imixhkfy73l4"
