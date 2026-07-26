@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://clvbjgfe4252e" path="res://assets/mocks/thermometer_empty.png" id="3_ev1xt"]
 [ext_resource type="Texture2D" uid="uid://bvq0yewxmio1m" path="res://assets/spritesheets/book_tab.png" id="4_nvh1c"]
 [ext_resource type="Texture2D" uid="uid://den8akhwdtr4x" path="res://assets/images/lit_lightbulb.png" id="5_4j6de"]
+[ext_resource type="Script" uid="uid://63vp4ru54j47" path="res://scripts/wiring.gd" id="5_6bl1r"]
 [ext_resource type="Script" uid="uid://bhl2f18swwpct" path="res://scripts/lightbulbs.gd" id="5_nvh1c"]
 [ext_resource type="Texture2D" uid="uid://cne3a65t5l4w0" path="res://assets/images/arrow_right.png" id="7_nvh1c"]
 [ext_resource type="Texture2D" uid="uid://q3x6qdjsxvbq" path="res://assets/images/arrow_left.png" id="8_6bl1r"]
@@ -552,7 +553,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Tab4Image:position")
+tracks/0/path = NodePath("Tab5Image:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -568,7 +569,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Tab4Image:position")
+tracks/0/path = NodePath("Tab5Image:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -584,7 +585,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Tab4Image:position")
+tracks/0/path = NodePath("Tab5Image:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -620,6 +621,7 @@ metadata/_edit_lock_ = true
 [node name="Pages" type="Node2D" parent="." unique_id=1046660015]
 
 [node name="Thermometer" type="Node2D" parent="Pages" unique_id=1469277322]
+visible = false
 visible = false
 metadata/_edit_lock_ = true
 
@@ -865,175 +867,29 @@ texture = ExtResource("3_ev1xt")
 libraries/ = SubResource("AnimationLibrary_ca42v")
 
 [node name="Cody2" type="Node2D" parent="Pages" unique_id=2121371317]
-visible = false
 
 [node name="Contents" type="Node2D" parent="Pages/Cody2" unique_id=139109660]
 
-[node name="PageTitle" type="RichTextLabel" parent="Pages/Cody2/Contents" unique_id=438067125]
-offset_left = -297.0
-offset_top = -95.0
-offset_right = -14.0
-offset_bottom = -72.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
-text = "Cody2"
-fit_content = true
-horizontal_alignment = 1
-
-[node name="LeftText" type="RichTextLabel" parent="Pages/Cody2/Contents" unique_id=1016595093]
-offset_left = -297.0
-offset_top = -72.0
-offset_right = -14.0
-offset_bottom = 181.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 14
-text = "The thermometer gauge holds the temperature of the hottest it got during testing, and is used to test the theraml protection system."
-
-[node name="BookImage" type="Sprite2D" parent="Pages/Cody2/Contents" unique_id=1925507889]
-position = Vector2(-170, -175)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_ev1xt")
-centered = false
-
-[node name="Instructions" type="VBoxContainer" parent="Pages/Cody2/Contents" unique_id=203842055]
-offset_left = 15.0
-offset_top = -179.0
-offset_right = 298.0
-offset_bottom = 181.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Headers" type="HBoxContainer" parent="Pages/Cody2/Contents/Instructions" unique_id=1301329614]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Cody2/Contents/Instructions/Headers" unique_id=1604518866]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "If the thermometer reads..."
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Cody2/Contents/Instructions/Headers" unique_id=1462764184]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Do..."
-fit_content = true
-vertical_alignment = 2
-
-[node name="ColorRect" type="ColorRect" parent="Pages/Cody2/Contents/Instructions" unique_id=2068459509]
-custom_minimum_size = Vector2(0, 1)
-layout_mode = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Instruction1" type="HBoxContainer" parent="Pages/Cody2/Contents/Instructions" unique_id=893235037]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Cody2/Contents/Instructions/Instruction1" unique_id=887030238]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "0°C - 999°C"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Cody2/Contents/Instructions/Instruction1" unique_id=1308806901]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Abort mission"
-fit_content = true
-
-[node name="Instruction2" type="HBoxContainer" parent="Pages/Cody2/Contents/Instructions" unique_id=661981576]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Cody2/Contents/Instructions/Instruction2" unique_id=79600374]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "1,000°C - 1,249°C"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Cody2/Contents/Instructions/Instruction2" unique_id=2042888695]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Hold until timer ends in 3"
-fit_content = true
-
-[node name="Instruction3" type="HBoxContainer" parent="Pages/Cody2/Contents/Instructions" unique_id=751544089]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Cody2/Contents/Instructions/Instruction3" unique_id=494694484]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "1,250°C - 2,499°C"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Cody2/Contents/Instructions/Instruction3" unique_id=433457343]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Thermometer cleared"
-fit_content = true
-
-[node name="Instruction4" type="HBoxContainer" parent="Pages/Cody2/Contents/Instructions" unique_id=838368954]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Cody2/Contents/Instructions/Instruction4" unique_id=554687946]
-custom_minimum_size = Vector2(145, 0)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "2,500°C - ???"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Cody2/Contents/Instructions/Instruction4" unique_id=35115777]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 13
-text = "Abort mission"
-fit_content = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Cody2/Contents/Instructions" unique_id=1708335811]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 14
-
-[node name="Tab3Animation" type="AnimatedSprite2D" parent="Pages/Cody2" unique_id=99875062]
+[node name="Tab3Animation" type="AnimatedSprite2D" parent="Pages/Wiring" unique_id=99875062]
 position = Vector2(327, -116)
 sprite_frames = SubResource("SpriteFrames_riqys")
 animation = &"close_tab"
 frame = 6
 frame_progress = 1.0
 
-[node name="Tab3Button" type="Button" parent="Pages/Cody2" unique_id=1522914328]
+[node name="Tab3Button" type="Button" parent="Pages/Wiring" unique_id=1522914328]
 offset_left = 311.0
 offset_top = -126.0
 offset_right = 343.0
 offset_bottom = -106.0
 flat = true
 
-[node name="Tab3Image" type="Sprite2D" parent="Pages/Cody2" unique_id=1097694454]
+[node name="Tab3Image" type="Sprite2D" parent="Pages/Wiring" unique_id=1097694454]
 position = Vector2(325, -116)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("3_ev1xt")
 
-[node name="Tab3AnimationPlayer" type="AnimationPlayer" parent="Pages/Cody2" unique_id=613816853]
+[node name="Tab3AnimationPlayer" type="AnimationPlayer" parent="Pages/Wiring" unique_id=613816853]
 libraries/ = SubResource("AnimationLibrary_1kice")
 
 [node name="Lightbulbs" type="Node2D" parent="Pages" unique_id=785265382]
@@ -1218,7 +1074,9 @@ metadata/_edit_lock_ = true
 [connection signal="input_event" from="." to="." method="_on_instruction_book_input_event"]
 [connection signal="pressed" from="Pages/Thermometer/Tab1Button" to="." method="_on_tab_1_button_pressed"]
 [connection signal="pressed" from="Pages/ReactivityChart/Tab2Button" to="." method="_on_tab_2_button_pressed"]
-[connection signal="pressed" from="Pages/Cody2/Tab3Button" to="." method="_on_tab_3_button_pressed"]
+[connection signal="pressed" from="Pages/Wiring/Page1/NextPageButton" to="Pages/Wiring" method="_on_next_page_from_1_button_pressed"]
+[connection signal="pressed" from="Pages/Wiring/Page2/LastPageButton" to="Pages/Wiring" method="_on_last_page_from_2_pressed"]
+[connection signal="pressed" from="Pages/Wiring/Tab3Button" to="." method="_on_tab_3_button_pressed"]
 [connection signal="pressed" from="Pages/Lightbulbs/Page1/NextPageButton" to="Pages/Lightbulbs" method="_on_next_page_from_1_button_pressed"]
 [connection signal="pressed" from="Pages/Lightbulbs/Page2/LastPageButton" to="Pages/Lightbulbs" method="_on_last_page_from_2_pressed"]
 [connection signal="pressed" from="Pages/Lightbulbs/Page2/NextPageButton" to="Pages/Lightbulbs" method="_on_next_page_from_2_pressed"]
