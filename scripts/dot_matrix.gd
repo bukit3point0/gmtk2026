@@ -3,27 +3,32 @@ extends Sprite2D
 @onready var rich_text_label: RichTextLabel = $MarginContainer/RichTextLabel
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $MarginContainer/AudioStreamPlayer2D
 
+const TIME_BETWEEN_WORDS = 0.2
+
+var print_timer: float = 0.2
 var is_printing_words = false
 
+var words: Array[String]
+
 func _ready() -> void:
-	display_word_by_word()
-
-func _process(_delta) -> void:
-	# as long as it is printing words and the player is not currently running, play the audio
-	if is_printing_words and !audio_stream_player_2d.playing:
-		play_dot_matrix_sound()
-
-func display_word_by_word() -> void:
-	is_printing_words = true
-	var text = rich_text_label.text
-	var words = text.split(" ")
+	EventBus.connect("_print_message", _on_print_message)
+	words = ["Launch", "sequence", "begin"]
 	rich_text_label.text = ""
-	for word in words:
-		rich_text_label.text += word + " "
-		if get_tree() != null:
-			await get_tree().create_timer(0.2).timeout
-	is_printing_words = false
-	rich_text_label.text += "\n" # line break for the next set of text
 
-func play_dot_matrix_sound() -> void:
-	audio_stream_player_2d.playing = true
+func _process(delta) -> void:
+	print_timer -= delta
+	if print_timer <= 0:
+		print_timer = TIME_BETWEEN_WORDS
+		if words.is_empty():
+			audio_stream_player_2d.playing = false
+		else:
+			audio_stream_player_2d.playing = true
+			var word = words.pop_front()
+			rich_text_label.text += word + " "
+			if words.is_empty():
+				rich_text_label.text += "\n\n"
+
+func _on_print_message(message: String):
+	var individual_words = message.split(" ")
+	for word in individual_words:
+		words.push_back(word)
