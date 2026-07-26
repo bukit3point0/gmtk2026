@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dd2cvhfsq4k23" path="res://assets/images/reject_button.png" id="15_fligg"]
 [ext_resource type="Script" uid="uid://dcqkm34267kvf" path="res://scripts/player_lives.gd" id="15_ivgg2"]
 [ext_resource type="Texture2D" uid="uid://d3th7nm1kllde" path="res://assets/images/player_life.png" id="16_r4ipc"]
-[ext_resource type="Texture2D" uid="uid://dxu8ahg5x2ca2" path="res://assets/mocks/metal plate.png" id="17_r4ipc"]
+[ext_resource type="Texture2D" uid="uid://cjqo3f1jf0m8w" path="res://assets/images/license_plate.png" id="21_iquee"]
 [ext_resource type="Texture2D" uid="uid://bf12x55o2xloh" path="res://assets/images/settings.png" id="22_iquee"]
 
 [node name="Background" type="Node2D" unique_id=2126150908]
@@ -203,17 +203,22 @@ centered = false
 
 [node name="Sprite2D" type="Sprite2D" parent="TextureRect" unique_id=931145954]
 position = Vector2(1007, 332)
-texture = ExtResource("17_r4ipc")
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("21_iquee")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Sprite2D" unique_id=716756715]
-offset_left = -85.0
-offset_top = -37.0
-offset_right = 85.0
-offset_bottom = 37.0
-theme_override_colors/default_color = Color(0.8156863, 0.8627451, 0.8627451, 1)
+anchors_preset = -1
+anchor_right = -0.0127688
+anchor_bottom = 0.0016583748
+offset_left = -616.6665
+offset_top = -299.99994
+offset_right = -446.6665
+offset_bottom = -225.99994
+scale = Vector2(8, 8)
+theme_override_colors/default_color = Color(0.8092493, 0.7954659, 0.7650906, 1)
 theme_override_colors/font_outline_color = Color(0.37254903, 0.4509804, 0.4627451, 1)
 theme_override_constants/outline_size = 3
-theme_override_font_sizes/normal_font_size = 34
+theme_override_font_sizes/normal_font_size = 32
 text = "8675309A"
 horizontal_alignment = 1
 vertical_alignment = 1

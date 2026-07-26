@@ -310,7 +310,7 @@ report_data = ExtResource("9_bo4dx")
 shape = SubResource("RectangleShape2D_sn0t7")
 
 [node name="Wires" type="CharacterBody2D" parent="Game/Table" unique_id=1301805531]
-position = Vector2(169, 609)
+position = Vector2(724, 578)
 collision_layer = 16
 collision_mask = 16
 input_pickable = true
