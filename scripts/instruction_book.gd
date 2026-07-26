@@ -145,16 +145,11 @@ func play_tab_3(open: bool = true) -> void:
 
 func play_tab_4(open: bool = true) -> void:
 	var page = pages.get_node("Lightbulbs")
-	var page1 = page.get_node("Page1")
-	var page2 = page.get_node("Page2")
-	page1.visible = false
-	page2.visible = false
+	page.get_node("Page1").visible = open
 	if tab_4_opened and !open:
 		tab_4_animation.play("close_tab")
 		tab_4_animation_player.play("close_tab")
 	elif !tab_4_opened and open:
 		tab_4_animation.play("open_tab")
 		tab_4_animation_player.play("open_tab")
-	page1.visible = open
-	page2.visible = open
 	tab_4_opened = open
