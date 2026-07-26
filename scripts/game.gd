@@ -1,18 +1,16 @@
 extends Node2D
 
+func _ready() -> void:
+	EventBus.connect("_pause_screen", pause_button_trigger)
+	
 func pause_trigger():
-	var clock_node = get_node("Level1/Background/TextureRect/Clock")
-	clock_node.pause_countdown = true
+	EventBus._pause.emit()
 	var pauseMenu = get_node("PauseMenu")
 	print("pause ", pauseMenu)
 	pauseMenu.visible = true
 
 func unpause():
-	var clock_node = get_node("Level1/Background/TextureRect/Clock")
-	clock_node.pause_countdown = false
-	clock_node.countdown()
+	EventBus._unpause.emit()
 
-func _process(_delta: float) -> void:
-	# If escape is pressed it triggers the func to pause timer and open pause menu
-	if Input.is_action_just_pressed("Escape"):
-		pause_trigger()
+func pause_button_trigger():
+	pause_trigger()

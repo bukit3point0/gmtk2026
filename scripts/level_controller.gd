@@ -12,6 +12,8 @@ func _ready() -> void:
 	EventBus.connect("_abort_launch", _on_abort_launch)
 	EventBus.connect("_confirm_launch", _on_confirm_launch)
 	EventBus.connect("_countdown_ended", _on_countdown_ended)
+	EventBus.connect("_pause_screen", pause_button_trigger)
+
 
 func _on_abort_launch() -> void:
 	if level_ended:
@@ -59,7 +61,5 @@ func pause_trigger():
 func unpause():
 	EventBus._unpause.emit()
 
-func _process(_delta: float) -> void:
-	# If escape is pressed it triggers the func to pause timer and open pause menu
-	if Input.is_action_just_pressed("Escape"):
-		pause_trigger()
+func pause_button_trigger():
+	pause_trigger()

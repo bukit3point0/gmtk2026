@@ -13,6 +13,8 @@ func _ready() -> void:
 	SaveLoad.load_game()
 
 func load_game() -> void:
+	for child in get_children():
+		child.queue_free()
 	var level = LEVEL_2.instantiate()
 	add_child(level)
 	level.connect("_win_level", _on_win_level)
