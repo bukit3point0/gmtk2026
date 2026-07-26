@@ -231,3 +231,4 @@ expand_icon = true
 
 [connection signal="pressed" from="TextureRect/ChoiceButtons/HBoxContainer/ConfirmButton" to="TextureRect/ChoiceButtons" method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="TextureRect/ChoiceButtons/HBoxContainer/RejectButton" to="TextureRect/ChoiceButtons" method="_on_reject_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dl7xc7yc0rvel" path="res://scripts/pause_settings.gd" id="1_05uyy"]
 [ext_resource type="PackedScene" uid="uid://bo2hvopdyrqm4" path="res://scenes/settings_button.tscn" id="2_p81d2"]
 [ext_resource type="PackedScene" uid="uid://cefb85vh8t844" path="res://scenes/settings.tscn" id="3_2nc7s"]
-[ext_resource type="PackedScene" uid="uid://c8as720viq20p" path="res://scenes/fullscreen_button.tscn" id="4_5d2l8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
 content_margin_bottom = 80.0
@@ -66,9 +65,6 @@ text = "Quit"
 
 [node name="Settings" parent="." unique_id=1476206606 instance=ExtResource("3_2nc7s")]
 visible = false
-
-[node name="Fullscreen_button" parent="." unique_id=1669883148 instance=ExtResource("4_5d2l8")]
-position = Vector2(4, 15)
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/RestartLevelButton" to="." method="_on_restart_level_button_pressed"]

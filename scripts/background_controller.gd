@@ -8,3 +8,6 @@ func stop_clock() -> void:
 
 func trigger_final_countdown():
 	clock.set_time(11)
+
+func _on_button_pressed() -> void:
+	EventBus._pause_screen.emit()
