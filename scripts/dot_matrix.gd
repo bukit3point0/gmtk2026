@@ -25,6 +25,8 @@ func _process(delta) -> void:
 			audio_stream_player_2d.playing = true
 			var word = words.pop_front()
 			rich_text_label.text += word + " "
+			if words.is_empty():
+				rich_text_label.text += "\n\n"
 
 func _on_print_message(message: String):
 	var individual_words = message.split(" ")
