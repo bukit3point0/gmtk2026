@@ -433,6 +433,9 @@ _data = {
 &"open_tab": SubResource("Animation_264po")
 }
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nvh1c"]
+load_path = "res://.godot/imported/arrow_right.png-42b6c677f54da5dc4129c6a869eef1da.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_qgjk3"]
 atlas = ExtResource("4_nvh1c")
 region = Rect2(192, 0, 32, 20)
@@ -797,9 +800,9 @@ visible = false
 
 [node name="PageTitle" type="RichTextLabel" parent="Pages/ReactivityChart/Contents" unique_id=911714899]
 offset_left = -297.0
-offset_top = -95.0
+offset_top = -157.0
 offset_right = -14.0
-offset_bottom = -72.0
+offset_bottom = -134.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
 text = "Material Reactivity"
@@ -807,10 +810,10 @@ fit_content = true
 horizontal_alignment = 1
 
 [node name="LeftText" type="RichTextLabel" parent="Pages/ReactivityChart/Contents" unique_id=976272786]
-offset_left = -297.0
-offset_top = -72.0
-offset_right = -14.0
-offset_bottom = 181.0
+offset_left = -298.0
+offset_top = -110.0
+offset_right = -15.0
+offset_bottom = 159.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 text = "Reactivity of components in continuous contact must NOT exceed 0.5 units, otherwise operational conditions may result in structural failure.
@@ -1038,7 +1041,6 @@ script = ExtResource("5_nvh1c")
 metadata/_edit_lock_ = true
 
 [node name="Page1" type="Node2D" parent="Pages/Lightbulbs" unique_id=968897906]
-visible = false
 
 [node name="PageTitle" type="RichTextLabel" parent="Pages/Lightbulbs/Page1" unique_id=713024890]
 offset_left = -297.0
@@ -1060,20 +1062,7 @@ offset_bottom = 181.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
-text = "Did you know: astronauts can't see in the dark! These light bulbs need to be tested in a very specific way: in the order of the CEO's favorite numbers 1 - 5. Unfortunately, this changes based on what his favorite number was"
-
-[node name="RightText" type="RichTextLabel" parent="Pages/Lightbulbs/Page1" unique_id=250515400]
-offset_left = 15.0
-offset_top = -179.0
-offset_right = 299.0
-offset_bottom = 181.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
-text = "on the day the rocket was created. Use the chart to map out in what order to flip the switches.
-
-If the sum of the numbers in the rocket ID is even, your starting order is \"12345\".
-
-If the sum of the numbers in the rocket ID is odd, your starting order is \"54321\"."
+text = "Did you know: astronauts can't see in the dark! These light bulbs need to be tested in a very specific way. Missing any step can cause catastrophic failures."
 
 [node name="BookImage" type="Sprite2D" parent="Pages/Lightbulbs/Page1" unique_id=1049632705]
 position = Vector2(-183, -175)
@@ -1092,492 +1081,102 @@ icon = ExtResource("7_nvh1c")
 icon_alignment = 2
 expand_icon = true
 
+[node name="LeftText2" type="RichTextLabel" parent="Pages/Lightbulbs/Page1" unique_id=2087775308]
+offset_left = 19.0
+offset_top = -38.0
+offset_right = 302.0
+offset_bottom = 62.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "The next two pages contains the test protocals for the lightbulbs."
+horizontal_alignment = 1
+
 [node name="Page2" type="Node2D" parent="Pages/Lightbulbs" unique_id=430351340]
+visible = false
 
-[node name="LeftPage" type="GridContainer" parent="Pages/Lightbulbs/Page2" unique_id=2007138734]
-offset_left = -297.0
-offset_top = -179.0
-offset_right = -14.0
-offset_bottom = 181.0
-theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 0
-columns = 2
-
-[node name="EmtpyContainer" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=1436771402]
-custom_minimum_size = Vector2(1, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-
-[node name="NumberOrder1" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=1823716439]
-custom_minimum_size = Vector2(71, 23)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/NumberOrder1" unique_id=917268035]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
-text = "Pos1"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfRocketColor" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=289245421]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfRocketColor" unique_id=499945948]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 0
-offset_left = -1.0
-offset_right = 212.0
-offset_bottom = 42.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "If the rocket is [color]:"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfRocketInstruction1" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=1131853804]
-custom_minimum_size = Vector2(71, 23)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfRocketInstruction1" unique_id=373854143]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 0
-offset_right = 71.0
-offset_bottom = 42.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Move to Pos2"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfPlate1Letter" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=2036373233]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfPlate1Letter" unique_id=99309529]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 0
-offset_left = -1.0
-offset_right = 212.0
-offset_bottom = 42.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "If the plate has 1 letter:"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfPlate1LetterInstruction1" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=221908030]
-custom_minimum_size = Vector2(71, 23)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfPlate1LetterInstruction1" unique_id=469425081]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 0
-offset_right = 71.0
-offset_bottom = 42.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Move to Pos4"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfLowThermometer" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=259124300]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfLowThermometer" unique_id=1992094355]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 0
-offset_left = -1.0
-offset_right = 212.0
-offset_bottom = 42.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "If the themomter reads under 2,000°C:"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfThermometerInstruction1" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/LeftPage" unique_id=1202582315]
-custom_minimum_size = Vector2(71, 23)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/LeftPage/IfThermometerInstruction1" unique_id=1657352178]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 0
-offset_right = 71.0
-offset_bottom = 42.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Move to Pos5"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="RightPage" type="GridContainer" parent="Pages/Lightbulbs/Page2" unique_id=1286254008]
-offset_left = 15.0
-offset_top = -179.0
-offset_right = 299.0
-offset_bottom = 181.0
-theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 0
-columns = 4
-
-[node name="NumberOrder2" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=1810571875]
-custom_minimum_size = Vector2(71, 23)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/NumberOrder2" unique_id=1652179655]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
-text = "Pos2"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="NumberOrder3" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=28180671]
-custom_minimum_size = Vector2(71, 23)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/NumberOrder3" unique_id=275627960]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
-text = "Pos3"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="NumberOrder4" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=80652187]
-custom_minimum_size = Vector2(71, 23)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/NumberOrder4" unique_id=1197645283]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
-text = "Pos4"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="NumberOrder5" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=414266453]
-custom_minimum_size = Vector2(70, 23)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/NumberOrder5" unique_id=1806463710]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
-text = "Pos5"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfRocketInstruction2" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=769926432]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction2" unique_id=1006680416]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Move to Pos1"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfRocketInstruction3" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=141753877]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction3" unique_id=1145827638]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Keep"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfRocketInstruction4" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=328397256]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction4" unique_id=1877893412]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Keep"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfRocketInstruction5" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=243938251]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfRocketInstruction5" unique_id=1863755142]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Keep"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfPlate1LetterInstruction2" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=361243327]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction2" unique_id=1539068107]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Keep"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfPlate1LetterInstruction3" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=1074778719]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction3" unique_id=1071297730]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Move to Pos1"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfPlate1LetterInstruction4" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=613496594]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction4" unique_id=851512441]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Move to Pos3"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfPlate1LetterInstruction5" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=380321530]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfPlate1LetterInstruction5" unique_id=165824119]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Keep"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfThermometerInstruction2" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=1593302938]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction2" unique_id=262111971]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Move to Pos3"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfThermometerInstruction3" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=1626384265]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction3" unique_id=269059376]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Move to Pos4"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfThermometerInstruction4" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=334695229]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction4" unique_id=744199920]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Move to Pos1"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="IfThermometerInstruction5" type="ReferenceRect" parent="Pages/Lightbulbs/Page2/RightPage" unique_id=965156952]
-custom_minimum_size = Vector2(71, 42)
-layout_mode = 2
-border_color = Color(0, 0, 0, 1)
-editor_only = false
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2/RightPage/IfThermometerInstruction5" unique_id=299807250]
-custom_minimum_size = Vector2(64, 42)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 69.0
-offset_bottom = 24.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 18
-text = "Move to Pos2"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="NextPageButton" type="Button" parent="Pages/Lightbulbs/Page2" unique_id=212352073]
-offset_left = -293.0
-offset_top = 127.0
-offset_right = -173.0
-offset_bottom = 169.0
+[node name="LastPageButton" type="Button" parent="Pages/Lightbulbs/Page2" unique_id=212352073]
+offset_left = -296.0
+offset_top = 144.0
+offset_right = -184.0
+offset_bottom = 179.0
 theme_override_font_sizes/font_size = 20
 text = "Last Page"
 icon = ExtResource("8_6bl1r")
 expand_icon = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Lightbulbs/Page2" unique_id=492020263]
+offset_left = -293.0
+offset_top = -166.0
+offset_right = -1.0
+offset_bottom = 147.0
+theme_override_colors/default_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Step 1: Begin with all switch protocols in the off position. If any switch has been left in the off position, there may be systems firing that may prevent test mode from functioning. (The Reset Protocol must be completed prior to engaging Test Mode). If all switches are in the correct configuration proceed to Step 2."
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page2" unique_id=1215928935]
+offset_left = 13.0
+offset_top = -181.0
+offset_right = 304.99997
+offset_bottom = 147.0
+theme_override_colors/default_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Step 2: Cycle the Navigation System Control (NSc1) Switch located at Toggle Switch 5. This will cycle through all navigation control systems to verify they are freely moving. Begin the cycling process by switching the toggle on and off quickly three times ending with the toggle in the on position the third time. The cycle may take up to 3 seconds to complete: 
+	a. PASS - the light above the toggle remains solid. Proceed to Step 3.
+	b. PASS - If the light is blinking slowly, this indicates a moving part is sticking but tested successfully.  All moving parts should be lubricated following the shuttle’s return.
+	c. WARNING - If the light is blinking slowly, “Warning - Ports 3 and 4 have been labeled incorrectly please swap the labels. The pilot will need to compensate by reversing Y Axis controls.” Proceed to Step 3."
+
+[node name="NextPageButton" type="Button" parent="Pages/Lightbulbs/Page2" unique_id=1272243894]
+offset_left = 186.0
+offset_top = 146.0
+offset_right = 298.0
+offset_bottom = 181.0
+theme_override_font_sizes/font_size = 20
+text = "Next Page"
+icon = SubResource("CompressedTexture2D_nvh1c")
+expand_icon = true
+
+[node name="Page3" type="Node2D" parent="Pages/Lightbulbs" unique_id=36001933]
+visible = false
+
+[node name="LastPageButton" type="Button" parent="Pages/Lightbulbs/Page3" unique_id=346912568]
+offset_left = -296.0
+offset_top = 144.0
+offset_right = -184.0
+offset_bottom = 179.0
+theme_override_font_sizes/font_size = 20
+text = "Last Page"
+icon = ExtResource("8_6bl1r")
+expand_icon = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Lightbulbs/Page3" unique_id=1748354744]
+offset_left = -293.0
+offset_top = -173.0
+offset_right = -1.0
+offset_bottom = 147.0
+theme_override_colors/default_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Step 3: Toggle the External Sensor Array Switch (EsA3) located at Toggle Switch 3 to the on position.
+	a. PASS - The temperature gage will raise to maximum for 3 Seconds then should remain within [8 to 10] go to Step 4
+	b. CRITICAL - The temperature gage does go to maximum prior to becoming steady. ABORT!
+	c. WARNING - the temperature gage goes to maximum and remains mostly steady but occasionally dips below [8]. “Warning - Fuel pipe in contact with a Structural  Member” go to Step 4"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Lightbulbs/Page3" unique_id=1715747468]
+offset_left = 13.0
+offset_top = -177.0
+offset_right = 304.99997
+offset_bottom = 181.0
+theme_override_colors/default_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Step 4: Finally, engage test mode by doing the following in order:
+	1. Turn the Auxiliary System Controller Switch (ASc1) to the on position.
+	2. Quickly turn on the Primary Communications Sync (Pcs2), and quickly turn it off again. The second indicator light will blink twice.
+	3. Turn on the Primary Control System (PcS2).
+		a. CRITICAL - Light 3 is blinking, light 2 or 5 is solid, and light one is not lit.
+		b.CRITICAL - Any two lights are solid and any two lights are blinking.
+		c. CRITICAL - Any three lights are blinking and there is one solid light.
+		4. WARNING - Light 1 and light 5 are both solid “Warning the fuel tank is in contact with a deck plate.”
+		5. PASS - All other configurations. You may proceed"
 
 [node name="Instructions" type="VBoxContainer" parent="Pages/Lightbulbs" unique_id=1248383558]
 visible = false
@@ -1621,3 +1220,7 @@ metadata/_edit_lock_ = true
 [connection signal="pressed" from="Pages/ReactivityChart/Tab2Button" to="." method="_on_tab_2_button_pressed"]
 [connection signal="pressed" from="Pages/Cody2/Tab3Button" to="." method="_on_tab_3_button_pressed"]
 [connection signal="pressed" from="Pages/Lightbulbs/Page1/NextPageButton" to="Pages/Lightbulbs" method="_on_next_page_from_1_button_pressed"]
+[connection signal="pressed" from="Pages/Lightbulbs/Page2/LastPageButton" to="Pages/Lightbulbs" method="_on_last_page_from_2_pressed"]
+[connection signal="pressed" from="Pages/Lightbulbs/Page2/NextPageButton" to="Pages/Lightbulbs" method="_on_next_page_from_2_pressed"]
+[connection signal="pressed" from="Pages/Lightbulbs/Page3/LastPageButton" to="Pages/Lightbulbs" method="_on_last_page_from_3_pressed"]
+[connection signal="pressed" from="Pages/Lightbulbs/Tab4Button" to="." method="_on_tab_4_button_pressed"]
