@@ -23,18 +23,24 @@ func load_game() -> void:
 
 	remove_child($Home)
 
-func go_to_transition(win: bool):
+func go_to_transition(win: bool, condition: int):
 	remove_child(current_level)
 
 	var transition = TRANSITION.instantiate()
 	add_child(transition)
 	if win:
-		transition.show_win()
+		if condition == 0:
+			pass # the rocket was fine and it launched
+		else:
+			pass # the rocket had problems but you stopped it
 	else:
-		transition.show_fail()
+		if condition == 0:
+			pass # the rocket was fine but you stopped it for no reason
+		else:
+			pass # the rocke had issues and you let it launch
 
-func _on_win_level(_condition: int):
-	go_to_transition(true)
+func _on_win_level(condition: int):
+	go_to_transition(true, condition)
 
-func _on_fail_level(_condition: int):
-	go_to_transition(false)
+func _on_fail_level(condition: int):
+	go_to_transition(false, condition)
