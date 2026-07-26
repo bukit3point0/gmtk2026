@@ -102,7 +102,6 @@ func play_tab_1(open: bool = true) -> void:
 	title.visible = false
 	left_text.visible = false
 	book_image.visible = false
-	instructions.visible = false
 	if tab_1_opened and !open:
 		tab_1_animation.play("close_tab")
 		tab_1_animation_player.play("close_tab")
@@ -112,7 +111,6 @@ func play_tab_1(open: bool = true) -> void:
 	title.visible = open
 	left_text.visible = open
 	book_image.visible = open
-	instructions.visible = open
 	tab_1_opened = open
 
 func play_tab_2(open: bool = true) -> void:
