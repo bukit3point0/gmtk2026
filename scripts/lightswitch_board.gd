@@ -37,6 +37,7 @@ func _on_switch_button_pressed(button_index) -> void:
 			EventBus._print_message.emit("Beginning External Sensor Array Switch test protocol")
 
 	switches_on[button_index] = !switches_on[button_index]
+	$LightSwitch.play()
 	
 	if switches_on[button_index]:
 		switches[button_index].texture = switch_on
