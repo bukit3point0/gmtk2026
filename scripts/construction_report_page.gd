@@ -17,7 +17,6 @@ func _set_construction_report_drag() -> void:
 	construction_report_dragging = !construction_report_dragging
 
 func _on_construction_report_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	print("input")
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			emit_signal("construction_report_drag_signal")
