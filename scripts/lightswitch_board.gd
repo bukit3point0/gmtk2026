@@ -56,6 +56,8 @@ func _on_switch_button_pressed(button_index) -> void:
 	else:
 		switches[button_index].texture = switch_off
 
+
+
 func temp_test():
 	conducting_temp_test = true
 	lights[2].texture = lit_bulb
