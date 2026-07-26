@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpn3sdvipin1v"]
 
-[ext_resource type="Texture2D" uid="uid://ntkki1lc1tjv" path="res://assets/mocks/office_background.png" id="1_bkp1e"]
 [ext_resource type="Script" uid="uid://dabmy8h4nlkq7" path="res://scripts/background_controller.gd" id="1_fligg"]
+[ext_resource type="Texture2D" uid="uid://d1lv7qhc7flm7" path="res://assets/images/desktop.png" id="2_nj1e1"]
 [ext_resource type="Texture2D" uid="uid://bl7qw5d1kfdtl" path="res://assets/images/dot_matrix.png" id="2_y0upk"]
 [ext_resource type="Script" uid="uid://bni6xaul56pow" path="res://scripts/dot_matrix.gd" id="3_jougr"]
 [ext_resource type="AudioStream" uid="uid://7vda1wwp4s8f" path="res://assets/audio/dot_matrix_printer.wav" id="4_cbsqf"]
@@ -22,6 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://d3th7nm1kllde" path="res://assets/images/player_life.png" id="16_r4ipc"]
 [ext_resource type="Texture2D" uid="uid://dxu8ahg5x2ca2" path="res://assets/mocks/metal plate.png" id="17_r4ipc"]
 [ext_resource type="Texture2D" uid="uid://bf12x55o2xloh" path="res://assets/images/settings.png" id="22_iquee"]
+[ext_resource type="Texture2D" uid="uid://c4ccphj6fvsgh" path="res://assets/images/rocket.png" id="23_wx42w"]
+[ext_resource type="Script" uid="uid://c7x7e8i512lc1" path="res://scripts/rocket_motion.gd" id="24_582at"]
+[ext_resource type="Texture2D" uid="uid://cwaljh3gf2le7" path="res://assets/images/concrete.png" id="25_emhnm"]
 
 [node name="Background" type="Node2D" unique_id=2126150908]
 script = ExtResource("1_fligg")
@@ -29,7 +32,7 @@ script = ExtResource("1_fligg")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1104701256]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("1_bkp1e")
+texture = ExtResource("2_nj1e1")
 
 [node name="DotMatrix" type="Sprite2D" parent="TextureRect" unique_id=907441809]
 position = Vector2(1471, 85)
@@ -218,6 +221,23 @@ text = "8675309A"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Node" type="Node2D" parent="TextureRect" unique_id=260972644]
+show_behind_parent = true
+
+[node name="Rocket" type="Sprite2D" parent="TextureRect/Node" unique_id=730375857]
+position = Vector2(498, 406)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("23_wx42w")
+script = ExtResource("24_582at")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Node" unique_id=1812223027]
+show_behind_parent = true
+offset_left = 130.0
+offset_top = 125.0
+offset_right = 890.0
+offset_bottom = 679.0
+texture = ExtResource("25_emhnm")
 
 [node name="Button" type="Button" parent="." unique_id=2016498875]
 modulate = Color(0.3403396, 0.3403392, 0.34033927, 1)

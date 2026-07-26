@@ -34,3 +34,4 @@ func _on_switch_button_pressed(button_index) -> void:
 		switches[button_index].texture = switch_on
 	else:
 		switches[button_index].texture = switch_off
+
