@@ -6,6 +6,8 @@ signal _fail_level(condition: int)
 
 @onready var background: Background = %Background
 
+@export var level_data: ShipProblems
+
 var level_ended: bool = false
 
 func _ready() -> void:
