@@ -35,16 +35,20 @@ func go_to_transition(win: bool, condition: int):
 		if condition == 0:
 			pass # the rocket was fine and it launched
 			var victory_text = current_data.launched_good_rocket
+			transition.launch_good(victory_text)
 		else:
 			pass # the rocket had problems but you stopped it
 			var victory_text = current_data.stopped_bad_rocket
+			transition.stop_bad(victory_text)
 	else:
 		if condition == 0:
 			pass # the rocket was fine but you stopped it for no reason
 			var fail_text = current_data.stopped_good_rocket
+			transition.stop_good(fail_text)
 		else:
 			pass # the rocket had issues and you let it launch
 			var fail_text = current_data.launched_bad_rocket
+			transition.launch_bad(fail_text)
 
 func _on_win_level(condition: int):
 	go_to_transition(true, condition)
