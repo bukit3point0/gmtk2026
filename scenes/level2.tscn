@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://b6at7x8phf37l" path="res://scenes/prefabs/instruction_book.tscn" id="5_xa7n4"]
 [ext_resource type="Script" uid="uid://nbhdbkrs6pss" path="res://scripts/construction_report_page.gd" id="8_76toy"]
 [ext_resource type="Resource" uid="uid://dkjwimq0ykkb6" path="res://rocket_data/construction_reports/bad_report_1.tres" id="9_bo4dx"]
-[ext_resource type="Script" uid="uid://d00itm13ksven" path="res://scripts/table_item/lightswitch_board.gd" id="10_s4es8"]
 [ext_resource type="Script" uid="uid://bqf55w6mymnhk" path="res://scripts/table_wires.gd" id="11_56gwk"]
 [ext_resource type="PackedScene" uid="uid://b4qhjw6ikhwnj" path="res://scenes/lightswitch_board.tscn" id="11_63e4f"]
 [ext_resource type="PackedScene" uid="uid://b8lgao4rxe2oh" path="res://scenes/wires.tscn" id="12_8g4ke"]
@@ -167,9 +166,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
-size = Vector2(684, 431)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn0t7"]
 size = Vector2(422, 594)
 
@@ -295,23 +291,9 @@ position = Vector2(1070, 654)
 collision_layer = 2
 collision_mask = 2
 
-[node name="LightswitchBoard" type="CharacterBody2D" parent="Game/Table" unique_id=319225547]
+[node name="BulbsAndSwitches" parent="Game/Table" unique_id=1007271350 instance=ExtResource("11_63e4f")]
 position = Vector2(21.000023, 402.99997)
 scale = Vector2(0.8, 0.8)
-collision_layer = 4
-collision_mask = 4
-input_pickable = true
-script = ExtResource("10_s4es8")
-metadata/_edit_group_ = true
-
-[node name="BulbsAndSwitches" parent="Game/Table/LightswitchBoard" unique_id=1007271350 instance=ExtResource("11_63e4f")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Table/LightswitchBoard" unique_id=2138706299]
-light_mask = 4
-visibility_layer = 4
-position = Vector2(341.99997, 215.49997)
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="ConstructionReportPage" type="CharacterBody2D" parent="Game/Table" unique_id=1967828674]
 position = Vector2(519, 757)
@@ -344,8 +326,5 @@ shape = SubResource("RectangleShape2D_riqys")
 [node name="PauseMenu" parent="." unique_id=1704919904 instance=ExtResource("12_y6lc1")]
 
 [connection signal="input_event" from="Game/Table/Thermometer" to="Game/Table/Thermometer" method="_on_thermometer_input_event"]
-[connection signal="input_event" from="Game/Table/LightswitchBoard" to="Game/Table/LightswitchBoard" method="_on_lightswitch_input_event"]
-[connection signal="lightswitch_drag_signal" from="Game/Table/LightswitchBoard" to="Game/Table/LightswitchBoard" method="_on_lightswitch_drag_signal"]
-[connection signal="mouse_entered" from="Game/Table/LightswitchBoard" to="Game/Table/LightswitchBoard" method="_on_mouse_entered"]
 [connection signal="input_event" from="Game/Table/ConstructionReportPage" to="Game/Table/ConstructionReportPage" method="_on_construction_report_input_event"]
 [connection signal="input_event" from="Game/Table/Wires" to="Game/Table/Wires" method="_on_wires_input_event"]
