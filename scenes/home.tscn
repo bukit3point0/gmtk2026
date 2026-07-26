@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://ccy6qnbd6s1r" path="res://scripts/home.gd" id="1_uhids"]
 [ext_resource type="PackedScene" uid="uid://bo2hvopdyrqm4" path="res://scenes/settings_button.tscn" id="2_w18ys"]
 [ext_resource type="PackedScene" uid="uid://cefb85vh8t844" path="res://scenes/settings.tscn" id="3_w18ys"]
-[ext_resource type="AudioStream" uid="uid://c7qj5punbrc50" path="res://assets/audio/GameJamTitleMusic.mp3" id="4_reixx"]
+[ext_resource type="AudioStream" uid="uid://cu3yxqdhvd6ki" path="res://assets/audio/GameJamTitleMusic.mp3" id="4_reixx"]
 
 [node name="Home" type="Node2D" unique_id=262647136]
 script = ExtResource("1_uhids")

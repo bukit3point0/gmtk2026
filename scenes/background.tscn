@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dd2cvhfsq4k23" path="res://assets/images/reject_button.png" id="15_fligg"]
 [ext_resource type="Script" uid="uid://dcqkm34267kvf" path="res://scripts/player_lives.gd" id="15_ivgg2"]
 [ext_resource type="Texture2D" uid="uid://d3th7nm1kllde" path="res://assets/images/player_life.png" id="16_r4ipc"]
+[ext_resource type="AudioStream" uid="uid://b4p8nqptxeecd" path="res://assets/audio/Button.mp3" id="19_plk4d"]
 [ext_resource type="Texture2D" uid="uid://cjqo3f1jf0m8w" path="res://assets/images/license_plate.png" id="21_iquee"]
 [ext_resource type="Texture2D" uid="uid://bf12x55o2xloh" path="res://assets/images/settings.png" id="22_iquee"]
 
@@ -181,6 +182,9 @@ icon = ExtResource("15_fligg")
 flat = true
 expand_icon = true
 
+[node name="Button" type="AudioStreamPlayer2D" parent="TextureRect/ChoiceButtons" unique_id=1263711753]
+stream = ExtResource("19_plk4d")
+
 [node name="PlayerLives" type="Node2D" parent="TextureRect" unique_id=1660213540]
 visible = false
 script = ExtResource("15_ivgg2")
@@ -208,6 +212,7 @@ texture = ExtResource("21_iquee")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Sprite2D" unique_id=716756715]
 anchors_preset = -1
+anchor_left = -0.0127688
 anchor_right = -0.0127688
 anchor_bottom = 0.0016583748
 offset_left = -616.6665
