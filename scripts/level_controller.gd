@@ -56,6 +56,9 @@ func _on_countdown_ended():
 func rocket_condition() -> int:
 	var condition: int = 0
 
+	if get_tree() == null:
+		return 0
+		
 	var possible_problems = get_tree().get_nodes_in_group("rocket_problems")
 	for problem in possible_problems:
 		if problem.has_method("get_problem_level"):
