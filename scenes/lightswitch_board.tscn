@@ -2,9 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://ctl34c38murvo" path="res://assets/images/unlit_lightbulb.png" id="1_o01s3"]
 [ext_resource type="Script" uid="uid://d0kwfw3611dio" path="res://scripts/lightswitch_board.gd" id="1_wllbv"]
-[ext_resource type="Texture2D" uid="uid://djdavkyeuyedt" path="res://assets/mocks/light_switch_on.png" id="2_wllbv"]
-[ext_resource type="AudioStream" uid="uid://ct052fahgotv0" path="res://assets/audio/LightSwitch.mp3" id="4_tmw1c"]
 [ext_resource type="Texture2D" uid="uid://lp42ulfjx0cx" path="res://assets/images/switch_off.png" id="3_wllbv"]
+[ext_resource type="Texture2D" uid="uid://ctuybhwsueen2" path="res://assets/images/masking_tape.png" id="4_b16bg"]
+[ext_resource type="AudioStream" uid="uid://ct052fahgotv0" path="res://assets/audio/LightSwitch.mp3" id="4_tmw1c"]
+[ext_resource type="FontFile" uid="uid://d18alb8uyr3dg" path="res://assets/fonts/PermanentMarker.ttf" id="5_pcr8j"]
 
 [node name="LightswitchBoard" type="Node2D" unique_id=1007271350]
 script = ExtResource("1_wllbv")
@@ -105,6 +106,91 @@ offset_left = 6.0
 offset_right = 124.0
 offset_bottom = 231.0
 flat = true
+
+[node name="MaskingTape" type="TextureRect" parent="GridContainer" unique_id=1707309763]
+layout_mode = 2
+texture = ExtResource("4_b16bg")
+expand_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/MaskingTape" unique_id=1563428837]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 39.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_pcr8j")
+theme_override_font_sizes/normal_font_size = 27
+text = "Asc1"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaskingTape2" type="TextureRect" parent="GridContainer" unique_id=427819094]
+layout_mode = 2
+texture = ExtResource("4_b16bg")
+expand_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/MaskingTape2" unique_id=903602810]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 39.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_pcr8j")
+theme_override_font_sizes/normal_font_size = 27
+text = "PcS2"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaskingTape3" type="TextureRect" parent="GridContainer" unique_id=660764614]
+layout_mode = 2
+texture = ExtResource("4_b16bg")
+expand_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/MaskingTape3" unique_id=1498796568]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 39.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_pcr8j")
+theme_override_font_sizes/normal_font_size = 27
+text = "EsA3"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaskingTape4" type="TextureRect" parent="GridContainer" unique_id=30913579]
+layout_mode = 2
+texture = ExtResource("4_b16bg")
+expand_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/MaskingTape4" unique_id=1166187869]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 39.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_pcr8j")
+theme_override_font_sizes/normal_font_size = 27
+text = "Pcs2"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaskingTape5" type="TextureRect" parent="GridContainer" unique_id=755220724]
+layout_mode = 2
+texture = ExtResource("4_b16bg")
+expand_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/MaskingTape5" unique_id=1416395020]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 39.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_pcr8j")
+theme_override_font_sizes/normal_font_size = 27
+text = "NSc1"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LightSwitch" type="AudioStreamPlayer2D" parent="." unique_id=876672252]
 stream = ExtResource("4_tmw1c")
