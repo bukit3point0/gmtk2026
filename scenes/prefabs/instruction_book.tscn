@@ -746,6 +746,7 @@ texture = ExtResource("3_ev1xt")
 libraries/ = SubResource("AnimationLibrary_ca42v")
 
 [node name="Wiring" type="Node2D" parent="Pages" unique_id=2121371317]
+visible = false
 script = ExtResource("5_6bl1r")
 
 [node name="Page1" type="Node2D" parent="Pages/Wiring" unique_id=139109660]
