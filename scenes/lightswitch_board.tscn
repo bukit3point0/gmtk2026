@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ctl34c38murvo" path="res://assets/images/unlit_lightbulb.png" id="1_o01s3"]
 [ext_resource type="Script" uid="uid://d0kwfw3611dio" path="res://scripts/lightswitch_board.gd" id="1_wllbv"]
 [ext_resource type="Texture2D" uid="uid://djdavkyeuyedt" path="res://assets/mocks/light_switch_on.png" id="2_wllbv"]
+[ext_resource type="AudioStream" uid="uid://ct052fahgotv0" path="res://assets/audio/LightSwitch.mp3" id="4_tmw1c"]
 
 [node name="LightswitchBoard" type="Node2D" unique_id=1007271350]
 script = ExtResource("1_wllbv")
@@ -108,6 +109,9 @@ offset_top = 70.0
 offset_right = 77.0
 offset_bottom = 142.0
 flat = true
+
+[node name="LightSwitch" type="AudioStreamPlayer2D" parent="." unique_id=876672252]
+stream = ExtResource("4_tmw1c")
 
 [connection signal="pressed" from="GridContainer/Switch/SwitchButton" to="." method="_on_switch_button_pressed" binds= [0]]
 [connection signal="pressed" from="GridContainer/Switch2/SwitchButton2" to="." method="_on_switch_button_pressed" binds= [1]]

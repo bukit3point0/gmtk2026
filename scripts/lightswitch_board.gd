@@ -29,7 +29,8 @@ func _on_switch_button_pressed(button_index) -> void:
 	print(button_index)
 
 	switches_on[button_index] = !switches_on[button_index]
-
+	$LightSwitch.play()
+	
 	if switches_on[button_index]:
 		switches[button_index].texture = switch_on
 	else:

@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://i8afgcl4mdvi"]
 
 [ext_resource type="Script" uid="uid://bt46ckpp3c4qu" path="res://scripts/transition_screen.gd" id="1_12c8c"]
+[ext_resource type="AudioStream" uid="uid://uqyjt8pqydht" path="res://assets/audio/RocketExplosion.mp3" id="2_jweab"]
+[ext_resource type="AudioStream" uid="uid://u03j2ritaaku" path="res://assets/audio/Cheering.mp3" id="3_jrk67"]
+[ext_resource type="AudioStream" uid="uid://bto8wogkb28ws" path="res://assets/audio/RocketLaunch.mp3" id="4_qj1lb"]
 
 [node name="TransitionScreen" type="Node2D" unique_id=1325931215]
 script = ExtResource("1_12c8c")
@@ -11,3 +14,13 @@ offset_top = 213.0
 offset_right = 847.0
 offset_bottom = 501.0
 text = "Get owned nerd"
+
+[node name="RocketExplosion" type="AudioStreamPlayer2D" parent="." unique_id=1256758840]
+stream = ExtResource("2_jweab")
+
+[node name="Cheering" type="AudioStreamPlayer2D" parent="." unique_id=1772855928]
+stream = ExtResource("3_jrk67")
+
+[node name="RocketLaunch" type="AudioStreamPlayer2D" parent="." unique_id=2032920021]
+stream = ExtResource("4_qj1lb")
+volume_db = 7.293
