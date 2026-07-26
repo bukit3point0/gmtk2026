@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ctuybhwsueen2" path="res://assets/images/masking_tape.png" id="4_b16bg"]
 [ext_resource type="AudioStream" uid="uid://ct052fahgotv0" path="res://assets/audio/LightSwitch.mp3" id="4_tmw1c"]
 [ext_resource type="FontFile" uid="uid://d18alb8uyr3dg" path="res://assets/fonts/PermanentMarker.ttf" id="5_pcr8j"]
+[ext_resource type="Texture2D" uid="uid://bl6vbp0pw8ruq" path="res://assets/images/reset_button.png" id="7_pcr8j"]
 
 [node name="LightswitchBoard" type="Node2D" unique_id=1007271350]
 script = ExtResource("1_wllbv")
@@ -194,6 +195,39 @@ vertical_alignment = 1
 
 [node name="LightSwitch" type="AudioStreamPlayer2D" parent="." unique_id=876672252]
 stream = ExtResource("4_tmw1c")
+
+[node name="Reset" type="Node2D" parent="." unique_id=386179693]
+
+[node name="ResetButton" type="Button" parent="Reset" unique_id=63864651]
+offset_left = 708.0
+offset_top = 200.0
+offset_right = 754.0
+offset_bottom = 246.0
+icon = ExtResource("7_pcr8j")
+
+[node name="TextureRect" type="TextureRect" parent="Reset" unique_id=647775107]
+offset_left = 671.0
+offset_top = 270.0
+offset_right = 815.4961
+offset_bottom = 323.6624
+rotation = -0.38397244
+texture = ExtResource("4_b16bg")
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="ResetText" type="RichTextLabel" parent="Reset/TextureRect" unique_id=2120303704]
+layout_mode = 0
+offset_left = 0.25273716
+offset_top = 0.11273193
+offset_right = 143.89165
+offset_bottom = 44.36963
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_pcr8j")
+theme_override_font_sizes/normal_font_size = 32
+text = "RESET"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="GridContainer/Switch/SwitchButton" to="." method="_on_switch_button_pressed" binds= [0]]
 [connection signal="pressed" from="GridContainer/Switch2/SwitchButton2" to="." method="_on_switch_button_pressed" binds= [1]]

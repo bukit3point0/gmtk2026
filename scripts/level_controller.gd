@@ -22,7 +22,7 @@ func _ready() -> void:
 	wires.update_wires(level_data.wires_array)
 	background.update_ship_plate_id(level_data.ship_plate_id)
 	bulbs_and_switches.set_initial_switches(level_data.switches_on)
-	bulbs_and_switches.set_step_results(level_data.nsc1, level_data.esa3, level_data.final)
+	bulbs_and_switches.set_step_results(level_data.nsc1, level_data.temperature_test, level_data.final)
 
 func _on_abort_launch() -> void:
 	if level_ended:
