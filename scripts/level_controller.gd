@@ -30,10 +30,8 @@ func _on_abort_launch() -> void:
 
 	var condition = rocket_condition()
 	if condition != 0:
-		await get_tree().create_timer(LEVEL_END_DELAY).timeout
 		_win_level.emit(condition)
 	else:
-		await get_tree().create_timer(LEVEL_END_DELAY).timeout
 		_fail_level.emit(condition)
 
 func _on_confirm_launch() -> void:

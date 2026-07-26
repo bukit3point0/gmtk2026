@@ -12,5 +12,4 @@ func _on_confirm_button_pressed() -> void:
 func _on_reject_button_pressed() -> void:
 	EventBus._abort_launch.emit()
 	reject_button.offset_transform_position.x = 16
-	await get_tree().create_timer(1.0).timeout
 	$Button.play()
