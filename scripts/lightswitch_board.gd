@@ -20,6 +20,9 @@ var switch_on = preload("uid://bsdacw00b0gem")
 var switch_off = preload("uid://lp42ulfjx0cx")
 
 var switches_on = [false, false, false, false, false]
+var nsc_1_result
+var esa_3_result
+var final_step_result
 
 var temperature_test = ShipProblems.TestResult.PASS
 var temp_switch_flips: int = 0
@@ -28,6 +31,14 @@ const TEMP_PROTOCOL_START = 6
 
 func _ready() -> void:
 	pass
+
+func set_initial_switches(switches_array: Array[bool]) -> void:
+	switches_on = switches_array
+
+func set_step_results(nsc_1, esa_3, final) -> void:
+	nsc_1_result = nsc_1
+	esa_3_result = esa_3 
+	final_step_result = final
 
 func _on_switch_button_pressed(button_index) -> void:
 	if button_index == 2: # temp test
