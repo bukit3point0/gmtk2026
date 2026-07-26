@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://ctl34c38murvo" path="res://assets/images/unlit_lightbulb.png" id="1_o01s3"]
 [ext_resource type="Script" uid="uid://d0kwfw3611dio" path="res://scripts/lightswitch_board.gd" id="1_wllbv"]
 [ext_resource type="Texture2D" uid="uid://djdavkyeuyedt" path="res://assets/mocks/light_switch_on.png" id="2_wllbv"]
+[ext_resource type="AudioStream" uid="uid://ct052fahgotv0" path="res://assets/audio/LightSwitch.mp3" id="4_tmw1c"]
+[ext_resource type="Texture2D" uid="uid://lp42ulfjx0cx" path="res://assets/images/switch_off.png" id="3_wllbv"]
 
 [node name="LightswitchBoard" type="Node2D" unique_id=1007271350]
 script = ExtResource("1_wllbv")
@@ -45,69 +47,67 @@ expand_mode = 3
 
 [node name="Switch" type="TextureRect" parent="GridContainer" unique_id=1935412089]
 layout_mode = 2
-texture = ExtResource("2_wllbv")
+texture = ExtResource("3_wllbv")
 expand_mode = 5
 metadata/_edit_group_ = true
 
 [node name="SwitchButton" type="Button" parent="GridContainer/Switch" unique_id=1799488727]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 71.0
-offset_right = 77.0
-offset_bottom = 143.0
+offset_left = 6.0
+offset_right = 124.0
+offset_bottom = 231.0
 flat = true
 
 [node name="Switch2" type="TextureRect" parent="GridContainer" unique_id=1668546211]
 layout_mode = 2
-texture = ExtResource("2_wllbv")
+texture = ExtResource("3_wllbv")
 expand_mode = 5
 
 [node name="SwitchButton2" type="Button" parent="GridContainer/Switch2" unique_id=1443879885]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 74.0
-offset_right = 76.0
-offset_bottom = 146.0
+offset_left = 6.0
+offset_right = 124.0
+offset_bottom = 231.0
 flat = true
 
 [node name="Switch3" type="TextureRect" parent="GridContainer" unique_id=1538411182]
 layout_mode = 2
-texture = ExtResource("2_wllbv")
+texture = ExtResource("3_wllbv")
 expand_mode = 5
 
 [node name="SwitchButton3" type="Button" parent="GridContainer/Switch3" unique_id=758567623]
 layout_mode = 0
-offset_left = 47.0
-offset_top = 70.0
-offset_right = 78.0
-offset_bottom = 142.0
+offset_left = 6.0
+offset_right = 124.0
+offset_bottom = 231.0
 flat = true
 
 [node name="Switch4" type="TextureRect" parent="GridContainer" unique_id=1468906553]
 layout_mode = 2
-texture = ExtResource("2_wllbv")
+texture = ExtResource("3_wllbv")
 expand_mode = 5
 
 [node name="SwitchButton4" type="Button" parent="GridContainer/Switch4" unique_id=488198154]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 72.0
-offset_right = 76.0
-offset_bottom = 144.0
+offset_left = 6.0
+offset_right = 124.0
+offset_bottom = 231.0
 flat = true
 
 [node name="Switch5" type="TextureRect" parent="GridContainer" unique_id=249968653]
 layout_mode = 2
-texture = ExtResource("2_wllbv")
+texture = ExtResource("3_wllbv")
 expand_mode = 5
 
 [node name="SwitchButton5" type="Button" parent="GridContainer/Switch5" unique_id=664099086]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 70.0
-offset_right = 77.0
-offset_bottom = 142.0
+offset_left = 6.0
+offset_right = 124.0
+offset_bottom = 231.0
 flat = true
+
+[node name="LightSwitch" type="AudioStreamPlayer2D" parent="." unique_id=876672252]
+stream = ExtResource("4_tmw1c")
 
 [connection signal="pressed" from="GridContainer/Switch/SwitchButton" to="." method="_on_switch_button_pressed" binds= [0]]
 [connection signal="pressed" from="GridContainer/Switch2/SwitchButton2" to="." method="_on_switch_button_pressed" binds= [1]]

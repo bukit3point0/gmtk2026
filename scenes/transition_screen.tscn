@@ -1,13 +1,40 @@
 [gd_scene format=3 uid="uid://i8afgcl4mdvi"]
 
 [ext_resource type="Script" uid="uid://bt46ckpp3c4qu" path="res://scripts/transition_screen.gd" id="1_12c8c"]
+[ext_resource type="AudioStream" uid="uid://uqyjt8pqydht" path="res://assets/audio/RocketExplosion.mp3" id="2_jweab"]
+[ext_resource type="AudioStream" uid="uid://u03j2ritaaku" path="res://assets/audio/Cheering.mp3" id="3_jrk67"]
+[ext_resource type="AudioStream" uid="uid://bto8wogkb28ws" path="res://assets/audio/RocketLaunch.mp3" id="4_qj1lb"]
+[ext_resource type="AudioStream" uid="uid://dys500ipxu3vx" path="res://assets/audio/Relief.mp3" id="5_vfryg"]
+[ext_resource type="AudioStream" uid="uid://bnri7ejy4qbgl" path="res://assets/audio/Booing.mp3" id="6_hpb5t"]
+[ext_resource type="Texture2D" uid="uid://bl7qw5d1kfdtl" path="res://assets/images/dot_matrix.png" id="7_hpb5t"]
 
 [node name="TransitionScreen" type="Node2D" unique_id=1325931215]
 script = ExtResource("1_12c8c")
 
-[node name="WinLossMessage" type="RichTextLabel" parent="." unique_id=1140736192]
-offset_left = 318.0
-offset_top = 213.0
-offset_right = 847.0
-offset_bottom = 501.0
+[node name="RocketExplosion" type="AudioStreamPlayer2D" parent="." unique_id=1256758840]
+stream = ExtResource("2_jweab")
+
+[node name="Cheering" type="AudioStreamPlayer2D" parent="." unique_id=1772855928]
+stream = ExtResource("3_jrk67")
+
+[node name="RocketLaunch" type="AudioStreamPlayer2D" parent="." unique_id=2032920021]
+stream = ExtResource("4_qj1lb")
+volume_db = 7.293
+
+[node name="Relief" type="AudioStreamPlayer2D" parent="." unique_id=247126607]
+stream = ExtResource("5_vfryg")
+
+[node name="Booing" type="AudioStreamPlayer2D" parent="." unique_id=1113415656]
+stream = ExtResource("6_hpb5t")
+
+[node name="DotMatrix" type="Sprite2D" parent="." unique_id=870153054]
+position = Vector2(980, 514)
+texture = ExtResource("7_hpb5t")
+
+[node name="WinLossMessage" type="RichTextLabel" parent="DotMatrix" unique_id=1140736192]
+offset_left = -361.0
+offset_top = -169.0
+offset_right = 168.0
+offset_bottom = 119.0
+theme_override_font_sizes/normal_font_size = 36
 text = "Get owned nerd"

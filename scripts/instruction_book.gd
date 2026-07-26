@@ -11,6 +11,7 @@ extends CharacterBody2D
 @onready var pages: Node2D = $Pages
 
 var instruction_book_dragging = false
+var difference = 0.0
 var currently_open_tab = 1
 var tab_1_opened = false
 var tab_2_opened = false
@@ -27,13 +28,15 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if instruction_book_dragging:
 		var mouse_position = get_viewport().get_mouse_position()
-		position = Vector2(mouse_position.x, mouse_position.y)
+		position = mouse_position - difference
 		move_and_slide()
 
 func _set_instruction_book_drag() -> void:
 	instruction_book_dragging = !instruction_book_dragging
 
 func _on_instruction_book_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	var mouse_position = get_viewport().get_mouse_position()
+	difference = mouse_position - position
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			instruction_book_dragging = true
