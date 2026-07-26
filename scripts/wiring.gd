@@ -10,8 +10,10 @@ func show_page(page_number: int = 1) -> void:
 	page_1.visible = page_number == 1
 	page_2.visible = page_number == 2
 
-func _on_next_page_from_1_button_pressed() -> void:
+func _on_next_page_button_pressed() -> void:
 	show_page(2)
 
-func _on_last_page_from_2_pressed() -> void:
+
+
+func _on_last_page_button_pressed() -> void:
 	show_page(1)

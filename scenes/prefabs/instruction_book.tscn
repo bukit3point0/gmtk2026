@@ -622,7 +622,6 @@ metadata/_edit_lock_ = true
 
 [node name="Thermometer" type="Node2D" parent="Pages" unique_id=1469277322]
 visible = false
-visible = false
 metadata/_edit_lock_ = true
 
 [node name="PageTitle" type="RichTextLabel" parent="Pages/Thermometer" unique_id=1258747618]
@@ -746,9 +745,107 @@ texture = ExtResource("3_ev1xt")
 [node name="Tab2AnimationPlayer" type="AnimationPlayer" parent="Pages/ReactivityChart" unique_id=1094889806]
 libraries/ = SubResource("AnimationLibrary_ca42v")
 
-[node name="Cody2" type="Node2D" parent="Pages" unique_id=2121371317]
+[node name="Wiring" type="Node2D" parent="Pages" unique_id=2121371317]
+script = ExtResource("5_6bl1r")
 
-[node name="Contents" type="Node2D" parent="Pages/Cody2" unique_id=139109660]
+[node name="Page1" type="Node2D" parent="Pages/Wiring" unique_id=139109660]
+
+[node name="NextPageButton" type="Button" parent="Pages/Wiring/Page1" unique_id=464126621]
+offset_left = 184.0
+offset_top = 142.0
+offset_right = 304.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 20
+text = "Next Page"
+icon = ExtResource("7_nvh1c")
+icon_alignment = 2
+expand_icon = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Wiring/Page1" unique_id=758495498]
+offset_left = 15.0
+offset_top = -181.0
+offset_right = 307.0
+offset_bottom = 143.0
+theme_override_colors/default_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "ID Plate #1: 8DSF1FG5
+Non-Critical: No connection exists Port 3 and Port B
+Non-Critical: No connection exists between a Port with and even number and Port D, B, or E
+Non-Critical: Any two of Ports 2, 3, and 5 are connected to overloaded ports.
+Non-Critical: A blue wire is connected to Port D.
+Non-Critical: All odd Ports are connected to overloaded Ports.
+Critical: Port 1 is connected to Port B, C, or F, and Port 5 is not in use or Port is connected to Port A or E.
+Critical: There are two or more overloaded ports, and Port 4 is connected to a port lower than the second overloaded port.
+
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Wiring/Page1" unique_id=1523771592]
+offset_left = -295.0
+offset_top = -147.0
+offset_right = -3.0
+offset_bottom = 179.0
+theme_override_colors/default_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "If any critical rule fails, abort mission.
+If any 3 non-critical item fail, abort mission.
+There are 3 rule sets based on the ID Plate.
+Basic Rules:
+A port is overloaded if it connects to two or more other ports.
+If a port connects to an overloaded port, it is connected to all ports on the overloaded circuit."
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Pages/Wiring/Page1" unique_id=1027718443]
+offset_left = -294.0
+offset_top = -178.0
+offset_right = -16.0
+offset_bottom = -149.0
+theme_override_colors/default_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Wiring Checklist"
+horizontal_alignment = 1
+
+[node name="Page2" type="Node2D" parent="Pages/Wiring" unique_id=267015189]
+visible = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Wiring/Page2" unique_id=860026158]
+offset_left = 15.0
+offset_top = -181.0
+offset_right = 307.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "ID Plate #3: W55H8ED2
+Non-Critical: Any overloaded port connects only to even or odd ports
+Non-Critical: Port 2 or Port 4 connect to a Port other than Ports C, D, or F.
+Non-Critical: Any two ports next to each other connect to any two ports next to each other.
+Critical: More than two even ports are connected to overloaded ports and no odd ports are connected by overloaded ports
+Critical: Port 3 or 2 is connected to Port F or A and Port 4 or 5 is connected to Port C or D.
+Critical: The number of even Ports in use and the number of ports not overloaded is the same."
+
+[node name="LastPageButton" type="Button" parent="Pages/Wiring/Page2" unique_id=1976568025]
+offset_left = -296.0
+offset_top = 144.0
+offset_right = -184.0
+offset_bottom = 179.0
+theme_override_font_sizes/font_size = 20
+text = "Last Page"
+icon = ExtResource("8_6bl1r")
+expand_icon = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Wiring/Page2" unique_id=1261068824]
+offset_left = -298.0
+offset_top = -179.0
+offset_right = -6.0
+offset_bottom = 143.0
+theme_override_colors/default_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "ID Plate #2: OS5FBR5K
+Non-Critical: There are more than 4 connections
+Non-Critical: Five or more ports are connected to overloaded ports
+Non-Critical: There is exactly one overloaded port
+Non-Critical: Port 2 is not connected to a port below C.
+Critical: More than half the connected ports have a connection higher on the right than left.
+Critical: There are at least two even ports in use and no more than two odd ports in use and Port 6 is connected to a port from B to D.
+"
 
 [node name="Tab3Animation" type="AnimatedSprite2D" parent="Pages/Wiring" unique_id=99875062]
 position = Vector2(327, -116)
@@ -770,9 +867,11 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("3_ev1xt")
 
 [node name="Tab3AnimationPlayer" type="AnimationPlayer" parent="Pages/Wiring" unique_id=613816853]
+root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_1kice")
 
 [node name="Lightbulbs" type="Node2D" parent="Pages" unique_id=785265382]
+visible = false
 script = ExtResource("5_nvh1c")
 metadata/_edit_lock_ = true
 
@@ -954,8 +1053,8 @@ metadata/_edit_lock_ = true
 [connection signal="input_event" from="." to="." method="_on_instruction_book_input_event"]
 [connection signal="pressed" from="Pages/Thermometer/Tab1Button" to="." method="_on_tab_1_button_pressed"]
 [connection signal="pressed" from="Pages/ReactivityChart/Tab2Button" to="." method="_on_tab_2_button_pressed"]
-[connection signal="pressed" from="Pages/Wiring/Page1/NextPageButton" to="Pages/Wiring" method="_on_next_page_from_1_button_pressed"]
-[connection signal="pressed" from="Pages/Wiring/Page2/LastPageButton" to="Pages/Wiring" method="_on_last_page_from_2_pressed"]
+[connection signal="pressed" from="Pages/Wiring/Page1/NextPageButton" to="Pages/Wiring" method="_on_next_page_button_pressed"]
+[connection signal="pressed" from="Pages/Wiring/Page2/LastPageButton" to="Pages/Wiring" method="_on_last_page_button_pressed"]
 [connection signal="pressed" from="Pages/Wiring/Tab3Button" to="." method="_on_tab_3_button_pressed"]
 [connection signal="pressed" from="Pages/Lightbulbs/Page1/NextPageButton" to="Pages/Lightbulbs" method="_on_next_page_from_1_button_pressed"]
 [connection signal="pressed" from="Pages/Lightbulbs/Page2/LastPageButton" to="Pages/Lightbulbs" method="_on_last_page_from_2_pressed"]
