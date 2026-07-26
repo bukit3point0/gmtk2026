@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var label = $WinLossMessage
+@onready var label = %WinLossMessage
 
 func launch_bad(text):
 	label.text = text
