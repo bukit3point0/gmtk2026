@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ShipProblems" format=3 uid="uid://1i5j4s3k2ugr"]
+
+[ext_resource type="Script" uid="uid://imixhkfy73l4" path="res://scripts/types/ship_problems.gd" id="1_ofpki"]
+
+[resource]
+script = ExtResource("1_ofpki")
+metadata/_custom_type_script = "uid://imixhkfy73l4"

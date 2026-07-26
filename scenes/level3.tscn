@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://c1fb6btapvul7"]
+[gd_scene format=3 uid="uid://deiutb6nh54x3"]
 
 [ext_resource type="Script" uid="uid://gmeqcgwpu5hb" path="res://scripts/level_controller.gd" id="1_8g4ke"]
-[ext_resource type="Resource" uid="uid://dsixoodcfgkhk" path="res://rocket_data/level_data/level_data_1.tres" id="2_2ku1j"]
 [ext_resource type="PackedScene" uid="uid://bpn3sdvipin1v" path="res://scenes/background.tscn" id="2_56gwk"]
+[ext_resource type="Resource" uid="uid://1i5j4s3k2ugr" path="res://rocket_data/level_data/level_data_3.tres" id="2_qewby"]
 [ext_resource type="Script" uid="uid://dj30d0hgnscu5" path="res://scripts/thermometer.gd" id="3_ve5ok"]
 [ext_resource type="Texture2D" uid="uid://c0sw7ff8v4dvb" path="res://assets/spritesheets/thermometer.png" id="4_cleqw"]
 [ext_resource type="PackedScene" uid="uid://b6at7x8phf37l" path="res://scenes/prefabs/instruction_book.tscn" id="5_xa7n4"]
@@ -169,9 +169,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn0t7"]
 size = Vector2(422, 594)
 
-[node name="Level1" type="Node2D" unique_id=1055144618]
+[node name="Level3" type="Node2D" unique_id=1055144618]
 script = ExtResource("1_8g4ke")
-level_data = ExtResource("2_2ku1j")
+level_data = ExtResource("2_qewby")
 
 [node name="Game" type="Node2D" parent="." unique_id=799543503]
 
