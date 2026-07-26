@@ -205,15 +205,14 @@ position = Vector2(137, 15)
 texture = ExtResource("16_r4ipc")
 centered = false
 
-[node name="Sprite2D" type="Sprite2D" parent="TextureRect" unique_id=931145954]
+[node name="ShipPlateId" type="Sprite2D" parent="TextureRect" unique_id=931145954]
 position = Vector2(1007, 332)
 scale = Vector2(0.12, 0.12)
 texture = ExtResource("21_iquee")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Sprite2D" unique_id=716756715]
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/ShipPlateId" unique_id=716756715]
 anchors_preset = -1
-anchor_left = -0.0127688
-anchor_right = -0.0127688
+anchor_right = -0.012769047
 anchor_bottom = 0.0016583748
 offset_left = -616.6665
 offset_top = -299.99994
@@ -224,7 +223,7 @@ theme_override_colors/default_color = Color(0.8092493, 0.7954659, 0.7650906, 1)
 theme_override_colors/font_outline_color = Color(0.37254903, 0.4509804, 0.4627451, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/normal_font_size = 32
-text = "8675309A"
+text = "8DSF1FG5"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true

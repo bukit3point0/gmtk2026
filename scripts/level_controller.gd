@@ -4,6 +4,7 @@ class_name Level
 signal _win_level(condition: int)
 signal _fail_level(condition: int)
 
+@onready var wires: Node2D = $Game/Table/Wires
 @onready var background: Background = %Background
 
 @export var level_data: ShipProblems
@@ -15,7 +16,8 @@ func _ready() -> void:
 	EventBus.connect("_confirm_launch", _on_confirm_launch)
 	EventBus.connect("_countdown_ended", _on_countdown_ended)
 	EventBus.connect("_pause_screen", pause_button_trigger)
-
+	wires.update_wires(level_data.wires_array)
+	background.update_ship_plate_id(level_data.ship_plate_id)
 
 func _on_abort_launch() -> void:
 	if level_ended:

@@ -36,9 +36,9 @@ func _set_instruction_book_drag() -> void:
 
 func _on_instruction_book_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	var mouse_position = get_viewport().get_mouse_position()
-	difference = mouse_position - position
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			difference = mouse_position - position
 			instruction_book_dragging = true
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			instruction_book_dragging = false

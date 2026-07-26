@@ -11,3 +11,6 @@ enum TestResult { PASS, WARN, FAIL }
 @export var condition: int
 
 @export var temperature_test: TestResult
+@export var ship_plate_id: String
+@export var wires_test: TestResult
+@export var wires_array: Array[int]

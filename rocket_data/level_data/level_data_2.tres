@@ -8,4 +8,6 @@ stopped_bad_rocket = "Whew, close call! I can't believe you almost launched a ro
 stopped_good_rocket = "WHY DID YOU STOP IT?!?! We were planning to do this for months and all of thhat time and money just went down thhe drain! I'm seriously gonna have to reconsider your position after this mistake."
 launched_bad_rocket = "NOOOO!!! MY EXPENSIVE ROCKET! You're going to pay for the damages, and I'm lowering your payrate!"
 launched_good_rocket = "Ahhh, another successful day of being a Billionaire. Those astronauts will view space in ways rarely any of us ever have, and it’s all thanks to me! Alright, get back to work and stop wasting my time."
+ship_plate_id = "8DSF1FG5"
+wires_array = Array[int]([0, 3, 0, 2, 5, 5])
 metadata/_custom_type_script = "uid://imixhkfy73l4"

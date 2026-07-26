@@ -19,9 +19,9 @@ func _set_construction_report_drag() -> void:
 
 func _on_construction_report_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	var mouse_position = get_viewport().get_mouse_position()
-	difference = mouse_position - position
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			difference = mouse_position - position
 			emit_signal("construction_report_drag_signal")
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			emit_signal("construction_report_drag_signal")
