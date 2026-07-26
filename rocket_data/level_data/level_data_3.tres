@@ -8,4 +8,7 @@ condition = 1
 temperature_test = 2
 ship_plate_id = "W55H8ED2"
 wires_array = Array[int]([4, 2, 0, 0, 5, 3])
+switches_on = Array[bool]([false, false, true, false, false])
+nsc1 = 1
+final = 2
 metadata/_custom_type_script = "uid://imixhkfy73l4"

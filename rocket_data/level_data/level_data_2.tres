@@ -10,4 +10,5 @@ launched_bad_rocket = "NOOOO!!! MY EXPENSIVE ROCKET! You're going to pay for the
 launched_good_rocket = "Ahhh, another successful day of being a Billionaire. Those astronauts will view space in ways rarely any of us ever have, and it’s all thanks to me! Alright, get back to work and stop wasting my time."
 ship_plate_id = "8DSF1FG5"
 wires_array = Array[int]([0, 3, 0, 2, 5, 5])
+switches_on = Array[bool]([false, false, false, false, false])
 metadata/_custom_type_script = "uid://imixhkfy73l4"
