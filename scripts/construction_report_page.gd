@@ -11,7 +11,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if construction_report_dragging:
 		var mouse_position = get_viewport().get_mouse_position()
-		position = mouse_position - difference
+		position = mouse_position
 		move_and_slide()
 
 func _set_construction_report_drag() -> void:

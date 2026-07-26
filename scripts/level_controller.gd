@@ -23,7 +23,7 @@ func _ready() -> void:
 
 func _on_abort_launch() -> void:
 	if level_ended:
-		return #ignore further input
+		return # ignore further input
 
 	print("Launch aborted")
 	background.stop_clock()
@@ -38,7 +38,7 @@ func _on_abort_launch() -> void:
 
 func _on_confirm_launch() -> void:
 	if level_ended:
-		return #ignore further input
+		return # ignore further input
 	
 	print("Launch confirmed")
 	background.trigger_final_countdown()

@@ -20,7 +20,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if thermometer_dragging:
 		var mouse_position = get_viewport().get_mouse_position()
-		position = mouse_position - difference
+		position = mouse_position
 		move_and_slide()
 	
 	noise_timer -= delta

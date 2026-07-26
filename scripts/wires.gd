@@ -9,7 +9,6 @@ extends Node2D
 
 
 func update_wires(wire_selection: Array) -> void:
-	print("wire")
 	wire_1_red.get_child(wire_selection[0]).visible = true
 	wire_2_blue.get_child(wire_selection[1]).visible = true
 	wire_1_yellow.get_child(wire_selection[2]).visible = true
