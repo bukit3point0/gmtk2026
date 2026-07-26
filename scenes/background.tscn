@@ -60,6 +60,7 @@ stream = ExtResource("4_cbsqf")
 bus = &"Gameplay"
 
 [node name="GroundToShipText" type="Sprite2D" parent="TextureRect" unique_id=716613478]
+visible = false
 position = Vector2(1677, 816)
 texture = ExtResource("5_wax1t")
 script = ExtResource("6_l5f8m")
