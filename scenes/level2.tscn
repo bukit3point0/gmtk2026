@@ -290,12 +290,12 @@ text = "1,000"
 fit_content = true
 
 [node name="InstructionBook" parent="Game/Table" unique_id=1643634744 instance=ExtResource("5_xa7n4")]
-position = Vector2(1078, 734)
+position = Vector2(953, 687)
 collision_layer = 2
 collision_mask = 2
 
 [node name="ConstructionReportPage" type="CharacterBody2D" parent="Game/Table" unique_id=1967828674]
-position = Vector2(519, 757)
+position = Vector2(394, 769)
 collision_layer = 4
 collision_mask = 4
 input_pickable = true

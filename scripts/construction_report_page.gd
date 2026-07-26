@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var construction_report_dragging = false
+var difference = 0.0
 
 signal construction_report_drag_signal
 
@@ -10,14 +11,15 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if construction_report_dragging:
 		var mouse_position = get_viewport().get_mouse_position()
-		position = Vector2(mouse_position.x, mouse_position.y)
+		position = mouse_position - difference
 		move_and_slide()
 
 func _set_construction_report_drag() -> void:
 	construction_report_dragging = !construction_report_dragging
 
 func _on_construction_report_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	print("input")
+	var mouse_position = get_viewport().get_mouse_position()
+	difference = mouse_position - position
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			emit_signal("construction_report_drag_signal")

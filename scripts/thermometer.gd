@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var thermometer_dragging = false
+var difference = 0.0
 
 signal thermometer_drag_signal
 
@@ -10,13 +11,15 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if thermometer_dragging:
 		var mouse_position = get_viewport().get_mouse_position()
-		position = Vector2(mouse_position.x, mouse_position.y)
+		position = mouse_position - difference
 		move_and_slide()
 
 func _set_thermometer_drag() -> void:
 	thermometer_dragging = !thermometer_dragging
 
 func _on_thermometer_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	var mouse_position = get_viewport().get_mouse_position()
+	difference = mouse_position - position
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			emit_signal("thermometer_drag_signal")
