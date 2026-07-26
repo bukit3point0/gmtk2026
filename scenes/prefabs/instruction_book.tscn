@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://clvbjgfe4252e" path="res://assets/mocks/thermometer_empty.png" id="3_ev1xt"]
 [ext_resource type="Texture2D" uid="uid://bvq0yewxmio1m" path="res://assets/spritesheets/book_tab.png" id="4_nvh1c"]
 [ext_resource type="Texture2D" uid="uid://den8akhwdtr4x" path="res://assets/images/lit_lightbulb.png" id="5_4j6de"]
+[ext_resource type="Script" uid="uid://63vp4ru54j47" path="res://scripts/wiring.gd" id="5_6bl1r"]
 [ext_resource type="Script" uid="uid://bhl2f18swwpct" path="res://scripts/lightbulbs.gd" id="5_nvh1c"]
 [ext_resource type="Texture2D" uid="uid://cne3a65t5l4w0" path="res://assets/images/arrow_right.png" id="7_nvh1c"]
 [ext_resource type="Texture2D" uid="uid://q3x6qdjsxvbq" path="res://assets/images/arrow_left.png" id="8_6bl1r"]
@@ -552,7 +553,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Tab4Image:position")
+tracks/0/path = NodePath("Tab5Image:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -568,7 +569,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Tab4Image:position")
+tracks/0/path = NodePath("Tab5Image:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -584,7 +585,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Tab4Image:position")
+tracks/0/path = NodePath("Tab5Image:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -621,6 +622,8 @@ metadata/_edit_lock_ = true
 
 [node name="Thermometer" type="Node2D" parent="Pages" unique_id=1469277322]
 visible = false
+visible = false
+metadata/_edit_lock_ = true
 
 [node name="PageTitle" type="RichTextLabel" parent="Pages/Thermometer" unique_id=1258747618]
 offset_left = -297.0
@@ -747,26 +750,26 @@ libraries/ = SubResource("AnimationLibrary_ca42v")
 
 [node name="Contents" type="Node2D" parent="Pages/Cody2" unique_id=139109660]
 
-[node name="Tab3Animation" type="AnimatedSprite2D" parent="Pages/Cody2" unique_id=99875062]
+[node name="Tab3Animation" type="AnimatedSprite2D" parent="Pages/Wiring" unique_id=99875062]
 position = Vector2(327, -116)
 sprite_frames = SubResource("SpriteFrames_riqys")
 animation = &"close_tab"
 frame = 6
 frame_progress = 1.0
 
-[node name="Tab3Button" type="Button" parent="Pages/Cody2" unique_id=1522914328]
+[node name="Tab3Button" type="Button" parent="Pages/Wiring" unique_id=1522914328]
 offset_left = 311.0
 offset_top = -126.0
 offset_right = 343.0
 offset_bottom = -106.0
 flat = true
 
-[node name="Tab3Image" type="Sprite2D" parent="Pages/Cody2" unique_id=1097694454]
+[node name="Tab3Image" type="Sprite2D" parent="Pages/Wiring" unique_id=1097694454]
 position = Vector2(325, -116)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("3_ev1xt")
 
-[node name="Tab3AnimationPlayer" type="AnimationPlayer" parent="Pages/Cody2" unique_id=613816853]
+[node name="Tab3AnimationPlayer" type="AnimationPlayer" parent="Pages/Wiring" unique_id=613816853]
 libraries/ = SubResource("AnimationLibrary_1kice")
 
 [node name="Lightbulbs" type="Node2D" parent="Pages" unique_id=785265382]
@@ -951,7 +954,9 @@ metadata/_edit_lock_ = true
 [connection signal="input_event" from="." to="." method="_on_instruction_book_input_event"]
 [connection signal="pressed" from="Pages/Thermometer/Tab1Button" to="." method="_on_tab_1_button_pressed"]
 [connection signal="pressed" from="Pages/ReactivityChart/Tab2Button" to="." method="_on_tab_2_button_pressed"]
-[connection signal="pressed" from="Pages/Cody2/Tab3Button" to="." method="_on_tab_3_button_pressed"]
+[connection signal="pressed" from="Pages/Wiring/Page1/NextPageButton" to="Pages/Wiring" method="_on_next_page_from_1_button_pressed"]
+[connection signal="pressed" from="Pages/Wiring/Page2/LastPageButton" to="Pages/Wiring" method="_on_last_page_from_2_pressed"]
+[connection signal="pressed" from="Pages/Wiring/Tab3Button" to="." method="_on_tab_3_button_pressed"]
 [connection signal="pressed" from="Pages/Lightbulbs/Page1/NextPageButton" to="Pages/Lightbulbs" method="_on_next_page_from_1_button_pressed"]
 [connection signal="pressed" from="Pages/Lightbulbs/Page2/LastPageButton" to="Pages/Lightbulbs" method="_on_last_page_from_2_pressed"]
 [connection signal="pressed" from="Pages/Lightbulbs/Page2/NextPageButton" to="Pages/Lightbulbs" method="_on_next_page_from_2_pressed"]

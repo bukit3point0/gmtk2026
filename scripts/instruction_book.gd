@@ -4,8 +4,8 @@ extends CharacterBody2D
 @onready var tab_1_animation_player: AnimationPlayer = $Pages/Thermometer/Tab1AnimationPlayer
 @onready var tab_2_animation: AnimatedSprite2D = $Pages/ReactivityChart/Tab2Animation
 @onready var tab_2_animation_player: AnimationPlayer = $Pages/ReactivityChart/Tab2AnimationPlayer
-@onready var tab_3_animation: AnimatedSprite2D = $Pages/Cody2/Tab3Animation
-@onready var tab_3_animation_player: AnimationPlayer = $Pages/Cody2/Tab3AnimationPlayer
+@onready var tab_3_animation: AnimatedSprite2D = $Pages/Wiring/Tab3Animation
+@onready var tab_3_animation_player: AnimationPlayer = $Pages/Wiring/Tab3AnimationPlayer
 @onready var tab_4_animation: AnimatedSprite2D = $Pages/Lightbulbs/Tab4Animation
 @onready var tab_4_animation_player: AnimationPlayer = $Pages/Lightbulbs/Tab4AnimationPlayer
 @onready var pages: Node2D = $Pages
@@ -17,6 +17,7 @@ var tab_1_opened = false
 var tab_2_opened = false
 var tab_3_opened = false
 var tab_4_opened = false
+
 
 func _ready() -> void:
 	for child in pages.get_children():
@@ -73,7 +74,7 @@ func _on_tab_4_button_pressed() -> void:
 	currently_open_tab = 4
 	close_other_tabs()
 	tab_4_opened = true
-
+	
 func close_other_tabs() -> void:
 	match currently_open_tab:
 		1:
@@ -88,10 +89,12 @@ func close_other_tabs() -> void:
 			play_tab_1(false)
 			play_tab_2(false)
 			play_tab_4(false)
+
 		4:
 			play_tab_1(false)
 			play_tab_2(false)
 			play_tab_3(false)
+
 
 func play_tab_1(open: bool = true) -> void:
 	var page = pages.get_node("Thermometer")
@@ -127,8 +130,8 @@ func play_tab_2(open: bool = true) -> void:
 	tab_2_opened = open
 
 func play_tab_3(open: bool = true) -> void:
-	var page = pages.get_node("Cody2")
-	var contents = page.get_node("Contents")
+	var page = pages.get_node("Wiring")
+	page.get_node("Page1").visible = open
 	
 	if tab_3_opened and !open:
 		tab_3_animation.play("close_tab")
@@ -137,7 +140,6 @@ func play_tab_3(open: bool = true) -> void:
 		tab_3_animation.play("open_tab")
 		tab_3_animation_player.play("open_tab")
 	
-	contents.visible = open
 	tab_3_opened = open
 
 func play_tab_4(open: bool = true) -> void:
